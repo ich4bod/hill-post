@@ -98,6 +98,17 @@ function render() {
   document.querySelector('#road-choice-rows').replaceChildren(...roadRows);
   document.querySelector('#road-choices-empty').hidden = currentId !== level.goal;
   document.querySelector('#route').textContent = `Route: ${state.path.map(id => nodeById.get(id).name).join(' → ')}`;
+  const legList = document.querySelector('#ride-leg-list');
+  const legItems = state.path.slice(1).map((toId, i) => {
+    const from = nodeById.get(state.path[i]);
+    const to = nodeById.get(toId);
+    const edge = level.edges.find(([a, b]) => (a === from.id && b === to.id) || (a === to.id && b === from.id));
+    const item = document.createElement('li');
+    item.textContent = `${from.name} → ${to.name}: distance ${edge[2]} · climbing ${Math.max(0, to.height - from.height)}.`;
+    return item;
+  });
+  legList.replaceChildren(...legItems);
+  document.querySelector('#ride-legs-empty').hidden = state.path.length > 1;
   document.querySelector('#undo').disabled = state.path.length === 1;
   document.querySelector('#restart').disabled = false;
 }

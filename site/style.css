@@ -62,7 +62,7 @@ select { min-height: 44px; max-width: 100%; padding: 6px 10px; }
 }
 #map button[aria-current="location"] { background: #f1c75b; }
 #map button:disabled { opacity: .65; cursor: default; }
-#map button:focus-visible, .actions button:focus-visible, select:focus-visible, #road-choices > summary:focus-visible {
+#map button:focus-visible, .actions button:focus-visible, select:focus-visible, #road-choices > summary:focus-visible, #ride-legs > summary:focus-visible {
   outline: 3px solid #d46a3c;
   outline-offset: 3px;
 }
@@ -79,6 +79,16 @@ select { min-height: 44px; max-width: 100%; padding: 6px 10px; }
 }
 #road-choices > summary { min-height: 44px; line-height: 44px; cursor: pointer; }
 #road-choices table { width: 100%; border-collapse: collapse; font: 14px system-ui, sans-serif; }
+#ride-legs {
+  margin: 12px 0;
+  padding: 8px;
+  border: 1px solid #8c9b86;
+  border-radius: 8px;
+  background: #fffdf2;
+}
+#ride-legs > summary { min-height: 44px; line-height: 44px; cursor: pointer; }
+#ride-legs ol { padding-left: 24px; color: #203a32; font: 14px/1.5 system-ui, sans-serif; }
+#ride-legs li { margin: 6px 0; }
 #road-choices th, #road-choices td { text-align: left; padding: 4px; }
 #route { margin: 8px 0; overflow-wrap: anywhere; }
 .actions { display: flex; flex-wrap: wrap; gap: 8px; }
