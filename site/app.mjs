@@ -79,6 +79,9 @@ function render() {
       : currentId === level.goal
         ? 'The parcel arrived, but the ride ran over budget. Undo and find another way.'
         : 'Over budget. You can still ride, undo or restart.';
+  const arrivalNote = document.querySelector('#arrival-note');
+  arrivalNote.hidden = currentId !== level.goal;
+  arrivalNote.textContent = arrivalNote.hidden ? '' : `Height change: ${destination.height - nodeById.get(level.start).height}. Uphill ridden: ${state.climb}.`;
   const roadRows = [];
   if (currentId !== level.goal) {
     for (const node of level.nodes) {

@@ -70,6 +70,8 @@ select { min-height: 44px; max-width: 100%; padding: 6px 10px; }
 #distance, #climb { margin: 8px 0 0; }
 .over-budget { color: #a63f26; }
 #ride-status { min-height: 3em; margin: 8px 0 0; }
+#arrival-note { margin: 8px 0; color: #203a32; font: 14px/1.5 system-ui, sans-serif; }
+#arrival-note[hidden] { display: none; }
 #road-choices {
   margin: 12px 0;
   padding: 8px;
