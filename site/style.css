@@ -19,6 +19,7 @@ header p { margin: 0 0 16px; }
 select, button { color: inherit; font: inherit; }
 select { min-height: 44px; max-width: 100%; padding: 6px 10px; }
 #delivery-brief { margin: 0 0 12px; }
+#destination { margin: 8px 0; color: #203a32; font-weight: 700; }
 #map {
   position: relative;
   width: 100%;

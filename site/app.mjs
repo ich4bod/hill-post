@@ -63,6 +63,8 @@ function render() {
   }
   document.querySelector('#delivery-title').textContent = level.title;
   document.querySelector('#delivery-brief').textContent = level.brief;
+  const destination = nodeById.get(level.goal);
+  document.querySelector('#destination').textContent = `Deliver to ${destination.name} · Height ${destination.height}.`;
   const distance = document.querySelector('#distance');
   distance.textContent = `Distance: ${state.distance} / ${level.distanceBudget}`;
   distance.classList.toggle('over-budget', state.distance > level.distanceBudget);
