@@ -1,0 +1,1393 @@
+[
+  {
+    "level": {
+      "id": "cafe-upward",
+      "title": "Climb to the cafe",
+      "brief": "The parcel goes uphill. Take the small rises rather than the roof road.",
+      "start": "s",
+      "goal": "t",
+      "distanceBudget": 8,
+      "climbBudget": 3,
+      "nodes": [
+        {
+          "id": "s",
+          "name": "Depot",
+          "x": 12,
+          "y": 48,
+          "height": 0
+        },
+        {
+          "id": "h",
+          "name": "Roof road",
+          "x": 50,
+          "y": 18,
+          "height": 4
+        },
+        {
+          "id": "t",
+          "name": "Cafe",
+          "x": 88,
+          "y": 48,
+          "height": 3
+        },
+        {
+          "id": "a",
+          "name": "Mill",
+          "x": 28,
+          "y": 80,
+          "height": 0
+        },
+        {
+          "id": "b",
+          "name": "Bridge",
+          "x": 50,
+          "y": 80,
+          "height": 1
+        },
+        {
+          "id": "c",
+          "name": "Orchard",
+          "x": 72,
+          "y": 80,
+          "height": 2
+        }
+      ],
+      "edges": [
+        [
+          "s",
+          "h",
+          2
+        ],
+        [
+          "h",
+          "t",
+          2
+        ],
+        [
+          "s",
+          "a",
+          2
+        ],
+        [
+          "a",
+          "b",
+          2
+        ],
+        [
+          "b",
+          "c",
+          2
+        ],
+        [
+          "c",
+          "t",
+          2
+        ]
+      ]
+    },
+    "win": [
+      "s",
+      "a",
+      "b",
+      "c",
+      "t"
+    ],
+    "wrong": [
+      "s",
+      "h",
+      "t"
+    ],
+    "winCost": [
+      8,
+      3
+    ],
+    "wrongCost": [
+      4,
+      4
+    ]
+  },
+  {
+    "level": {
+      "id": "cafe-homeward",
+      "title": "Bring the empty bag home",
+      "brief": "The same hills face the other way. A short climb buys a long descent.",
+      "start": "t",
+      "goal": "s",
+      "distanceBudget": 4,
+      "climbBudget": 1,
+      "nodes": [
+        {
+          "id": "s",
+          "name": "Depot",
+          "x": 12,
+          "y": 48,
+          "height": 0
+        },
+        {
+          "id": "h",
+          "name": "Roof road",
+          "x": 50,
+          "y": 18,
+          "height": 4
+        },
+        {
+          "id": "t",
+          "name": "Cafe",
+          "x": 88,
+          "y": 48,
+          "height": 3
+        },
+        {
+          "id": "a",
+          "name": "Mill",
+          "x": 28,
+          "y": 80,
+          "height": 0
+        },
+        {
+          "id": "b",
+          "name": "Bridge",
+          "x": 50,
+          "y": 80,
+          "height": 1
+        },
+        {
+          "id": "c",
+          "name": "Orchard",
+          "x": 72,
+          "y": 80,
+          "height": 2
+        }
+      ],
+      "edges": [
+        [
+          "s",
+          "h",
+          2
+        ],
+        [
+          "h",
+          "t",
+          2
+        ],
+        [
+          "s",
+          "a",
+          2
+        ],
+        [
+          "a",
+          "b",
+          2
+        ],
+        [
+          "b",
+          "c",
+          2
+        ],
+        [
+          "c",
+          "t",
+          2
+        ]
+      ]
+    },
+    "win": [
+      "t",
+      "h",
+      "s"
+    ],
+    "wrong": [
+      "t",
+      "c",
+      "b",
+      "a",
+      "s"
+    ],
+    "winCost": [
+      4,
+      1
+    ],
+    "wrongCost": [
+      8,
+      0
+    ]
+  },
+  {
+    "level": {
+      "id": "bakery-gentle",
+      "title": "Two small rises",
+      "brief": "Both little rises count. Together they still cost less climbing than the beacon.",
+      "start": "s",
+      "goal": "t",
+      "distanceBudget": 6,
+      "climbBudget": 2,
+      "nodes": [
+        {
+          "id": "s",
+          "name": "Depot",
+          "x": 12,
+          "y": 48,
+          "height": 0
+        },
+        {
+          "id": "h",
+          "name": "Beacon",
+          "x": 50,
+          "y": 18,
+          "height": 3
+        },
+        {
+          "id": "t",
+          "name": "Bakery",
+          "x": 88,
+          "y": 48,
+          "height": 0
+        },
+        {
+          "id": "a",
+          "name": "West rise",
+          "x": 28,
+          "y": 80,
+          "height": 1
+        },
+        {
+          "id": "b",
+          "name": "Ditch",
+          "x": 50,
+          "y": 80,
+          "height": 0
+        },
+        {
+          "id": "c",
+          "name": "East rise",
+          "x": 72,
+          "y": 80,
+          "height": 1
+        }
+      ],
+      "edges": [
+        [
+          "s",
+          "h",
+          2
+        ],
+        [
+          "h",
+          "t",
+          2
+        ],
+        [
+          "s",
+          "a",
+          1
+        ],
+        [
+          "a",
+          "b",
+          2
+        ],
+        [
+          "b",
+          "c",
+          2
+        ],
+        [
+          "c",
+          "t",
+          1
+        ]
+      ]
+    },
+    "win": [
+      "s",
+      "a",
+      "b",
+      "c",
+      "t"
+    ],
+    "wrong": [
+      "s",
+      "h",
+      "t"
+    ],
+    "winCost": [
+      6,
+      2
+    ],
+    "wrongCost": [
+      4,
+      3
+    ]
+  },
+  {
+    "level": {
+      "id": "bakery-express",
+      "title": "Before the ovens close",
+      "brief": "The bakery needs the parcel now. Spend the climbing allowance on the shorter road.",
+      "start": "s",
+      "goal": "t",
+      "distanceBudget": 4,
+      "climbBudget": 3,
+      "nodes": [
+        {
+          "id": "s",
+          "name": "Depot",
+          "x": 12,
+          "y": 48,
+          "height": 0
+        },
+        {
+          "id": "h",
+          "name": "Beacon",
+          "x": 50,
+          "y": 18,
+          "height": 3
+        },
+        {
+          "id": "t",
+          "name": "Bakery",
+          "x": 88,
+          "y": 48,
+          "height": 0
+        },
+        {
+          "id": "a",
+          "name": "West rise",
+          "x": 28,
+          "y": 80,
+          "height": 1
+        },
+        {
+          "id": "b",
+          "name": "Ditch",
+          "x": 50,
+          "y": 80,
+          "height": 0
+        },
+        {
+          "id": "c",
+          "name": "East rise",
+          "x": 72,
+          "y": 80,
+          "height": 1
+        }
+      ],
+      "edges": [
+        [
+          "s",
+          "h",
+          2
+        ],
+        [
+          "h",
+          "t",
+          2
+        ],
+        [
+          "s",
+          "a",
+          1
+        ],
+        [
+          "a",
+          "b",
+          2
+        ],
+        [
+          "b",
+          "c",
+          2
+        ],
+        [
+          "c",
+          "t",
+          1
+        ]
+      ]
+    },
+    "win": [
+      "s",
+      "h",
+      "t"
+    ],
+    "wrong": [
+      "s",
+      "a",
+      "b",
+      "c",
+      "t"
+    ],
+    "winCost": [
+      4,
+      3
+    ],
+    "wrongCost": [
+      6,
+      2
+    ]
+  },
+  {
+    "level": {
+      "id": "station-cut",
+      "title": "Leave the hollow sideways",
+      "brief": "Neither whole road fits. A link from the hollow lets you leave the second hill behind.",
+      "start": "s",
+      "goal": "t",
+      "distanceBudget": 6,
+      "climbBudget": 5,
+      "nodes": [
+        {
+          "id": "s",
+          "name": "Depot",
+          "x": 12,
+          "y": 48,
+          "height": 0
+        },
+        {
+          "id": "p",
+          "name": "West hill",
+          "x": 30,
+          "y": 18,
+          "height": 4
+        },
+        {
+          "id": "q",
+          "name": "Hollow",
+          "x": 50,
+          "y": 18,
+          "height": 0
+        },
+        {
+          "id": "r",
+          "name": "East hill",
+          "x": 70,
+          "y": 18,
+          "height": 4
+        },
+        {
+          "id": "t",
+          "name": "Station",
+          "x": 88,
+          "y": 48,
+          "height": 0
+        },
+        {
+          "id": "a",
+          "name": "Towpath",
+          "x": 32,
+          "y": 80,
+          "height": 1
+        },
+        {
+          "id": "b",
+          "name": "Canal",
+          "x": 68,
+          "y": 80,
+          "height": 1
+        }
+      ],
+      "edges": [
+        [
+          "s",
+          "p",
+          1
+        ],
+        [
+          "p",
+          "q",
+          1
+        ],
+        [
+          "q",
+          "r",
+          1
+        ],
+        [
+          "r",
+          "t",
+          1
+        ],
+        [
+          "s",
+          "a",
+          3
+        ],
+        [
+          "a",
+          "b",
+          3
+        ],
+        [
+          "b",
+          "t",
+          3
+        ],
+        [
+          "q",
+          "b",
+          1
+        ]
+      ]
+    },
+    "win": [
+      "s",
+      "p",
+      "q",
+      "b",
+      "t"
+    ],
+    "wrong": [
+      "s",
+      "p",
+      "q",
+      "r",
+      "t"
+    ],
+    "winCost": [
+      6,
+      5
+    ],
+    "wrongCost": [
+      4,
+      8
+    ]
+  },
+  {
+    "level": {
+      "id": "station-canal",
+      "title": "The long flat allowance",
+      "brief": "With less climbing to spare, the canal is worth its extra distance.",
+      "start": "s",
+      "goal": "t",
+      "distanceBudget": 9,
+      "climbBudget": 1,
+      "nodes": [
+        {
+          "id": "s",
+          "name": "Depot",
+          "x": 12,
+          "y": 48,
+          "height": 0
+        },
+        {
+          "id": "p",
+          "name": "West hill",
+          "x": 30,
+          "y": 18,
+          "height": 4
+        },
+        {
+          "id": "q",
+          "name": "Hollow",
+          "x": 50,
+          "y": 18,
+          "height": 0
+        },
+        {
+          "id": "r",
+          "name": "East hill",
+          "x": 70,
+          "y": 18,
+          "height": 4
+        },
+        {
+          "id": "t",
+          "name": "Station",
+          "x": 88,
+          "y": 48,
+          "height": 0
+        },
+        {
+          "id": "a",
+          "name": "Towpath",
+          "x": 32,
+          "y": 80,
+          "height": 1
+        },
+        {
+          "id": "b",
+          "name": "Canal",
+          "x": 68,
+          "y": 80,
+          "height": 1
+        }
+      ],
+      "edges": [
+        [
+          "s",
+          "p",
+          1
+        ],
+        [
+          "p",
+          "q",
+          1
+        ],
+        [
+          "q",
+          "r",
+          1
+        ],
+        [
+          "r",
+          "t",
+          1
+        ],
+        [
+          "s",
+          "a",
+          3
+        ],
+        [
+          "a",
+          "b",
+          3
+        ],
+        [
+          "b",
+          "t",
+          3
+        ],
+        [
+          "q",
+          "b",
+          1
+        ]
+      ]
+    },
+    "win": [
+      "s",
+      "a",
+      "b",
+      "t"
+    ],
+    "wrong": [
+      "s",
+      "p",
+      "q",
+      "b",
+      "t"
+    ],
+    "winCost": [
+      9,
+      1
+    ],
+    "wrongCost": [
+      6,
+      5
+    ]
+  },
+  {
+    "level": {
+      "id": "quay-outward",
+      "title": "Down to the quay",
+      "brief": "The windmill asks for one last rise. The rest of that short road is downhill.",
+      "start": "s",
+      "goal": "t",
+      "distanceBudget": 4,
+      "climbBudget": 1,
+      "nodes": [
+        {
+          "id": "s",
+          "name": "Post",
+          "x": 12,
+          "y": 48,
+          "height": 4
+        },
+        {
+          "id": "h",
+          "name": "Windmill",
+          "x": 50,
+          "y": 18,
+          "height": 5
+        },
+        {
+          "id": "t",
+          "name": "Quay",
+          "x": 88,
+          "y": 48,
+          "height": 0
+        },
+        {
+          "id": "a",
+          "name": "Upper lane",
+          "x": 28,
+          "y": 80,
+          "height": 3
+        },
+        {
+          "id": "b",
+          "name": "Mid lane",
+          "x": 50,
+          "y": 80,
+          "height": 2
+        },
+        {
+          "id": "c",
+          "name": "Lower lane",
+          "x": 72,
+          "y": 80,
+          "height": 1
+        }
+      ],
+      "edges": [
+        [
+          "s",
+          "h",
+          2
+        ],
+        [
+          "h",
+          "t",
+          2
+        ],
+        [
+          "s",
+          "a",
+          2
+        ],
+        [
+          "a",
+          "b",
+          2
+        ],
+        [
+          "b",
+          "c",
+          2
+        ],
+        [
+          "c",
+          "t",
+          2
+        ]
+      ]
+    },
+    "win": [
+      "s",
+      "h",
+      "t"
+    ],
+    "wrong": [
+      "s",
+      "a",
+      "b",
+      "c",
+      "t"
+    ],
+    "winCost": [
+      4,
+      1
+    ],
+    "wrongCost": [
+      8,
+      0
+    ]
+  },
+  {
+    "level": {
+      "id": "quay-homeward",
+      "title": "Four steps back up",
+      "brief": "Bring a reply from the quay. Climbing the lanes fits; climbing the windmill does not.",
+      "start": "t",
+      "goal": "s",
+      "distanceBudget": 8,
+      "climbBudget": 4,
+      "nodes": [
+        {
+          "id": "s",
+          "name": "Post",
+          "x": 12,
+          "y": 48,
+          "height": 4
+        },
+        {
+          "id": "h",
+          "name": "Windmill",
+          "x": 50,
+          "y": 18,
+          "height": 5
+        },
+        {
+          "id": "t",
+          "name": "Quay",
+          "x": 88,
+          "y": 48,
+          "height": 0
+        },
+        {
+          "id": "a",
+          "name": "Upper lane",
+          "x": 28,
+          "y": 80,
+          "height": 3
+        },
+        {
+          "id": "b",
+          "name": "Mid lane",
+          "x": 50,
+          "y": 80,
+          "height": 2
+        },
+        {
+          "id": "c",
+          "name": "Lower lane",
+          "x": 72,
+          "y": 80,
+          "height": 1
+        }
+      ],
+      "edges": [
+        [
+          "s",
+          "h",
+          2
+        ],
+        [
+          "h",
+          "t",
+          2
+        ],
+        [
+          "s",
+          "a",
+          2
+        ],
+        [
+          "a",
+          "b",
+          2
+        ],
+        [
+          "b",
+          "c",
+          2
+        ],
+        [
+          "c",
+          "t",
+          2
+        ]
+      ]
+    },
+    "win": [
+      "t",
+      "c",
+      "b",
+      "a",
+      "s"
+    ],
+    "wrong": [
+      "t",
+      "h",
+      "s"
+    ],
+    "winCost": [
+      8,
+      4
+    ],
+    "wrongCost": [
+      4,
+      5
+    ]
+  },
+  {
+    "level": {
+      "id": "library-link",
+      "title": "Leave the deep cut",
+      "brief": "A descent into the cut makes the next rise larger. Turn toward the garden instead.",
+      "start": "s",
+      "goal": "t",
+      "distanceBudget": 6,
+      "climbBudget": 5,
+      "nodes": [
+        {
+          "id": "s",
+          "name": "Post",
+          "x": 12,
+          "y": 48,
+          "height": 3
+        },
+        {
+          "id": "p",
+          "name": "West rim",
+          "x": 30,
+          "y": 18,
+          "height": 5
+        },
+        {
+          "id": "q",
+          "name": "Deep cut",
+          "x": 50,
+          "y": 18,
+          "height": 1
+        },
+        {
+          "id": "r",
+          "name": "East rim",
+          "x": 70,
+          "y": 18,
+          "height": 5
+        },
+        {
+          "id": "t",
+          "name": "Library",
+          "x": 88,
+          "y": 48,
+          "height": 3
+        },
+        {
+          "id": "a",
+          "name": "South lane",
+          "x": 32,
+          "y": 80,
+          "height": 4
+        },
+        {
+          "id": "b",
+          "name": "Garden",
+          "x": 68,
+          "y": 80,
+          "height": 4
+        }
+      ],
+      "edges": [
+        [
+          "s",
+          "p",
+          1
+        ],
+        [
+          "p",
+          "q",
+          1
+        ],
+        [
+          "q",
+          "r",
+          1
+        ],
+        [
+          "r",
+          "t",
+          1
+        ],
+        [
+          "s",
+          "a",
+          3
+        ],
+        [
+          "a",
+          "b",
+          3
+        ],
+        [
+          "b",
+          "t",
+          3
+        ],
+        [
+          "q",
+          "b",
+          1
+        ]
+      ]
+    },
+    "win": [
+      "s",
+      "p",
+      "q",
+      "b",
+      "t"
+    ],
+    "wrong": [
+      "s",
+      "p",
+      "q",
+      "r",
+      "t"
+    ],
+    "winCost": [
+      6,
+      5
+    ],
+    "wrongCost": [
+      4,
+      6
+    ]
+  },
+  {
+    "level": {
+      "id": "library-rims",
+      "title": "Over both rims",
+      "brief": "A tighter distance allowance makes both rims useful. Count the climb out of the deep cut.",
+      "start": "s",
+      "goal": "t",
+      "distanceBudget": 4,
+      "climbBudget": 6,
+      "nodes": [
+        {
+          "id": "s",
+          "name": "Post",
+          "x": 12,
+          "y": 48,
+          "height": 3
+        },
+        {
+          "id": "p",
+          "name": "West rim",
+          "x": 30,
+          "y": 18,
+          "height": 5
+        },
+        {
+          "id": "q",
+          "name": "Deep cut",
+          "x": 50,
+          "y": 18,
+          "height": 1
+        },
+        {
+          "id": "r",
+          "name": "East rim",
+          "x": 70,
+          "y": 18,
+          "height": 5
+        },
+        {
+          "id": "t",
+          "name": "Library",
+          "x": 88,
+          "y": 48,
+          "height": 3
+        },
+        {
+          "id": "a",
+          "name": "South lane",
+          "x": 32,
+          "y": 80,
+          "height": 4
+        },
+        {
+          "id": "b",
+          "name": "Garden",
+          "x": 68,
+          "y": 80,
+          "height": 4
+        }
+      ],
+      "edges": [
+        [
+          "s",
+          "p",
+          1
+        ],
+        [
+          "p",
+          "q",
+          1
+        ],
+        [
+          "q",
+          "r",
+          1
+        ],
+        [
+          "r",
+          "t",
+          1
+        ],
+        [
+          "s",
+          "a",
+          3
+        ],
+        [
+          "a",
+          "b",
+          3
+        ],
+        [
+          "b",
+          "t",
+          3
+        ],
+        [
+          "q",
+          "b",
+          1
+        ]
+      ]
+    },
+    "win": [
+      "s",
+      "p",
+      "q",
+      "r",
+      "t"
+    ],
+    "wrong": [
+      "s",
+      "a",
+      "b",
+      "t"
+    ],
+    "winCost": [
+      4,
+      6
+    ],
+    "wrongCost": [
+      9,
+      1
+    ]
+  },
+  {
+    "level": {
+      "id": "school-middle",
+      "title": "Not the shortest road",
+      "brief": "Bell hill is too steep and the field is too long. The north road fits both limits.",
+      "start": "s",
+      "goal": "t",
+      "distanceBudget": 4,
+      "climbBudget": 2,
+      "nodes": [
+        {
+          "id": "s",
+          "name": "Depot",
+          "x": 12,
+          "y": 48,
+          "height": 0
+        },
+        {
+          "id": "p",
+          "name": "North rise",
+          "x": 30,
+          "y": 18,
+          "height": 2
+        },
+        {
+          "id": "q",
+          "name": "North lane",
+          "x": 70,
+          "y": 18,
+          "height": 2
+        },
+        {
+          "id": "t",
+          "name": "School",
+          "x": 88,
+          "y": 48,
+          "height": 0
+        },
+        {
+          "id": "a",
+          "name": "South lane",
+          "x": 30,
+          "y": 80,
+          "height": 0
+        },
+        {
+          "id": "b",
+          "name": "Field",
+          "x": 70,
+          "y": 80,
+          "height": 0
+        },
+        {
+          "id": "c",
+          "name": "Bell hill",
+          "x": 50,
+          "y": 48,
+          "height": 5
+        }
+      ],
+      "edges": [
+        [
+          "s",
+          "p",
+          2
+        ],
+        [
+          "p",
+          "q",
+          1
+        ],
+        [
+          "q",
+          "t",
+          1
+        ],
+        [
+          "s",
+          "a",
+          1
+        ],
+        [
+          "a",
+          "b",
+          3
+        ],
+        [
+          "b",
+          "t",
+          1
+        ],
+        [
+          "s",
+          "c",
+          1
+        ],
+        [
+          "c",
+          "t",
+          1
+        ]
+      ]
+    },
+    "win": [
+      "s",
+      "p",
+      "q",
+      "t"
+    ],
+    "wrong": [
+      "s",
+      "c",
+      "t"
+    ],
+    "winCost": [
+      4,
+      2
+    ],
+    "wrongCost": [
+      2,
+      5
+    ]
+  },
+  {
+    "level": {
+      "id": "school-flat",
+      "title": "No climbing today",
+      "brief": "There is time to go around the field. Keep this parcel on level roads.",
+      "start": "s",
+      "goal": "t",
+      "distanceBudget": 5,
+      "climbBudget": 0,
+      "nodes": [
+        {
+          "id": "s",
+          "name": "Depot",
+          "x": 12,
+          "y": 48,
+          "height": 0
+        },
+        {
+          "id": "p",
+          "name": "North rise",
+          "x": 30,
+          "y": 18,
+          "height": 2
+        },
+        {
+          "id": "q",
+          "name": "North lane",
+          "x": 70,
+          "y": 18,
+          "height": 2
+        },
+        {
+          "id": "t",
+          "name": "School",
+          "x": 88,
+          "y": 48,
+          "height": 0
+        },
+        {
+          "id": "a",
+          "name": "South lane",
+          "x": 30,
+          "y": 80,
+          "height": 0
+        },
+        {
+          "id": "b",
+          "name": "Field",
+          "x": 70,
+          "y": 80,
+          "height": 0
+        },
+        {
+          "id": "c",
+          "name": "Bell hill",
+          "x": 50,
+          "y": 48,
+          "height": 5
+        }
+      ],
+      "edges": [
+        [
+          "s",
+          "p",
+          2
+        ],
+        [
+          "p",
+          "q",
+          1
+        ],
+        [
+          "q",
+          "t",
+          1
+        ],
+        [
+          "s",
+          "a",
+          1
+        ],
+        [
+          "a",
+          "b",
+          3
+        ],
+        [
+          "b",
+          "t",
+          1
+        ],
+        [
+          "s",
+          "c",
+          1
+        ],
+        [
+          "c",
+          "t",
+          1
+        ]
+      ]
+    },
+    "win": [
+      "s",
+      "a",
+      "b",
+      "t"
+    ],
+    "wrong": [
+      "s",
+      "p",
+      "q",
+      "t"
+    ],
+    "winCost": [
+      5,
+      0
+    ],
+    "wrongCost": [
+      4,
+      2
+    ]
+  }
+]

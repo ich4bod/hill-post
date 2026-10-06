@@ -7,7 +7,8 @@ if(process.argv[2]==='facts'){
  assert.deepEqual(cost(fixture[0],['s','a','b','c','t']),[8,1]);assert.deepEqual(cost(fixture[0],['s','h','t']),[4,4]);assert.deepEqual(cost(fixture[2],['s','p','q','r','t']),[4,4]);assert.deepEqual(cost(fixture[2],['s','a','b','t']),[6,1]);console.log('three delivery maps separate distance from cumulative climb');
 }else{
  const root=process.env.HILL_REFERENCE||new URL('../site/',import.meta.url).pathname;
- const {levels}=await import(pathToFileURL(root+'levels.mjs'));assert.deepEqual(levels,fixture);
+ const {levels}=await import(pathToFileURL(root+'levels.mjs'));// New authored deliveries may append; the original three records remain exact.
+ assert.deepEqual(levels.slice(0,fixture.length),fixture);assert.equal(new Set(levels.map(l=>l.id)).size,levels.length);
  const {create,move,undo,restart}=await import(pathToFileURL(root+'engine.mjs'));
  assert.throws(()=>create('missing'),RangeError);
  for(const [id,route,dist,climb] of [['contour',['a','b','c','t'],8,1],['ridge',['h','t'],4,4],['two-hills',['a','b','t'],6,1]]){
