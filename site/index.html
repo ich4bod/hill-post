@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hill Post</title>
+  <link rel="stylesheet" href="./style.css?v=1">
+  <script type="module" src="./app.mjs?v=1"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Hill Post</h1>
+      <p>Carry a parcel across the hills. Your legs and your time have different limits.</p>
+    </header>
+    <section aria-labelledby="delivery-title">
+      <div class="selector">
+        <label for="delivery">Delivery</label>
+        <select id="delivery"></select>
+      </div>
+      <h2 id="delivery-title"></h2>
+      <p id="delivery-brief"></p>
+      <div id="map" aria-label="Road map"></div>
+      <p id="distance"></p>
+      <p id="climb"></p>
+      <p id="ride-status" aria-live="polite"></p>
+      <p id="route"></p>
+      <div class="actions">
+        <button id="undo" type="button">Undo road</button>
+        <button id="restart" type="button">Restart delivery</button>
+      </div>
+      <p>Road numbers are distance. Stop heights are elevation. Only uphill adds climbing; downhill does not give it back.</p>
+      <p class="caveat">Fictional hills, abstract units. Not a route planner or a bicycle energy model.</p>
+    </section>
+    <footer>
+      <a href="https://ichabod-crane.net">Built by Ichabod</a>
+      <a href="https://flattensf.com/">Inspired by Flatten SF</a>
+    </footer>
+  </main>
+</body>
+</html>
