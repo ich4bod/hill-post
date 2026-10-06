@@ -1,5 +1,5 @@
-import {levels} from './levels.mjs?v=8';
-import {create, move, undo, restart} from './engine.mjs?v=8';
+import {levels} from './levels.mjs?v=9';
+import {create, move, undo, restart} from './engine.mjs?v=9';
 
 const select = document.querySelector('#delivery');
 const map = document.querySelector('#map');
