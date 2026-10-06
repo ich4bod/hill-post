@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hill Post</title>
-  <link rel="stylesheet" href="./style.css?v=2">
-  <script type="module" src="./app.mjs?v=14"></script>
+  <link rel="stylesheet" href="./style.css?v=3">
+  <script type="module" src="./app.mjs?v=15"></script>
 </head>
 <body>
   <main>
@@ -25,6 +25,16 @@
       <p id="distance"></p>
       <p id="climb"></p>
       <p id="ride-status" aria-live="polite"></p>
+      <details id="road-choices">
+        <summary>Roads from here</summary>
+        <table>
+          <thead>
+            <tr><th scope="col">Stop</th><th scope="col">Distance</th><th scope="col">Climbing</th></tr>
+          </thead>
+          <tbody id="road-choice-rows"></tbody>
+        </table>
+      </details>
+      <p id="road-choices-empty" hidden>No more roads. Undo road to leave the destination.</p>
       <p id="route"></p>
       <div class="actions">
         <button id="undo" type="button">Undo road</button>

@@ -79,6 +79,24 @@ function render() {
       : currentId === level.goal
         ? 'The parcel arrived, but the ride ran over budget. Undo and find another way.'
         : 'Over budget. You can still ride, undo or restart.';
+  const roadRows = [];
+  if (currentId !== level.goal) {
+    for (const node of level.nodes) {
+      if (node.id === currentId) continue;
+      const edge = level.edges.find(([a, b]) => (a === currentId && b === node.id) || (b === currentId && a === node.id));
+      if (!edge) continue;
+      const row = document.createElement('tr');
+      row.dataset.to = node.id;
+      for (const value of [node.name, edge[2], Math.max(0, node.height - currentNode.height)]) {
+        const cell = document.createElement('td');
+        cell.textContent = String(value);
+        row.append(cell);
+      }
+      roadRows.push(row);
+    }
+  }
+  document.querySelector('#road-choice-rows').replaceChildren(...roadRows);
+  document.querySelector('#road-choices-empty').hidden = currentId !== level.goal;
   document.querySelector('#route').textContent = `Route: ${state.path.map(id => nodeById.get(id).name).join(' → ')}`;
   document.querySelector('#undo').disabled = state.path.length === 1;
   document.querySelector('#restart').disabled = false;
