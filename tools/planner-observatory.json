@@ -1,0 +1,346 @@
+[
+  {
+    "level": {
+      "id": "observatory-link",
+      "title": "A parcel for the observatory",
+      "brief": "The tower rises above the destination. A turn at the orchard saves that extra climb.",
+      "start": "s",
+      "goal": "t",
+      "distanceBudget": 5,
+      "climbBudget": 4,
+      "nodes": [
+        {
+          "id": "s",
+          "name": "Depot",
+          "x": 12,
+          "y": 50,
+          "height": 0
+        },
+        {
+          "id": "a",
+          "name": "Orchard",
+          "x": 30,
+          "y": 20,
+          "height": 2
+        },
+        {
+          "id": "b",
+          "name": "Water tower",
+          "x": 70,
+          "y": 20,
+          "height": 5
+        },
+        {
+          "id": "t",
+          "name": "Observatory",
+          "x": 88,
+          "y": 50,
+          "height": 4
+        },
+        {
+          "id": "c",
+          "name": "Lime kiln",
+          "x": 30,
+          "y": 80,
+          "height": 0
+        },
+        {
+          "id": "d",
+          "name": "Quarry",
+          "x": 70,
+          "y": 80,
+          "height": 1
+        },
+        {
+          "id": "m",
+          "name": "Switchback",
+          "x": 50,
+          "y": 50,
+          "height": 3
+        }
+      ],
+      "edges": [
+        [
+          "s",
+          "a",
+          2
+        ],
+        [
+          "a",
+          "b",
+          2
+        ],
+        [
+          "b",
+          "t",
+          2
+        ],
+        [
+          "s",
+          "c",
+          2
+        ],
+        [
+          "c",
+          "d",
+          2
+        ],
+        [
+          "d",
+          "t",
+          2
+        ],
+        [
+          "a",
+          "m",
+          1
+        ],
+        [
+          "m",
+          "d",
+          1
+        ],
+        [
+          "m",
+          "t",
+          2
+        ]
+      ]
+    },
+    "path": [
+      "s",
+      "a",
+      "m",
+      "t"
+    ]
+  },
+  {
+    "level": {
+      "id": "observatory-home",
+      "title": "Down from the observatory",
+      "brief": "Bring the empty case to the depot without another rise. The quarry road takes too long.",
+      "start": "t",
+      "goal": "s",
+      "distanceBudget": 5,
+      "climbBudget": 0,
+      "nodes": [
+        {
+          "id": "s",
+          "name": "Depot",
+          "x": 12,
+          "y": 50,
+          "height": 0
+        },
+        {
+          "id": "a",
+          "name": "Orchard",
+          "x": 30,
+          "y": 20,
+          "height": 2
+        },
+        {
+          "id": "b",
+          "name": "Water tower",
+          "x": 70,
+          "y": 20,
+          "height": 5
+        },
+        {
+          "id": "t",
+          "name": "Observatory",
+          "x": 88,
+          "y": 50,
+          "height": 4
+        },
+        {
+          "id": "c",
+          "name": "Lime kiln",
+          "x": 30,
+          "y": 80,
+          "height": 0
+        },
+        {
+          "id": "d",
+          "name": "Quarry",
+          "x": 70,
+          "y": 80,
+          "height": 1
+        },
+        {
+          "id": "m",
+          "name": "Switchback",
+          "x": 50,
+          "y": 50,
+          "height": 3
+        }
+      ],
+      "edges": [
+        [
+          "s",
+          "a",
+          2
+        ],
+        [
+          "a",
+          "b",
+          2
+        ],
+        [
+          "b",
+          "t",
+          2
+        ],
+        [
+          "s",
+          "c",
+          2
+        ],
+        [
+          "c",
+          "d",
+          2
+        ],
+        [
+          "d",
+          "t",
+          2
+        ],
+        [
+          "a",
+          "m",
+          1
+        ],
+        [
+          "m",
+          "d",
+          1
+        ],
+        [
+          "m",
+          "t",
+          2
+        ]
+      ]
+    },
+    "path": [
+      "t",
+      "m",
+      "a",
+      "s"
+    ]
+  },
+  {
+    "level": {
+      "id": "tower-parcel",
+      "title": "Stop at the water tower",
+      "brief": "This parcel belongs at the tower, not the observatory. Spend five climbing units to reach it.",
+      "start": "s",
+      "goal": "b",
+      "distanceBudget": 4,
+      "climbBudget": 5,
+      "nodes": [
+        {
+          "id": "s",
+          "name": "Depot",
+          "x": 12,
+          "y": 50,
+          "height": 0
+        },
+        {
+          "id": "a",
+          "name": "Orchard",
+          "x": 30,
+          "y": 20,
+          "height": 2
+        },
+        {
+          "id": "b",
+          "name": "Water tower",
+          "x": 70,
+          "y": 20,
+          "height": 5
+        },
+        {
+          "id": "t",
+          "name": "Observatory",
+          "x": 88,
+          "y": 50,
+          "height": 4
+        },
+        {
+          "id": "c",
+          "name": "Lime kiln",
+          "x": 30,
+          "y": 80,
+          "height": 0
+        },
+        {
+          "id": "d",
+          "name": "Quarry",
+          "x": 70,
+          "y": 80,
+          "height": 1
+        },
+        {
+          "id": "m",
+          "name": "Switchback",
+          "x": 50,
+          "y": 50,
+          "height": 3
+        }
+      ],
+      "edges": [
+        [
+          "s",
+          "a",
+          2
+        ],
+        [
+          "a",
+          "b",
+          2
+        ],
+        [
+          "b",
+          "t",
+          2
+        ],
+        [
+          "s",
+          "c",
+          2
+        ],
+        [
+          "c",
+          "d",
+          2
+        ],
+        [
+          "d",
+          "t",
+          2
+        ],
+        [
+          "a",
+          "m",
+          1
+        ],
+        [
+          "m",
+          "d",
+          1
+        ],
+        [
+          "m",
+          "t",
+          2
+        ]
+      ]
+    },
+    "path": [
+      "s",
+      "a",
+      "b"
+    ]
+  }
+]
