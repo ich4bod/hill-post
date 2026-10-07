@@ -32,6 +32,18 @@ for (const [label, levelIds] of deliveryGroups) {
 }
 select.value = state.levelId;
 
+function junctionIndex(level, path) {
+  const neighbors = new Map(level.nodes.map(node => [node.id, new Set()]));
+  for (const [a, b] of level.edges) {
+    neighbors.get(a).add(b);
+    neighbors.get(b).add(a);
+  }
+  for (let i = path.length - 2; i >= 0; i--) {
+    if (neighbors.get(path[i]).size >= 3) return i;
+  }
+  return 0;
+}
+
 function render() {
   const level = levelById.get(state.levelId);
   const nodeById = new Map(level.nodes.map(node => [node.id, node]));
@@ -143,6 +155,7 @@ function render() {
   legList.replaceChildren(...legItems);
   document.querySelector('#ride-legs-empty').hidden = state.path.length > 1;
   document.querySelector('#undo').disabled = state.path.length === 1;
+  document.querySelector('#undo-junction').disabled = state.path.length === 1;
   document.querySelector('#restart').disabled = false;
   document.querySelector('#remember-ride').disabled = state.path.length < 2;
   const comparisonTable = document.querySelector('#ride-comparison table');
@@ -338,6 +351,12 @@ map.addEventListener('click', event => {
 });
 select.addEventListener('change', () => { state = create(select.value); render(); });
 document.querySelector('#undo').addEventListener('click', () => { state = undo(state); render(); });
+document.querySelector('#undo-junction').addEventListener('click', () => {
+  if (state.path.length === 1) return;
+  const targetLength = junctionIndex(levelById.get(state.levelId), state.path) + 1;
+  while (state.path.length > targetLength) state = undo(state);
+  render();
+});
 document.querySelector('#restart').addEventListener('click', () => { state = restart(state); render(); });
 document.querySelector('#remember-ride').addEventListener('click', () => {
   if (state.path.length < 2) return;
