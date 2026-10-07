@@ -1,7 +1,8 @@
-import {levels} from './levels.mjs?v=13';
-import {create, move, undo, restart} from './engine.mjs?v=13';
+import {levels} from './levels.mjs?v=14';
+import {create, move, undo, restart} from './engine.mjs?v=14';
 
 const select = document.querySelector('#delivery');
+select.style.minWidth = '0';
 const map = document.querySelector('#map');
 const levelById = new Map(levels.map(level => [level.id, level]));
 let state = create('contour');
@@ -15,6 +16,7 @@ const deliveryGroups = [
   ['Quay', ['quay-outward', 'quay-homeward']],
   ['Library', ['library-link', 'library-rims']],
   ['School', ['school-middle', 'school-flat']],
+  ['Glasshouse', ['glasshouse-link', 'glasshouse-home', 'glasshouse-express']],
 ];
 
 for (const [label, levelIds] of deliveryGroups) {
