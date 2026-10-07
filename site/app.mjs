@@ -98,6 +98,8 @@ function render() {
   const climb = document.querySelector('#climb');
   climb.textContent = `Climbing: ${state.climb} / ${level.climbBudget}`;
   climb.classList.toggle('over-budget', state.climb > level.climbBudget);
+  const allowance = (name, remaining) => `${name} ${remaining >= 0 ? 'left' : 'over'}: ${Math.abs(remaining)}.`;
+  document.querySelector('#ride-allowance').textContent = `${allowance('Distance', level.distanceBudget - state.distance)} ${allowance('Climbing', level.climbBudget - state.climb)}`;
   const status = document.querySelector('#ride-status');
   status.textContent = state.status === 'riding'
     ? 'Choose a road from the gold stop.'
