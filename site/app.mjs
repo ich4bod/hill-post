@@ -5,6 +5,7 @@ const select = document.querySelector('#delivery');
 const map = document.querySelector('#map');
 const levelById = new Map(levels.map(level => [level.id, level]));
 let state = create('contour');
+let keptRide = null;
 
 const deliveryGroups = [
   ['First rides', ['contour', 'ridge', 'two-hills']],
@@ -143,6 +144,32 @@ function render() {
   document.querySelector('#ride-legs-empty').hidden = state.path.length > 1;
   document.querySelector('#undo').disabled = state.path.length === 1;
   document.querySelector('#restart').disabled = false;
+  document.querySelector('#remember-ride').disabled = state.path.length < 2;
+  const comparisonTable = document.querySelector('#ride-comparison table');
+  const comparisonEmpty = document.querySelector('#ride-comparison-empty');
+  const sameLevelKept = keptRide?.levelId === state.levelId;
+  comparisonEmpty.hidden = sameLevelKept;
+  comparisonEmpty.textContent = keptRide && !sameLevelKept
+    ? 'The kept ride is on another delivery.'
+    : 'Ride at least one road, then keep it to compare another attempt.';
+  comparisonTable.hidden = !sameLevelKept;
+  const comparisonRows = [];
+  if (sameLevelKept) {
+    for (const [label, ridePath, rideDistance, rideClimb] of [
+      ['Current', state.path, state.distance, state.climb],
+      ['Kept', keptRide.path, keptRide.distance, keptRide.climb],
+    ]) {
+      const row = document.createElement('tr');
+      const route = ridePath.map(id => nodeById.get(id).name).join(' → ');
+      for (const value of [label, rideDistance, rideClimb, route]) {
+        const cell = document.createElement('td');
+        cell.textContent = String(value);
+        row.append(cell);
+      }
+      comparisonRows.push(row);
+    }
+  }
+  comparisonTable.querySelector('tbody').replaceChildren(...comparisonRows);
 }
 
 const cafeRows = document.querySelector('#ride-pair-cafe-rows');
@@ -309,5 +336,10 @@ map.addEventListener('click', event => {
 select.addEventListener('change', () => { state = create(select.value); render(); });
 document.querySelector('#undo').addEventListener('click', () => { state = undo(state); render(); });
 document.querySelector('#restart').addEventListener('click', () => { state = restart(state); render(); });
+document.querySelector('#remember-ride').addEventListener('click', () => {
+  if (state.path.length < 2) return;
+  keptRide = {levelId: state.levelId, path: [...state.path], distance: state.distance, climb: state.climb};
+  render();
+});
 window.__hillPost = {state: () => structuredClone(state)};
 render();

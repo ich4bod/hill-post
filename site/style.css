@@ -62,7 +62,7 @@ select { min-height: 44px; max-width: 100%; padding: 6px 10px; }
 }
 #map button[aria-current="location"] { background: #f1c75b; }
 #map button:disabled { opacity: .65; cursor: default; }
-#map button:focus-visible, .actions button:focus-visible, select:focus-visible, #road-choices > summary:focus-visible, #ride-legs > summary:focus-visible {
+#map button:focus-visible, .actions button:focus-visible, select:focus-visible, #road-choices > summary:focus-visible, #ride-legs > summary:focus-visible, #ride-comparison > summary:focus-visible {
   outline: 3px solid #d46a3c;
   outline-offset: 3px;
 }
@@ -124,6 +124,25 @@ select { min-height: 44px; max-width: 100%; padding: 6px 10px; }
 #ride-legs li { margin: 6px 0; }
 #road-choices th, #road-choices td { text-align: left; padding: 4px; }
 #route { margin: 8px 0; overflow-wrap: anywhere; }
+#ride-comparison {
+  margin: 12px 0;
+  padding: 0 12px;
+  border: 1px solid #203a32;
+  border-radius: 12px;
+}
+#ride-comparison > summary {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  cursor: pointer;
+  font: 18px Georgia, serif;
+}
+#ride-comparison table { width: 100%; table-layout: fixed; border-collapse: collapse; font: 13px/1.5 system-ui, sans-serif; }
+#ride-comparison th, #ride-comparison td { padding: 6px 2px; text-align: left; overflow-wrap: anywhere; }
+#ride-comparison th:nth-child(1), #ride-comparison td:nth-child(1) { width: 14%; }
+#ride-comparison th:nth-child(2), #ride-comparison td:nth-child(2) { width: 18%; }
+#ride-comparison th:nth-child(3), #ride-comparison td:nth-child(3) { width: 20%; }
+#ride-comparison th:nth-child(4), #ride-comparison td:nth-child(4) { width: 48%; }
 .actions { display: flex; flex-wrap: wrap; gap: 8px; }
 .actions button { min-height: 44px; padding: 8px 14px; border: 2px solid #203a32; border-radius: 8px; background: #fffdf2; cursor: pointer; }
 .actions button:disabled { opacity: .65; cursor: default; }
