@@ -6,11 +6,28 @@ const map = document.querySelector('#map');
 const levelById = new Map(levels.map(level => [level.id, level]));
 let state = create('contour');
 
-for (const level of levels) {
-  const option = document.createElement('option');
-  option.value = level.id;
-  option.textContent = level.title;
-  select.append(option);
+const deliveryGroups = [
+  ['First rides', ['contour', 'ridge', 'two-hills']],
+  ['Cafe hill', ['cafe-upward', 'cafe-homeward']],
+  ['Bakery', ['bakery-gentle', 'bakery-express']],
+  ['Station', ['station-cut', 'station-canal']],
+  ['Quay', ['quay-outward', 'quay-homeward']],
+  ['Library', ['library-link', 'library-rims']],
+  ['School', ['school-middle', 'school-flat']],
+];
+
+for (const [label, levelIds] of deliveryGroups) {
+  const group = document.createElement('optgroup');
+  group.label = label;
+  for (const id of levelIds) {
+    const level = levelById.get(id);
+    if (!level) throw new RangeError(`Unknown delivery: ${id}`);
+    const option = document.createElement('option');
+    option.value = level.id;
+    option.textContent = level.title;
+    group.append(option);
+  }
+  select.append(group);
 }
 select.value = state.levelId;
 
