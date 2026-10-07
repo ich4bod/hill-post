@@ -122,6 +122,17 @@ select { min-height: 44px; max-width: 100%; padding: 6px 10px; }
 #ride-legs > summary { min-height: 44px; line-height: 44px; cursor: pointer; }
 #ride-legs ol { padding-left: 24px; color: #203a32; font: 14px/1.5 system-ui, sans-serif; }
 #ride-legs li { margin: 6px 0; }
+#ride-profile {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-width: 0;
+  margin: 8px 0;
+  border: 1px solid #8c9b86;
+  border-radius: 8px;
+  background: #fffdf2;
+}
+#ride-profile-help { margin: 8px 0; font: 14px/1.5 system-ui, sans-serif; }
 #road-choices th, #road-choices td { text-align: left; padding: 4px; }
 #route { margin: 8px 0; overflow-wrap: anywhere; }
 #ride-comparison {

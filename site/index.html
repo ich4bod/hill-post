@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hill Post</title>
-  <link rel="stylesheet" href="./style.css?v=6">
-  <script type="module" src="./app.mjs?v=29"></script>
+  <link rel="stylesheet" href="./style.css?v=7">
+  <script type="module" src="./app.mjs?v=30"></script>
 </head>
 <body>
   <main>
@@ -42,6 +42,11 @@
         <summary>Every road in this ride</summary>
         <p id="ride-legs-empty">No roads ridden yet.</p>
         <ol id="ride-leg-list"></ol>
+        <svg id="ride-profile" viewBox="0 0 320 120" aria-hidden="true">
+          <polyline id="ride-profile-live" fill="none" stroke="#d46a3c" stroke-width="3"></polyline>
+          <polyline id="ride-profile-kept" fill="none" stroke="#203a32" stroke-width="2" hidden></polyline>
+        </svg>
+        <p id="ride-profile-help">Heights use one scale for this delivery. Horizontal positions follow distance already ridden.</p>
       </details>
       <div class="actions">
         <button id="undo" type="button">Undo road</button>

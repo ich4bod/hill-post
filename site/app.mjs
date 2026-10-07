@@ -44,6 +44,25 @@ function junctionIndex(level, path) {
   return 0;
 }
 
+function profilePoints(level, path) {
+  const low = Math.min(...level.nodes.map(node => node.height));
+  const high = Math.max(...level.nodes.map(node => node.height));
+  const distances = [0];
+  for (let i = 1; i < path.length; i++) {
+    const fromId = path[i - 1], toId = path[i];
+    const edge = level.edges.find(([a, b]) => (a === fromId && b === toId) || (a === toId && b === fromId));
+    distances.push(distances[i - 1] + edge[2]);
+  }
+  const total = distances.at(-1);
+  const nodeById = new Map(level.nodes.map(node => [node.id, node]));
+  return path.map((id, i) => {
+    const node = nodeById.get(id);
+    const x = 16 + 288 * distances[i] / Math.max(1, total);
+    const y = 104 - 88 * (node.height - low) / Math.max(1, high - low);
+    return `${x.toFixed(3)},${y.toFixed(3)}`;
+  }).join(' ');
+}
+
 function render() {
   const level = levelById.get(state.levelId);
   const nodeById = new Map(level.nodes.map(node => [node.id, node]));
@@ -153,6 +172,11 @@ function render() {
     return item;
   });
   legList.replaceChildren(...legItems);
+  document.querySelector('#ride-profile-live').setAttribute('points', profilePoints(level, state.path));
+  const keptProfile = document.querySelector('#ride-profile-kept');
+  const sameLevelKept = keptRide?.levelId === state.levelId;
+  keptProfile.toggleAttribute('hidden', !sameLevelKept);
+  if (sameLevelKept) keptProfile.setAttribute('points', profilePoints(level, keptRide.path));
   document.querySelector('#ride-legs-empty').hidden = state.path.length > 1;
   document.querySelector('#undo').disabled = state.path.length === 1;
   document.querySelector('#undo-junction').disabled = state.path.length === 1;
@@ -160,7 +184,6 @@ function render() {
   document.querySelector('#remember-ride').disabled = state.path.length < 2;
   const comparisonTable = document.querySelector('#ride-comparison table');
   const comparisonEmpty = document.querySelector('#ride-comparison-empty');
-  const sameLevelKept = keptRide?.levelId === state.levelId;
   const returnKeptRide = document.querySelector('#return-kept-ride');
   const differentKeptRoute = sameLevelKept && (keptRide.path.length !== state.path.length || keptRide.path.some((id, i) => id !== state.path[i]));
   returnKeptRide.disabled = !differentKeptRoute;
