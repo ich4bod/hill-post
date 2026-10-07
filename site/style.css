@@ -120,6 +120,22 @@ select { min-height: 44px; max-width: 100%; padding: 6px 10px; }
   background: #fffdf2;
 }
 #ride-legs > summary { min-height: 44px; line-height: 44px; cursor: pointer; }
+#retrace-route {
+  margin: 12px 0;
+  padding: 8px;
+  border: 1px solid #8c9b86;
+  border-radius: 8px;
+  background: #fffdf2;
+}
+#retrace-route > summary { min-height: 44px; line-height: 44px; cursor: pointer; }
+#retrace-route table { width: 100%; table-layout: fixed; border-collapse: collapse; font: 14px/1.5 system-ui, sans-serif; }
+#retrace-route th, #retrace-route td { padding: 4px; text-align: left; overflow-wrap: anywhere; }
+#retrace-route th:nth-child(1), #retrace-route td:nth-child(1) { width: 44%; }
+#retrace-route th:nth-child(2), #retrace-route td:nth-child(2),
+#retrace-route th:nth-child(3), #retrace-route td:nth-child(3) { width: 28%; }
+#retrace-values, #retrace-help { margin: 8px 0; }
+#retrace-help { font: 14px/1.5 system-ui, sans-serif; }
+#retrace-route > summary:focus-visible { outline: 3px solid #d46a3c; outline-offset: 3px; }
 #ride-legs ol { padding-left: 24px; color: #203a32; font: 14px/1.5 system-ui, sans-serif; }
 #ride-legs li { margin: 6px 0; }
 #ride-profile-kept[hidden] { display: none; }

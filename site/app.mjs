@@ -174,6 +174,27 @@ function render() {
     return item;
   });
   legList.replaceChildren(...legItems);
+  const retracePath = [...state.path].reverse();
+  const retraceRows = [];
+  let retraceDistance = 0;
+  let retraceClimb = 0;
+  for (let i = 1; i < retracePath.length; i++) {
+    const from = nodeById.get(retracePath[i - 1]);
+    const to = nodeById.get(retracePath[i]);
+    const edge = level.edges.find(([a, b]) => (a === from.id && b === to.id) || (a === to.id && b === from.id));
+    const climb = Math.max(0, to.height - from.height);
+    retraceDistance += edge[2];
+    retraceClimb += climb;
+    const row = document.createElement('tr');
+    for (const value of [`${from.name} → ${to.name}`, edge[2], climb]) {
+      const cell = document.createElement('td');
+      cell.textContent = String(value);
+      row.append(cell);
+    }
+    retraceRows.push(row);
+  }
+  document.querySelector('#retrace-values').textContent = `Retracing this ride: ${retraceDistance} distance · ${retraceClimb} climbing.`;
+  document.querySelector('#retrace-rows').replaceChildren(...retraceRows);
   document.querySelector('#ride-profile-live').setAttribute('points', profilePoints(level, state.path));
   const keptProfile = document.querySelector('#ride-profile-kept');
   const sameLevelKept = keptRide?.levelId === state.levelId;
