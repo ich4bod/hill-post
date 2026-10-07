@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hill Post</title>
-  <link rel="stylesheet" href="./style.css?v=4">
-  <script type="module" src="./app.mjs?v=19"></script>
+  <link rel="stylesheet" href="./style.css?v=5">
+  <script type="module" src="./app.mjs?v=20"></script>
 </head>
 <body>
   <main>
@@ -34,8 +34,8 @@
           </thead>
           <tbody id="road-choice-rows"></tbody>
         </table>
+        <p id="road-choices-empty" hidden>No more roads. Undo road to leave the destination.</p>
       </details>
-      <p id="road-choices-empty" hidden>No more roads. Undo road to leave the destination.</p>
       <p id="route"></p>
       <details id="ride-legs">
         <summary>Every road in this ride</summary>
@@ -47,6 +47,19 @@
         <button id="restart" type="button">Restart delivery</button>
       </div>
       <p>Road numbers are distance. Stop heights are elevation. Only uphill adds climbing; downhill does not give it back.</p>
+      <details id="ride-pairs">
+        <summary>Same roads, different ride</summary>
+        <section id="ride-pair-cafe" aria-labelledby="ride-pair-cafe-heading">
+          <h3 id="ride-pair-cafe-heading">Cafe hill</h3>
+          <p>The parcel climbs to the cafe; the empty bag comes home. The heights stay put, but uphill faces the other way.</p>
+          <table>
+            <thead>
+              <tr><th scope="col">Delivery</th><th scope="col">Distance</th><th scope="col">Climbing</th><th scope="col">Try it</th></tr>
+            </thead>
+            <tbody id="ride-pair-cafe-rows"></tbody>
+          </table>
+        </section>
+      </details>
       <p class="caveat">Fictional hills, abstract units. Not a route planner or a bicycle energy model.</p>
     </section>
     <footer>

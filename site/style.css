@@ -72,6 +72,37 @@ select { min-height: 44px; max-width: 100%; padding: 6px 10px; }
 #ride-status { min-height: 3em; margin: 8px 0 0; }
 #arrival-note { margin: 8px 0; color: #203a32; font: 14px/1.5 system-ui, sans-serif; }
 #arrival-note[hidden] { display: none; }
+#ride-pairs {
+  margin-top: 12px;
+  padding: 0 10px;
+  border: 1px solid #203a32;
+  border-radius: 10px;
+  background: #fffdf2;
+}
+#ride-pairs > summary {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  cursor: pointer;
+  font: 18px Georgia, serif;
+}
+#ride-pairs h3 { margin: 12px 0 4px; font: 18px Georgia, serif; }
+#ride-pairs section > p { margin: 0 0 8px; font: 14px/1.5 system-ui, sans-serif; }
+#ride-pairs table { width: 100%; table-layout: fixed; border-collapse: collapse; font: 13px/1.4 system-ui, sans-serif; }
+#ride-pairs th, #ride-pairs td { padding: 6px 2px; text-align: left; vertical-align: middle; overflow-wrap: anywhere; }
+#ride-pairs th:nth-child(1), #ride-pairs td:nth-child(1) { width: 40%; }
+#ride-pairs th:nth-child(2), #ride-pairs td:nth-child(2),
+#ride-pairs th:nth-child(3), #ride-pairs td:nth-child(3),
+#ride-pairs th:nth-child(4), #ride-pairs td:nth-child(4) { width: 20%; }
+#ride-pairs button {
+  min-height: 44px;
+  padding: 6px 8px;
+  border: 2px solid #203a32;
+  border-radius: 8px;
+  background: #fffdf2;
+  cursor: pointer;
+}
+#ride-pairs button:focus-visible, #ride-pairs > summary:focus-visible { outline: 3px solid #d46a3c; outline-offset: 3px; }
 #road-choices {
   margin: 12px 0;
   padding: 8px;
