@@ -70,7 +70,17 @@ function render() {
     button.style.left = `${node.x}%`;
     button.style.top = `${node.y}%`;
     button.disabled = node.id === currentId || currentId === level.goal || !adjacent.has(node.id);
-    if (node.id === currentId) button.setAttribute('aria-current', 'location');
+    if (node.id === currentId) {
+      button.setAttribute('aria-current', 'location');
+      button.setAttribute('aria-label', `At ${node.name}, height ${node.height}.`);
+    } else if (currentId === level.goal) {
+      button.setAttribute('aria-label', `${node.name}, height ${node.height}; ride finished.`);
+    } else if (adjacent.has(node.id)) {
+      const edge = level.edges.find(([a, b]) => (a === currentId && b === node.id) || (b === currentId && a === node.id));
+      button.setAttribute('aria-label', `Ride to ${node.name}, height ${node.height}; distance ${edge[2]}; climbing ${Math.max(0, node.height - currentNode.height)}.`);
+    } else {
+      button.setAttribute('aria-label', `${node.name}, height ${node.height}; no road from here.`);
+    }
     const name = document.createElement('span');
     name.className = 'stop-name'; name.textContent = node.name;
     const height = document.createElement('span');
