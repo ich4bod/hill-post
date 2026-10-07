@@ -148,6 +148,9 @@ function render() {
   const comparisonTable = document.querySelector('#ride-comparison table');
   const comparisonEmpty = document.querySelector('#ride-comparison-empty');
   const sameLevelKept = keptRide?.levelId === state.levelId;
+  const returnKeptRide = document.querySelector('#return-kept-ride');
+  const differentKeptRoute = sameLevelKept && (keptRide.path.length !== state.path.length || keptRide.path.some((id, i) => id !== state.path[i]));
+  returnKeptRide.disabled = !differentKeptRoute;
   comparisonEmpty.hidden = sameLevelKept;
   comparisonEmpty.textContent = keptRide && !sameLevelKept
     ? 'The kept ride is on another delivery.'
@@ -339,6 +342,13 @@ document.querySelector('#restart').addEventListener('click', () => { state = res
 document.querySelector('#remember-ride').addEventListener('click', () => {
   if (state.path.length < 2) return;
   keptRide = {levelId: state.levelId, path: [...state.path], distance: state.distance, climb: state.climb};
+  render();
+});
+document.querySelector('#return-kept-ride').addEventListener('click', () => {
+  if (!keptRide || keptRide.levelId !== state.levelId || (keptRide.path.length === state.path.length && keptRide.path.every((id, i) => id === state.path[i]))) return;
+  let restored = create(keptRide.levelId);
+  for (const id of keptRide.path.slice(1)) restored = move(restored, id);
+  state = restored;
   render();
 });
 window.__hillPost = {state: () => structuredClone(state)};
