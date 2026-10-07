@@ -195,6 +195,32 @@ for (const id of ['bakery-gentle', 'bakery-express']) {
   bakeryRows.append(row);
 }
 
+const stationRows = document.querySelector('#ride-pair-station-rows');
+for (const id of ['station-cut', 'station-canal']) {
+  const level = levelById.get(id);
+  if (!level) throw new RangeError(`Unknown comparison delivery: ${id}`);
+  const row = document.createElement('tr');
+  row.dataset.level = id;
+  for (const value of [level.title, level.distanceBudget, level.climbBudget]) {
+    const cell = document.createElement('td');
+    cell.textContent = String(value);
+    row.append(cell);
+  }
+  const action = document.createElement('td');
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.setAttribute('aria-label', `Start ${level.title}`);
+  button.textContent = 'Start';
+  button.addEventListener('click', () => {
+    select.value = id;
+    state = create(id);
+    render();
+  });
+  action.append(button);
+  row.append(action);
+  stationRows.append(row);
+}
+
 map.addEventListener('click', event => {
   const button = event.target.closest('button[id^="node-"]');
   if (button && map.contains(button) && !button.disabled) state = move(state, button.id.slice(5));
