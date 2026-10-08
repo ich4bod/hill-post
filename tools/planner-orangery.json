@@ -1,0 +1,230 @@
+[
+  {
+    "level": {
+      "id": "orangery-express",
+      "title": "An urgent print",
+      "description": "Reach the orangery by the steps. A short trip can spend more climbing.",
+      "nodes": [
+        {
+          "id": "p",
+          "name": "Print shop",
+          "x": 70,
+          "y": 240,
+          "height": 0
+        },
+        {
+          "id": "s",
+          "name": "Steps",
+          "x": 220,
+          "y": 70,
+          "height": 3
+        },
+        {
+          "id": "g",
+          "name": "Garden",
+          "x": 235,
+          "y": 270,
+          "height": 1
+        },
+        {
+          "id": "o",
+          "name": "Orangery",
+          "x": 420,
+          "y": 170,
+          "height": 2
+        }
+      ],
+      "edges": [
+        [
+          "p",
+          "s",
+          1
+        ],
+        [
+          "s",
+          "o",
+          2
+        ],
+        [
+          "p",
+          "g",
+          3
+        ],
+        [
+          "g",
+          "o",
+          2
+        ],
+        [
+          "s",
+          "g",
+          1
+        ]
+      ],
+      "start": "p",
+      "goal": "o",
+      "distanceBudget": 3,
+      "climbBudget": 3
+    },
+    "path": [
+      "p",
+      "s",
+      "o"
+    ],
+    "distance": 3,
+    "climb": 3
+  },
+  {
+    "level": {
+      "id": "orangery-garden",
+      "title": "A garden print",
+      "description": "Reach the same orangery with only two climbing units. The garden takes more distance.",
+      "nodes": [
+        {
+          "id": "p",
+          "name": "Print shop",
+          "x": 70,
+          "y": 240,
+          "height": 0
+        },
+        {
+          "id": "s",
+          "name": "Steps",
+          "x": 220,
+          "y": 70,
+          "height": 3
+        },
+        {
+          "id": "g",
+          "name": "Garden",
+          "x": 235,
+          "y": 270,
+          "height": 1
+        },
+        {
+          "id": "o",
+          "name": "Orangery",
+          "x": 420,
+          "y": 170,
+          "height": 2
+        }
+      ],
+      "edges": [
+        [
+          "p",
+          "s",
+          1
+        ],
+        [
+          "s",
+          "o",
+          2
+        ],
+        [
+          "p",
+          "g",
+          3
+        ],
+        [
+          "g",
+          "o",
+          2
+        ],
+        [
+          "s",
+          "g",
+          1
+        ]
+      ],
+      "start": "p",
+      "goal": "o",
+      "distanceBudget": 5,
+      "climbBudget": 2
+    },
+    "path": [
+      "p",
+      "g",
+      "o"
+    ],
+    "distance": 5,
+    "climb": 2
+  },
+  {
+    "level": {
+      "id": "orangery-reply",
+      "title": "The reply comes down",
+      "description": "Return from the orangery to the print shop, delivering at the steps first. Going up to the steps still counts.",
+      "nodes": [
+        {
+          "id": "p",
+          "name": "Print shop",
+          "x": 70,
+          "y": 240,
+          "height": 0
+        },
+        {
+          "id": "s",
+          "name": "Steps",
+          "x": 220,
+          "y": 70,
+          "height": 3
+        },
+        {
+          "id": "g",
+          "name": "Garden",
+          "x": 235,
+          "y": 270,
+          "height": 1
+        },
+        {
+          "id": "o",
+          "name": "Orangery",
+          "x": 420,
+          "y": 170,
+          "height": 2
+        }
+      ],
+      "edges": [
+        [
+          "p",
+          "s",
+          1
+        ],
+        [
+          "s",
+          "o",
+          2
+        ],
+        [
+          "p",
+          "g",
+          3
+        ],
+        [
+          "g",
+          "o",
+          2
+        ],
+        [
+          "s",
+          "g",
+          1
+        ]
+      ],
+      "start": "o",
+      "goal": "p",
+      "distanceBudget": 3,
+      "climbBudget": 1,
+      "via": [
+        "s"
+      ]
+    },
+    "path": [
+      "o",
+      "s",
+      "p"
+    ],
+    "distance": 3,
+    "climb": 1
+  }
+]
