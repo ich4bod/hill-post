@@ -69,6 +69,24 @@ function profilePoints(level, path) {
   }).join(' ');
 }
 
+function budgetPoints(level, path, allowance, climbed) {
+  const nodeById = new Map(level.nodes.map(node => [node.id, node]));
+  const spent = [0];
+  for (let i = 1; i < path.length; i++) {
+    const from = nodeById.get(path[i - 1]);
+    const to = nodeById.get(path[i]);
+    const edge = level.edges.find(([a, b]) => (a === from.id && b === to.id) || (a === to.id && b === from.id));
+    spent.push(spent[i - 1] + (climbed ? Math.max(0, to.height - from.height) : edge[2]));
+  }
+  const total = spent.at(-1);
+  const scale = Math.max(allowance, total, 1);
+  const count = path.length - 1;
+  return {
+    points: spent.map((value, i) => `${count ? 12 + 376 * i / count : 12},${144 - 128 * value / scale}`).join(' '),
+    allowanceY: 144 - 128 * allowance / scale,
+  };
+}
+
 function render() {
   const level = levelById.get(state.levelId);
   const nodeById = new Map(level.nodes.map(node => [node.id, node]));
@@ -205,6 +223,16 @@ function render() {
   }
   document.querySelector('#retrace-values').textContent = `Retracing this ride: ${retraceDistance} distance · ${retraceClimb} climbing.`;
   document.querySelector('#retrace-rows').replaceChildren(...retraceRows);
+  for (const [name, allowance, climbed] of [
+    ['distance', level.distanceBudget, false],
+    ['climb', level.climbBudget, true],
+  ]) {
+    const plot = budgetPoints(level, state.path, allowance, climbed);
+    document.querySelector(`#ride-budget-${name}`).setAttribute('points', plot.points);
+    const limit = document.querySelector(`#ride-budget-${name}-allowance`);
+    limit.setAttribute('y1', plot.allowanceY);
+    limit.setAttribute('y2', plot.allowanceY);
+  }
   document.querySelector('#ride-profile-live').setAttribute('points', profilePoints(level, state.path));
   const keptProfile = document.querySelector('#ride-profile-kept');
   const sameLevelKept = keptRide?.levelId === state.levelId;

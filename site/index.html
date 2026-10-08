@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hill Post</title>
-  <link rel="stylesheet" href="./style.css?v=9">
-  <script type="module" src="./app.mjs?v=36"></script>
+  <link rel="stylesheet" href="./style.css?v=10">
+  <script type="module" src="./app.mjs?v=37"></script>
 </head>
 <body>
   <main>
@@ -50,6 +50,16 @@
         </svg>
         <p id="ride-profile-help">Heights use one scale for this delivery. Horizontal positions follow distance already ridden.</p>
         <p id="ride-profile-kept-help">Orange is the current ride; the dashed line is the kept ride on this delivery. Each route fills the width of its own distance, so compare total distance in the ride table.</p>
+      </details>
+      <details id="ride-budget-reader">
+        <summary>How this ride spends the allowances</summary>
+        <svg id="ride-budget-plot" viewBox="0 0 400 160" role="img" aria-label="Distance and climbing spent along this ride">
+          <line id="ride-budget-distance-allowance" data-series="distance" x1="12" x2="388" stroke="#d46a3c" stroke-width="2" stroke-dasharray="5 4"></line>
+          <line id="ride-budget-climb-allowance" data-series="climb" x1="12" x2="388" stroke="#203a32" stroke-width="2" stroke-dasharray="5 4"></line>
+          <polyline id="ride-budget-distance" fill="none" stroke="#d46a3c" stroke-width="2"></polyline>
+          <polyline id="ride-budget-climb" fill="none" stroke="#203a32" stroke-width="2"></polyline>
+        </svg>
+        <p id="ride-budget-help">Orange is distance spent; green is climbing spent. Each line is scaled to its own allowance, or to the amount already spent when you went over. Downhill never lowers the climbing total.</p>
       </details>
       <details id="retrace-route">
         <summary id="retrace-summary">Retrace these roads</summary>
