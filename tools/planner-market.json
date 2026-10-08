@@ -1,0 +1,272 @@
+[
+  {
+    "id": "market-quick",
+    "title": "Before the market bell",
+    "brief": "The north roof asks for two climbing. Its short road fits the bell.",
+    "start": "s",
+    "goal": "t",
+    "distanceBudget": 4,
+    "climbBudget": 2,
+    "nodes": [
+      {
+        "id": "s",
+        "name": "Post",
+        "x": 12,
+        "y": 48,
+        "height": 2
+      },
+      {
+        "id": "p",
+        "name": "North roof",
+        "x": 30,
+        "y": 18,
+        "height": 4
+      },
+      {
+        "id": "q",
+        "name": "North court",
+        "x": 68,
+        "y": 18,
+        "height": 3
+      },
+      {
+        "id": "t",
+        "name": "Market",
+        "x": 88,
+        "y": 48,
+        "height": 1
+      },
+      {
+        "id": "a",
+        "name": "South court",
+        "x": 30,
+        "y": 80,
+        "height": 1
+      },
+      {
+        "id": "b",
+        "name": "South roof",
+        "x": 68,
+        "y": 80,
+        "height": 2
+      }
+    ],
+    "edges": [
+      [
+        "s",
+        "p",
+        1
+      ],
+      [
+        "p",
+        "q",
+        2
+      ],
+      [
+        "q",
+        "t",
+        1
+      ],
+      [
+        "s",
+        "a",
+        2
+      ],
+      [
+        "a",
+        "b",
+        2
+      ],
+      [
+        "b",
+        "t",
+        2
+      ],
+      [
+        "q",
+        "b",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "market-gentle",
+    "title": "A parcel without the roof",
+    "brief": "The southern courts take longer, but need only one climbing.",
+    "start": "s",
+    "goal": "t",
+    "distanceBudget": 6,
+    "climbBudget": 1,
+    "nodes": [
+      {
+        "id": "s",
+        "name": "Post",
+        "x": 12,
+        "y": 48,
+        "height": 2
+      },
+      {
+        "id": "p",
+        "name": "North roof",
+        "x": 30,
+        "y": 18,
+        "height": 4
+      },
+      {
+        "id": "q",
+        "name": "North court",
+        "x": 68,
+        "y": 18,
+        "height": 3
+      },
+      {
+        "id": "t",
+        "name": "Market",
+        "x": 88,
+        "y": 48,
+        "height": 1
+      },
+      {
+        "id": "a",
+        "name": "South court",
+        "x": 30,
+        "y": 80,
+        "height": 1
+      },
+      {
+        "id": "b",
+        "name": "South roof",
+        "x": 68,
+        "y": 80,
+        "height": 2
+      }
+    ],
+    "edges": [
+      [
+        "s",
+        "p",
+        1
+      ],
+      [
+        "p",
+        "q",
+        2
+      ],
+      [
+        "q",
+        "t",
+        1
+      ],
+      [
+        "s",
+        "a",
+        2
+      ],
+      [
+        "a",
+        "b",
+        2
+      ],
+      [
+        "b",
+        "t",
+        2
+      ],
+      [
+        "q",
+        "b",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "market-reply",
+    "title": "A reply from the market",
+    "brief": "The north court now needs a rise of two. The southern roofs fit the way home.",
+    "start": "t",
+    "goal": "s",
+    "distanceBudget": 6,
+    "climbBudget": 2,
+    "nodes": [
+      {
+        "id": "s",
+        "name": "Post",
+        "x": 12,
+        "y": 48,
+        "height": 2
+      },
+      {
+        "id": "p",
+        "name": "North roof",
+        "x": 30,
+        "y": 18,
+        "height": 4
+      },
+      {
+        "id": "q",
+        "name": "North court",
+        "x": 68,
+        "y": 18,
+        "height": 3
+      },
+      {
+        "id": "t",
+        "name": "Market",
+        "x": 88,
+        "y": 48,
+        "height": 1
+      },
+      {
+        "id": "a",
+        "name": "South court",
+        "x": 30,
+        "y": 80,
+        "height": 1
+      },
+      {
+        "id": "b",
+        "name": "South roof",
+        "x": 68,
+        "y": 80,
+        "height": 2
+      }
+    ],
+    "edges": [
+      [
+        "s",
+        "p",
+        1
+      ],
+      [
+        "p",
+        "q",
+        2
+      ],
+      [
+        "q",
+        "t",
+        1
+      ],
+      [
+        "s",
+        "a",
+        2
+      ],
+      [
+        "a",
+        "b",
+        2
+      ],
+      [
+        "b",
+        "t",
+        2
+      ],
+      [
+        "q",
+        "b",
+        1
+      ]
+    ]
+  }
+]

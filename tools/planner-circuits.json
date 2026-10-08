@@ -1,0 +1,178 @@
+[
+  {
+    "id": "cafe-circuit-short",
+    "title": "Deliver and bring back the reply",
+    "brief": "Reach the cafe, then bring its reply to the depot. The roof fits eight distance and five climbing.",
+    "start": "s",
+    "goal": "s",
+    "via": [
+      "t"
+    ],
+    "distanceBudget": 8,
+    "climbBudget": 5,
+    "nodes": [
+      {
+        "id": "s",
+        "name": "Depot",
+        "x": 12,
+        "y": 48,
+        "height": 0
+      },
+      {
+        "id": "h",
+        "name": "Roof road",
+        "x": 50,
+        "y": 18,
+        "height": 4
+      },
+      {
+        "id": "t",
+        "name": "Cafe",
+        "x": 88,
+        "y": 48,
+        "height": 3
+      },
+      {
+        "id": "a",
+        "name": "Mill",
+        "x": 28,
+        "y": 80,
+        "height": 0
+      },
+      {
+        "id": "b",
+        "name": "Bridge",
+        "x": 50,
+        "y": 80,
+        "height": 1
+      },
+      {
+        "id": "c",
+        "name": "Orchard",
+        "x": 72,
+        "y": 80,
+        "height": 2
+      }
+    ],
+    "edges": [
+      [
+        "s",
+        "h",
+        2
+      ],
+      [
+        "h",
+        "t",
+        2
+      ],
+      [
+        "s",
+        "a",
+        2
+      ],
+      [
+        "a",
+        "b",
+        2
+      ],
+      [
+        "b",
+        "c",
+        2
+      ],
+      [
+        "c",
+        "t",
+        2
+      ]
+    ]
+  },
+  {
+    "id": "cafe-circuit-gentle",
+    "title": "A gentler complete delivery",
+    "brief": "Reach the cafe and return without the roof. Both legs share sixteen distance and three climbing.",
+    "start": "s",
+    "goal": "s",
+    "via": [
+      "t"
+    ],
+    "distanceBudget": 16,
+    "climbBudget": 3,
+    "nodes": [
+      {
+        "id": "s",
+        "name": "Depot",
+        "x": 12,
+        "y": 48,
+        "height": 0
+      },
+      {
+        "id": "h",
+        "name": "Roof road",
+        "x": 50,
+        "y": 18,
+        "height": 4
+      },
+      {
+        "id": "t",
+        "name": "Cafe",
+        "x": 88,
+        "y": 48,
+        "height": 3
+      },
+      {
+        "id": "a",
+        "name": "Mill",
+        "x": 28,
+        "y": 80,
+        "height": 0
+      },
+      {
+        "id": "b",
+        "name": "Bridge",
+        "x": 50,
+        "y": 80,
+        "height": 1
+      },
+      {
+        "id": "c",
+        "name": "Orchard",
+        "x": 72,
+        "y": 80,
+        "height": 2
+      }
+    ],
+    "edges": [
+      [
+        "s",
+        "h",
+        2
+      ],
+      [
+        "h",
+        "t",
+        2
+      ],
+      [
+        "s",
+        "a",
+        2
+      ],
+      [
+        "a",
+        "b",
+        2
+      ],
+      [
+        "b",
+        "c",
+        2
+      ],
+      [
+        "c",
+        "t",
+        2
+      ]
+    ]
+  }
+]
