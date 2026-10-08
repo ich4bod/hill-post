@@ -1,5 +1,5 @@
-import {levels} from './levels.mjs?v=15';
-import {create, move, undo, restart, nextStop} from './engine.mjs?v=15';
+import {levels} from './levels.mjs?v=16';
+import {create, move, undo, restart, nextStop} from './engine.mjs?v=16';
 
 const select = document.querySelector('#delivery');
 select.style.minWidth = '0';
@@ -18,6 +18,7 @@ const deliveryGroups = [
   ['School', ['school-middle', 'school-flat']],
   ['Glasshouse', ['glasshouse-link', 'glasshouse-home', 'glasshouse-express']],
   ['Complete deliveries', ['cafe-circuit-short', 'cafe-circuit-gentle']],
+  ['Observatories', ['observatory-link', 'observatory-home', 'tower-parcel']],
 ];
 
 for (const [label, levelIds] of deliveryGroups) {
