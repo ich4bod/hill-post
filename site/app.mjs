@@ -1,5 +1,5 @@
-import {levels} from './levels.mjs?v=14';
-import {create, move, undo, restart} from './engine.mjs?v=14';
+import {levels} from './levels.mjs?v=15';
+import {create, move, undo, restart, nextStop} from './engine.mjs?v=15';
 
 const select = document.querySelector('#delivery');
 select.style.minWidth = '0';
@@ -17,6 +17,7 @@ const deliveryGroups = [
   ['Library', ['library-link', 'library-rims']],
   ['School', ['school-middle', 'school-flat']],
   ['Glasshouse', ['glasshouse-link', 'glasshouse-home', 'glasshouse-express']],
+  ['Complete deliveries', ['cafe-circuit-short', 'cafe-circuit-gentle']],
 ];
 
 for (const [label, levelIds] of deliveryGroups) {
@@ -69,6 +70,8 @@ function render() {
   const level = levelById.get(state.levelId);
   const nodeById = new Map(level.nodes.map(node => [node.id, node]));
   const currentId = state.path.at(-1);
+  const nextId = nextStop(state);
+  const completed = nextId === null;
   const currentNode = nodeById.get(currentId);
   const adjacent = new Set(level.edges.flatMap(([a, b]) => a === currentId ? [b] : b === currentId ? [a] : []));
   const routeEdges = new Set(state.path.slice(1).map((id, i) => {
@@ -103,11 +106,11 @@ function render() {
     button.id = `node-${node.id}`;
     button.style.left = `${node.x}%`;
     button.style.top = `${node.y}%`;
-    button.disabled = node.id === currentId || currentId === level.goal || !adjacent.has(node.id);
+    button.disabled = node.id === currentId || completed || !adjacent.has(node.id);
     if (node.id === currentId) {
       button.setAttribute('aria-current', 'location');
       button.setAttribute('aria-label', `At ${node.name}, height ${node.height}.`);
-    } else if (currentId === level.goal) {
+    } else if (completed) {
       button.setAttribute('aria-label', `${node.name}, height ${node.height}; ride finished.`);
     } else if (adjacent.has(node.id)) {
       const edge = level.edges.find(([a, b]) => (a === currentId && b === node.id) || (b === currentId && a === node.id));
@@ -124,8 +127,12 @@ function render() {
   }
   document.querySelector('#delivery-title').textContent = level.title;
   document.querySelector('#delivery-brief').textContent = level.brief;
-  const destination = nodeById.get(level.goal);
+  const destination = nodeById.get(nextId ?? level.goal);
   document.querySelector('#destination').textContent = `Deliver to ${destination.name} · Height ${destination.height}.`;
+  document.querySelector('#hill-stops').textContent = `Stops: ${[...(level.via ?? []), level.goal].map(id => nodeById.get(id).name).join(' → ')}.`;
+  document.querySelector('#hill-next-stop').textContent = completed
+    ? 'All delivery stops reached.'
+    : `Next delivery stop: ${destination.name}.`;
   const distance = document.querySelector('#distance');
   distance.textContent = `Distance: ${state.distance} / ${level.distanceBudget}`;
   distance.classList.toggle('over-budget', state.distance > level.distanceBudget);
@@ -139,14 +146,14 @@ function render() {
     ? 'Choose a road from the gold stop.'
     : state.status === 'delivered'
       ? 'Delivered. Both budgets held.'
-      : currentId === level.goal
+      : completed
         ? 'The parcel arrived, but the ride ran over budget. Undo and find another way.'
         : 'Over budget. You can still ride, undo or restart.';
   const arrivalNote = document.querySelector('#arrival-note');
-  arrivalNote.hidden = currentId !== level.goal;
+  arrivalNote.hidden = !completed;
   arrivalNote.textContent = arrivalNote.hidden ? '' : `Height change: ${destination.height - nodeById.get(level.start).height}. Uphill ridden: ${state.climb}.`;
   const roadRows = [];
-  if (currentId !== level.goal) {
+  if (!completed) {
     for (const node of level.nodes) {
       if (node.id === currentId) continue;
       const edge = level.edges.find(([a, b]) => (a === currentId && b === node.id) || (b === currentId && a === node.id));
@@ -162,7 +169,7 @@ function render() {
     }
   }
   document.querySelector('#road-choice-rows').replaceChildren(...roadRows);
-  document.querySelector('#road-choices-empty').hidden = currentId !== level.goal;
+  document.querySelector('#road-choices-empty').hidden = !completed;
   document.querySelector('#route').textContent = `Route: ${state.path.map(id => nodeById.get(id).name).join(' → ')}`;
   const legList = document.querySelector('#ride-leg-list');
   const legItems = state.path.slice(1).map((toId, i) => {
