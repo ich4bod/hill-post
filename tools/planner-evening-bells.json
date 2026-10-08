@@ -1,0 +1,345 @@
+[
+  {
+    "level": {
+      "id": "bells-round",
+      "title": "Two bells before choir",
+      "brief": "Reach the lower bell, then the upper bell, before the choir.",
+      "start": "s",
+      "goal": "t",
+      "distanceBudget": 6,
+      "climbBudget": 4,
+      "nodes": [
+        {
+          "id": "s",
+          "name": "Post",
+          "x": 12,
+          "y": 50,
+          "height": 1
+        },
+        {
+          "id": "a",
+          "name": "Lower bell",
+          "x": 32,
+          "y": 80,
+          "height": 2
+        },
+        {
+          "id": "b",
+          "name": "Upper bell",
+          "x": 68,
+          "y": 20,
+          "height": 4
+        },
+        {
+          "id": "t",
+          "name": "Choir",
+          "x": 88,
+          "y": 50,
+          "height": 3
+        },
+        {
+          "id": "q",
+          "name": "Courtyard",
+          "x": 45,
+          "y": 45,
+          "height": 0
+        },
+        {
+          "id": "r",
+          "name": "Footpath",
+          "x": 68,
+          "y": 80,
+          "height": 1
+        }
+      ],
+      "edges": [
+        [
+          "s",
+          "a",
+          2
+        ],
+        [
+          "a",
+          "r",
+          2
+        ],
+        [
+          "r",
+          "t",
+          2
+        ],
+        [
+          "s",
+          "q",
+          1
+        ],
+        [
+          "q",
+          "b",
+          2
+        ],
+        [
+          "b",
+          "t",
+          1
+        ],
+        [
+          "a",
+          "q",
+          1
+        ],
+        [
+          "q",
+          "r",
+          2
+        ],
+        [
+          "r",
+          "b",
+          1
+        ]
+      ],
+      "via": [
+        "a",
+        "b"
+      ]
+    },
+    "path": [
+      "s",
+      "a",
+      "r",
+      "b",
+      "t"
+    ],
+    "distance": 6,
+    "climb": 4
+  },
+  {
+    "level": {
+      "id": "bells-home",
+      "title": "Bring the lower reply home",
+      "brief": "From the choir, collect the lower bell reply before returning to the post.",
+      "start": "t",
+      "goal": "s",
+      "distanceBudget": 6,
+      "climbBudget": 1,
+      "nodes": [
+        {
+          "id": "s",
+          "name": "Post",
+          "x": 12,
+          "y": 50,
+          "height": 1
+        },
+        {
+          "id": "a",
+          "name": "Lower bell",
+          "x": 32,
+          "y": 80,
+          "height": 2
+        },
+        {
+          "id": "b",
+          "name": "Upper bell",
+          "x": 68,
+          "y": 20,
+          "height": 4
+        },
+        {
+          "id": "t",
+          "name": "Choir",
+          "x": 88,
+          "y": 50,
+          "height": 3
+        },
+        {
+          "id": "q",
+          "name": "Courtyard",
+          "x": 45,
+          "y": 45,
+          "height": 0
+        },
+        {
+          "id": "r",
+          "name": "Footpath",
+          "x": 68,
+          "y": 80,
+          "height": 1
+        }
+      ],
+      "edges": [
+        [
+          "s",
+          "a",
+          2
+        ],
+        [
+          "a",
+          "r",
+          2
+        ],
+        [
+          "r",
+          "t",
+          2
+        ],
+        [
+          "s",
+          "q",
+          1
+        ],
+        [
+          "q",
+          "b",
+          2
+        ],
+        [
+          "b",
+          "t",
+          1
+        ],
+        [
+          "a",
+          "q",
+          1
+        ],
+        [
+          "q",
+          "r",
+          2
+        ],
+        [
+          "r",
+          "b",
+          1
+        ]
+      ],
+      "via": [
+        "a"
+      ]
+    },
+    "path": [
+      "t",
+      "r",
+      "a",
+      "s"
+    ],
+    "distance": 6,
+    "climb": 1
+  },
+  {
+    "level": {
+      "id": "bells-court",
+      "title": "Courtyard before the lower bell",
+      "brief": "The courtyard delivery comes first. Then reach the lower bell and finish at the choir.",
+      "start": "s",
+      "goal": "t",
+      "distanceBudget": 6,
+      "climbBudget": 4,
+      "nodes": [
+        {
+          "id": "s",
+          "name": "Post",
+          "x": 12,
+          "y": 50,
+          "height": 1
+        },
+        {
+          "id": "a",
+          "name": "Lower bell",
+          "x": 32,
+          "y": 80,
+          "height": 2
+        },
+        {
+          "id": "b",
+          "name": "Upper bell",
+          "x": 68,
+          "y": 20,
+          "height": 4
+        },
+        {
+          "id": "t",
+          "name": "Choir",
+          "x": 88,
+          "y": 50,
+          "height": 3
+        },
+        {
+          "id": "q",
+          "name": "Courtyard",
+          "x": 45,
+          "y": 45,
+          "height": 0
+        },
+        {
+          "id": "r",
+          "name": "Footpath",
+          "x": 68,
+          "y": 80,
+          "height": 1
+        }
+      ],
+      "edges": [
+        [
+          "s",
+          "a",
+          2
+        ],
+        [
+          "a",
+          "r",
+          2
+        ],
+        [
+          "r",
+          "t",
+          2
+        ],
+        [
+          "s",
+          "q",
+          1
+        ],
+        [
+          "q",
+          "b",
+          2
+        ],
+        [
+          "b",
+          "t",
+          1
+        ],
+        [
+          "a",
+          "q",
+          1
+        ],
+        [
+          "q",
+          "r",
+          2
+        ],
+        [
+          "r",
+          "b",
+          1
+        ]
+      ],
+      "via": [
+        "q",
+        "a"
+      ]
+    },
+    "path": [
+      "s",
+      "q",
+      "a",
+      "r",
+      "t"
+    ],
+    "distance": 6,
+    "climb": 4
+  }
+]
