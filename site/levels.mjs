@@ -291,5 +291,8 @@ export const levels = [
         1
       ]
     ]
-  }
+  },
+ {"id":"river-bell","title":"Across the high bridge","brief":"The bell is close. Spend two climbing units on the bridge.","start":"s","goal":"t","distanceBudget":4,"climbBudget":2,"nodes":[{"id":"s","name":"Post","x":12,"y":48,"height":1},{"id":"h","name":"High bridge","x":50,"y":18,"height":3},{"id":"t","name":"Dock","x":88,"y":48,"height":0},{"id":"a","name":"Orchard","x":28,"y":80,"height":0},{"id":"b","name":"Ford","x":50,"y":80,"height":1},{"id":"c","name":"Mill","x":72,"y":80,"height":0}],"edges":[["s","h",2],["h","t",2],["s","a",1],["a","b",2],["b","c",2],["c","t",1]]},
+ {"id":"river-home","title":"A reply by the ford","brief":"From the dock, the bridge needs three climbing units. Bring the reply through the low banks.","start":"t","goal":"s","distanceBudget":6,"climbBudget":2,"nodes":[{"id":"s","name":"Post","x":12,"y":48,"height":1},{"id":"h","name":"High bridge","x":50,"y":18,"height":3},{"id":"t","name":"Dock","x":88,"y":48,"height":0},{"id":"a","name":"Orchard","x":28,"y":80,"height":0},{"id":"b","name":"Ford","x":50,"y":80,"height":1},{"id":"c","name":"Mill","x":72,"y":80,"height":0}],"edges":[["s","h",2],["h","t",2],["s","a",1],["a","b",2],["b","c",2],["c","t",1]]},
+ {"id":"river-ford","title":"Deliver to the ford first","brief":"The first parcel belongs at the ford. Reach it before finishing at the dock.","start":"s","goal":"t","via":["b"],"distanceBudget":6,"climbBudget":1,"nodes":[{"id":"s","name":"Post","x":12,"y":48,"height":1},{"id":"h","name":"High bridge","x":50,"y":18,"height":3},{"id":"t","name":"Dock","x":88,"y":48,"height":0},{"id":"a","name":"Orchard","x":28,"y":80,"height":0},{"id":"b","name":"Ford","x":50,"y":80,"height":1},{"id":"c","name":"Mill","x":72,"y":80,"height":0}],"edges":[["s","h",2],["h","t",2],["s","a",1],["a","b",2],["b","c",2],["c","t",1]]}
 ];

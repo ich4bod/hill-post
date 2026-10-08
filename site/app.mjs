@@ -1,4 +1,4 @@
-import {levels} from './levels.mjs?v=17';
+import {levels} from './levels.mjs?v=18';
 import {create, move, undo, restart, nextStop} from './engine.mjs?v=17';
 
 const select = document.querySelector('#delivery');
@@ -20,6 +20,7 @@ const deliveryGroups = [
   ['Complete deliveries', ['cafe-circuit-short', 'cafe-circuit-gentle']],
   ['Observatories', ['observatory-link', 'observatory-home', 'tower-parcel']],
   ['Market', ['market-quick', 'market-gentle', 'market-reply']],
+  ['River crossings', ['river-bell', 'river-home', 'river-ford']],
 ];
 
 for (const [label, levelIds] of deliveryGroups) {
