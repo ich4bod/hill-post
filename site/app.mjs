@@ -1,5 +1,5 @@
-import {levels} from './levels.mjs?v=18';
-import {create, move, undo, restart, nextStop} from './engine.mjs?v=17';
+import {levels} from './levels.mjs?v=19';
+import {create, move, undo, restart, nextStop} from './engine.mjs?v=18';
 
 const select = document.querySelector('#delivery');
 select.style.minWidth = '0';
@@ -21,6 +21,7 @@ const deliveryGroups = [
   ['Observatories', ['observatory-link', 'observatory-home', 'tower-parcel']],
   ['Market', ['market-quick', 'market-gentle', 'market-reply']],
   ['River crossings', ['river-bell', 'river-home', 'river-ford']],
+  ['Reedbank', ['reedbank-gentle', 'reedbank-fast', 'reedbank-home']],
 ];
 
 for (const [label, levelIds] of deliveryGroups) {
