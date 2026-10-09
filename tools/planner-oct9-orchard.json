@@ -1,0 +1,302 @@
+[
+  {
+    "level": {
+      "id": "orchard-express",
+      "title": "Crates to the orchard",
+      "brief": "Three distance is all you have. The hollow makes the last rise count.",
+      "start": "s",
+      "goal": "t",
+      "distanceBudget": 3,
+      "climbBudget": 4,
+      "nodes": [
+        {
+          "id": "s",
+          "name": "Post",
+          "x": 12,
+          "y": 50,
+          "height": 2
+        },
+        {
+          "id": "a",
+          "name": "Ridge",
+          "x": 35,
+          "y": 20,
+          "height": 4
+        },
+        {
+          "id": "b",
+          "name": "Hollow",
+          "x": 65,
+          "y": 20,
+          "height": 1
+        },
+        {
+          "id": "t",
+          "name": "Orchard",
+          "x": 88,
+          "y": 50,
+          "height": 3
+        },
+        {
+          "id": "c",
+          "name": "Canal",
+          "x": 35,
+          "y": 80,
+          "height": 2
+        },
+        {
+          "id": "d",
+          "name": "Footbridge",
+          "x": 65,
+          "y": 80,
+          "height": 3
+        }
+      ],
+      "edges": [
+        [
+          "s",
+          "a",
+          1
+        ],
+        [
+          "a",
+          "b",
+          1
+        ],
+        [
+          "b",
+          "t",
+          1
+        ],
+        [
+          "s",
+          "c",
+          2
+        ],
+        [
+          "c",
+          "d",
+          2
+        ],
+        [
+          "d",
+          "t",
+          2
+        ],
+        [
+          "b",
+          "d",
+          1
+        ]
+      ]
+    },
+    "path": [
+      "s",
+      "a",
+      "b",
+      "t"
+    ],
+    "distance": 3,
+    "climb": 4
+  },
+  {
+    "level": {
+      "id": "orchard-low",
+      "title": "The low road to the orchard",
+      "brief": "The canal takes longer but asks for only one climbing unit.",
+      "start": "s",
+      "goal": "t",
+      "distanceBudget": 6,
+      "climbBudget": 1,
+      "nodes": [
+        {
+          "id": "s",
+          "name": "Post",
+          "x": 12,
+          "y": 50,
+          "height": 2
+        },
+        {
+          "id": "a",
+          "name": "Ridge",
+          "x": 35,
+          "y": 20,
+          "height": 4
+        },
+        {
+          "id": "b",
+          "name": "Hollow",
+          "x": 65,
+          "y": 20,
+          "height": 1
+        },
+        {
+          "id": "t",
+          "name": "Orchard",
+          "x": 88,
+          "y": 50,
+          "height": 3
+        },
+        {
+          "id": "c",
+          "name": "Canal",
+          "x": 35,
+          "y": 80,
+          "height": 2
+        },
+        {
+          "id": "d",
+          "name": "Footbridge",
+          "x": 65,
+          "y": 80,
+          "height": 3
+        }
+      ],
+      "edges": [
+        [
+          "s",
+          "a",
+          1
+        ],
+        [
+          "a",
+          "b",
+          1
+        ],
+        [
+          "b",
+          "t",
+          1
+        ],
+        [
+          "s",
+          "c",
+          2
+        ],
+        [
+          "c",
+          "d",
+          2
+        ],
+        [
+          "d",
+          "t",
+          2
+        ],
+        [
+          "b",
+          "d",
+          1
+        ]
+      ]
+    },
+    "path": [
+      "s",
+      "c",
+      "d",
+      "t"
+    ],
+    "distance": 6,
+    "climb": 1
+  },
+  {
+    "level": {
+      "id": "orchard-home",
+      "title": "Empty crates home",
+      "brief": "Bring the empty crates home without another rise.",
+      "start": "t",
+      "goal": "s",
+      "distanceBudget": 6,
+      "climbBudget": 0,
+      "nodes": [
+        {
+          "id": "s",
+          "name": "Post",
+          "x": 12,
+          "y": 50,
+          "height": 2
+        },
+        {
+          "id": "a",
+          "name": "Ridge",
+          "x": 35,
+          "y": 20,
+          "height": 4
+        },
+        {
+          "id": "b",
+          "name": "Hollow",
+          "x": 65,
+          "y": 20,
+          "height": 1
+        },
+        {
+          "id": "t",
+          "name": "Orchard",
+          "x": 88,
+          "y": 50,
+          "height": 3
+        },
+        {
+          "id": "c",
+          "name": "Canal",
+          "x": 35,
+          "y": 80,
+          "height": 2
+        },
+        {
+          "id": "d",
+          "name": "Footbridge",
+          "x": 65,
+          "y": 80,
+          "height": 3
+        }
+      ],
+      "edges": [
+        [
+          "s",
+          "a",
+          1
+        ],
+        [
+          "a",
+          "b",
+          1
+        ],
+        [
+          "b",
+          "t",
+          1
+        ],
+        [
+          "s",
+          "c",
+          2
+        ],
+        [
+          "c",
+          "d",
+          2
+        ],
+        [
+          "d",
+          "t",
+          2
+        ],
+        [
+          "b",
+          "d",
+          1
+        ]
+      ]
+    },
+    "path": [
+      "t",
+      "d",
+      "c",
+      "s"
+    ],
+    "distance": 6,
+    "climb": 0
+  }
+]
