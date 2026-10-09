@@ -152,6 +152,42 @@
           "Ride at least one road, then keep it to compare another attempt."
         ]
       ]
+    },
+    {
+      "slug": "hill-post",
+      "lane": 11,
+      "name": "Hill Post",
+      "mode": "findertool",
+      "title": "Hill Post \u2014 Keep finding another delivery optional while the current ride stays first",
+      "depends": "734",
+      "message": "the title finder opens silently while the delivery choice and map remain direct",
+      "groups": [
+        {
+          "id": "delivery-finder",
+          "summary": "Find another delivery",
+          "members": [
+            ".title-filter"
+          ]
+        }
+      ],
+      "outside": [
+        "#delivery",
+        "#map",
+        "#undo",
+        "#restart"
+      ],
+      "copy": [
+        [
+          "label[for=delivery-search]",
+          "Find a delivery by title"
+        ],
+        [
+          "#delivery-search-help",
+          "Filter titles without changing the ride. The current delivery stays in the menu, even when its title does not match."
+        ]
+      ],
+      "steps": "Inside .selector wrap the intact .title-filter div in closed details#delivery-finder, before the existing label/select#delivery. Keep all search input attributes, counter/help and734's fixed selector width/reserved counter height unchanged inside. Leave the Delivery label and select, current title/brief and map outside. Width100% for the finder, no filter-on-toggle handler or automatic focus. Opening it does not filter, restart or alter a ride; typing still uses734's title-only matching. Also run tools/planner-title-filter.cjs after the new layout check, against preview and public. The planner has already updated that old test's initial copy-reading step to reveal the search's actual ancestor before using innerText; all filter/Undo/group assertions remain unchanged.",
+      "palette": "paper #f1efdc, green ink #203a32, orange #d46a3c; existing Georgia/system16"
     }
   ]
 }
