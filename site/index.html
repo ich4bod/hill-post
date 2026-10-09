@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hill Post</title>
-  <link rel="stylesheet" href="./style.css?v=12">
+  <link rel="stylesheet" href="./style.css?v=13">
   <script type="module" src="./app.mjs?v=42"></script>
 </head>
 <body>
@@ -85,11 +85,10 @@
         <button id="undo" type="button">Undo road</button>
         <button id="undo-junction" type="button">Undo to the last junction</button>
         <button id="restart" type="button">Restart delivery</button>
-        <button id="remember-ride" type="button">Keep this ride</button>
       </div>
       <details id="ride-comparison">
         <summary>Compare with a kept ride</summary>
-        <div class="actions"><button id="return-kept-ride" type="button">Return to kept ride</button></div>
+        <div class="actions"><button id="remember-ride" type="button">Keep this ride</button><button id="return-kept-ride" type="button">Return to kept ride</button></div>
         <p id="ride-comparison-empty">Ride at least one road, then keep it to compare another attempt.</p>
         <table hidden>
           <thead>

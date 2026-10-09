@@ -209,17 +209,19 @@ select { width: min(100%, 24rem); min-height: 44px; max-width: 100%; padding: 6p
 #route { margin: 8px 0; overflow-wrap: anywhere; }
 #ride-comparison {
   margin: 12px 0;
-  padding: 0 12px;
+  padding: 12px;
   border: 1px solid #203a32;
-  border-radius: 12px;
+  border-radius: 8px;
+  background: #fffdf2;
 }
 #ride-comparison > summary {
   display: flex;
-  min-height: 44px;
+  min-height: 45px;
   align-items: center;
   cursor: pointer;
-  font: 18px Georgia, serif;
+  font: 16px/1.5 system-ui, sans-serif;
 }
+#ride-comparison > summary:focus { outline: 3px solid #d46a3c; outline-offset: 3px; }
 #ride-comparison table { width: 100%; table-layout: fixed; border-collapse: collapse; font: 13px/1.5 system-ui, sans-serif; }
 #ride-comparison th, #ride-comparison td { padding: 6px 2px; text-align: left; overflow-wrap: anywhere; }
 #ride-comparison th:nth-child(1), #ride-comparison td:nth-child(1) { width: 14%; }
