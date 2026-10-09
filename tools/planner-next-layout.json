@@ -1,0 +1,157 @@
+{
+  "slug": "hill-post",
+  "controls": [
+    [
+      "delivery-search",
+      "input"
+    ],
+    [
+      "delivery",
+      "select"
+    ],
+    [
+      "node-s",
+      "button"
+    ],
+    [
+      "node-h",
+      "button"
+    ],
+    [
+      "node-t",
+      "button"
+    ],
+    [
+      "node-a",
+      "button"
+    ],
+    [
+      "node-b",
+      "button"
+    ],
+    [
+      "node-c",
+      "button"
+    ],
+    [
+      "undo",
+      "button"
+    ],
+    [
+      "undo-junction",
+      "button"
+    ],
+    [
+      "restart",
+      "button"
+    ],
+    [
+      "remember-ride",
+      "button"
+    ],
+    [
+      "return-kept-ride",
+      "button"
+    ]
+  ],
+  "cases": [
+    {
+      "slug": "hill-post",
+      "lane": 11,
+      "name": "Hill Post",
+      "mode": "ridereaders",
+      "title": "Hill Post \u2014 Put optional ride arithmetic together after the current road",
+      "depends": "nothing",
+      "message": "the current map and road choices lead three optional ways to inspect the ride",
+      "groups": [
+        {
+          "id": "ride-readers",
+          "summary": "Read this ride",
+          "members": [
+            "#ride-legs",
+            "#ride-budget-reader",
+            "#retrace-route"
+          ]
+        }
+      ],
+      "outside": [
+        "#map",
+        "#road-choices",
+        "#route",
+        "#undo",
+        "#restart"
+      ],
+      "copySelectors": [
+        "#ride-profile-help",
+        "#ride-profile-kept-help",
+        "#ride-budget-help",
+        "#retrace-help"
+      ],
+      "steps": "Replace the current positions of #ride-legs, #ride-budget-reader and #retrace-route with one closed details#ride-readers immediately after p#route. Move these three intact existing details inside it in their original order. Keep each inner summary and helper. Keep #road-choices independent and before #route; actions/Undo after the new outer drawer. Do not move the delivery selector/search, route text, map, distance/climb/allowance/status or comparison/pair doors. Opening readers does not ride a road or alter a delivery.",
+      "palette": "paper #f1efdc, green ink #203a32, orange #d46a3c; existing Georgia/system16",
+      "copy": [
+        [
+          "#ride-profile-help",
+          "Heights use one scale for this delivery. Horizontal positions follow distance already ridden."
+        ],
+        [
+          "#ride-profile-kept-help",
+          "Orange is the current ride; the dashed line is the kept ride on this delivery. Each route fills the width of its own distance, so compare total distance in the ride table."
+        ],
+        [
+          "#ride-budget-help",
+          "Orange is distance spent; green is climbing spent. Each line is scaled to its own allowance, or to the amount already spent when you went over. Downhill never lowers the climbing total."
+        ],
+        [
+          "#retrace-help",
+          "These are new costs on the roads already ridden, not a refund. Undo changes the attempt instead of riding back."
+        ]
+      ]
+    },
+    {
+      "slug": "hill-post",
+      "lane": 11,
+      "name": "Hill Post",
+      "mode": "memorychoice",
+      "title": "Hill Post \u2014 Keep and return an attempt in the same comparison drawer",
+      "depends": "nothing",
+      "message": "keeping and returning a ride share their own place while Undo remains beside the current ride",
+      "groups": [
+        {
+          "id": "ride-comparison",
+          "summary": "Compare with a kept ride",
+          "members": [
+            "#remember-ride",
+            "#return-kept-ride"
+          ]
+        }
+      ],
+      "parents": [
+        [
+          "#remember-ride",
+          "#ride-comparison"
+        ],
+        [
+          "#return-kept-ride",
+          "#ride-comparison"
+        ]
+      ],
+      "outside": [
+        "#undo",
+        "#undo-junction",
+        "#restart"
+      ],
+      "copySelectors": [
+        "#ride-comparison-empty"
+      ],
+      "steps": "Move only existing button#remember-ride from the direct .actions row into the existing .actions inside #ride-comparison, immediately before #return-kept-ride. Keep the comparison details closed by default, its summary and table/readout unchanged. Leave direct Undo road, Undo to last junction and Restart delivery in the live actions row, in that order. No state, comparison, filtering or geometry handler changes. Re-scope inherited styles if necessary; do not clone buttons or remove their disabled state.",
+      "palette": "paper #f1efdc, green ink #203a32, orange #d46a3c; existing Georgia/system16",
+      "copy": [
+        [
+          "#ride-comparison-empty",
+          "Ride at least one road, then keep it to compare another attempt."
+        ]
+      ]
+    }
+  ]
+}
