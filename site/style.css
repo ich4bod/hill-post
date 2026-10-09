@@ -77,7 +77,7 @@ select { width: min(100%, 24rem); min-height: 44px; max-width: 100%; padding: 6p
 }
 #map button[aria-current="location"] { background: #f1c75b; }
 #map button:disabled { opacity: .65; cursor: default; }
-#map button:focus-visible, .actions button:focus-visible, select:focus-visible, #delivery-search:focus-visible, #road-choices > summary:focus-visible, #ride-legs > summary:focus-visible, #ride-budget-reader > summary:focus-visible, #ride-comparison > summary:focus-visible {
+#map button:focus-visible, .actions button:focus-visible, select:focus-visible, #delivery-search:focus-visible, #road-choices > summary:focus-visible, #ride-readers > summary:focus-visible, #ride-legs > summary:focus-visible, #ride-budget-reader > summary:focus-visible, #ride-comparison > summary:focus-visible {
   outline: 3px solid #d46a3c;
   outline-offset: 3px;
 }
@@ -177,6 +177,20 @@ select { width: min(100%, 24rem); min-height: 44px; max-width: 100%; padding: 6p
 #retrace-values, #retrace-help { margin: 8px 0; }
 #retrace-help { font: 14px/1.5 system-ui, sans-serif; }
 #retrace-route > summary:focus-visible { outline: 3px solid #d46a3c; outline-offset: 3px; }
+#ride-readers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+  padding: 12px;
+  border: 1px solid #203a32;
+  border-radius: 8px;
+  background: #fffdf2;
+}
+#ride-readers > summary { min-height: 45px; cursor: pointer; }
+#ride-readers > details { flex: 1 1 100%; }
+#ride-readers > summary:focus { outline: 3px solid #d46a3c; outline-offset: 3px; }
+#ride-readers [hidden] { display: none; }
 #ride-legs ol { padding-left: 24px; color: #203a32; font: 14px/1.5 system-ui, sans-serif; }
 #ride-legs li { margin: 6px 0; }
 #ride-profile-kept[hidden] { display: none; }

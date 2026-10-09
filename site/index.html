@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hill Post</title>
-  <link rel="stylesheet" href="./style.css?v=11">
+  <link rel="stylesheet" href="./style.css?v=12">
   <script type="module" src="./app.mjs?v=42"></script>
 </head>
 <body>
@@ -46,6 +46,8 @@
         <p id="road-choices-empty" hidden>No more roads. Undo road to leave the destination.</p>
       </details>
       <p id="route"></p>
+      <details id="ride-readers">
+        <summary>Read this ride</summary>
       <details id="ride-legs">
         <summary>Every road in this ride</summary>
         <p id="ride-legs-empty">No roads ridden yet.</p>
@@ -77,6 +79,7 @@
           <tbody id="retrace-rows"></tbody>
         </table>
         <p id="retrace-help">These are new costs on the roads already ridden, not a refund. Undo changes the attempt instead of riding back.</p>
+      </details>
       </details>
       <div class="actions">
         <button id="undo" type="button">Undo road</button>
