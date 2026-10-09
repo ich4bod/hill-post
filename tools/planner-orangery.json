@@ -8,29 +8,29 @@
         {
           "id": "p",
           "name": "Print shop",
-          "x": 70,
-          "y": 240,
+          "x": 12,
+          "y": 75,
           "height": 0
         },
         {
           "id": "s",
           "name": "Steps",
-          "x": 220,
-          "y": 70,
+          "x": 44,
+          "y": 22,
           "height": 3
         },
         {
           "id": "g",
           "name": "Garden",
-          "x": 235,
-          "y": 270,
+          "x": 47,
+          "y": 84,
           "height": 1
         },
         {
           "id": "o",
           "name": "Orangery",
-          "x": 420,
-          "y": 170,
+          "x": 84,
+          "y": 53,
           "height": 2
         }
       ],
@@ -83,29 +83,29 @@
         {
           "id": "p",
           "name": "Print shop",
-          "x": 70,
-          "y": 240,
+          "x": 12,
+          "y": 75,
           "height": 0
         },
         {
           "id": "s",
           "name": "Steps",
-          "x": 220,
-          "y": 70,
+          "x": 44,
+          "y": 22,
           "height": 3
         },
         {
           "id": "g",
           "name": "Garden",
-          "x": 235,
-          "y": 270,
+          "x": 47,
+          "y": 84,
           "height": 1
         },
         {
           "id": "o",
           "name": "Orangery",
-          "x": 420,
-          "y": 170,
+          "x": 84,
+          "y": 53,
           "height": 2
         }
       ],
@@ -158,29 +158,29 @@
         {
           "id": "p",
           "name": "Print shop",
-          "x": 70,
-          "y": 240,
+          "x": 12,
+          "y": 75,
           "height": 0
         },
         {
           "id": "s",
           "name": "Steps",
-          "x": 220,
-          "y": 70,
+          "x": 44,
+          "y": 22,
           "height": 3
         },
         {
           "id": "g",
           "name": "Garden",
-          "x": 235,
-          "y": 270,
+          "x": 47,
+          "y": 84,
           "height": 1
         },
         {
           "id": "o",
           "name": "Orangery",
-          "x": 420,
-          "y": 170,
+          "x": 84,
+          "y": 53,
           "height": 2
         }
       ],
