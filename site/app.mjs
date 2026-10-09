@@ -27,20 +27,39 @@ const deliveryGroups = [
   ['Orangery', ['orangery-express', 'orangery-garden', 'orangery-reply']],
 ];
 
-for (const [label, levelIds] of deliveryGroups) {
-  const group = document.createElement('optgroup');
-  group.label = label;
-  for (const id of levelIds) {
-    const level = levelById.get(id);
-    if (!level) throw new RangeError(`Unknown delivery: ${id}`);
-    const option = document.createElement('option');
-    option.value = level.id;
-    option.textContent = level.title;
-    group.append(option);
+const search = document.querySelector('#delivery-search');
+const matchCount = document.querySelector('#delivery-match-count');
+
+function renderDeliveryOptions() {
+  const query = search.value.trim().toLowerCase();
+  const matches = levels.filter(level => level.title.toLowerCase().includes(query));
+  const groups = [];
+  for (const [label, levelIds] of deliveryGroups) {
+    const group = document.createElement('optgroup');
+    group.label = label;
+    for (const id of levelIds) {
+      const level = levelById.get(id);
+      if (!level) throw new RangeError(`Unknown delivery: ${id}`);
+      if (!level.title.toLowerCase().includes(query) && id !== state.levelId) continue;
+      const option = document.createElement('option');
+      option.value = level.id;
+      option.textContent = level.title;
+      group.append(option);
+    }
+    if (group.children.length) groups.push(group);
   }
-  select.append(group);
+  select.replaceChildren(...groups);
+  select.value = state.levelId;
+  matchCount.textContent = query === ''
+    ? 'No title filter.'
+    : matches.length === 0
+      ? 'No matching delivery titles. The current delivery stays available.'
+      : matches.length === 1
+        ? '1 matching delivery title.'
+        : `${matches.length} matching delivery titles.`;
 }
-select.value = state.levelId;
+
+renderDeliveryOptions();
 
 function junctionIndex(level, path) {
   const neighbors = new Map(level.nodes.map(node => [node.id, new Set()]));
@@ -92,6 +111,7 @@ function budgetPoints(level, path, allowance, climbed) {
 }
 
 function render() {
+  renderDeliveryOptions();
   const level = levelById.get(state.levelId);
   const nodeById = new Map(level.nodes.map(node => [node.id, node]));
   const currentId = state.path.at(-1);
@@ -432,6 +452,7 @@ for (const id of ['school-middle', 'school-flat']) {
   schoolRows.append(row);
 }
 
+search.addEventListener('input', renderDeliveryOptions);
 map.addEventListener('click', event => {
   const button = event.target.closest('button[id^="node-"]');
   if (button && map.contains(button) && !button.disabled) state = move(state, button.id.slice(5));
