@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hill Post</title>
   <link rel="stylesheet" href="./style.css?v=14">
-  <script type="module" src="./app.mjs?v=47"></script>
+  <script type="module" src="./app.mjs?v=48"></script>
 </head>
 <body>
   <main>
@@ -25,7 +25,13 @@
           </div>
         </details>
         <label for="delivery">Delivery</label>
-        <select id="delivery"></select>
+        <select id="delivery">
+          <optgroup label="Ridge and river">
+            <option value="ridge-letter">Over the ridge to the ferry</option>
+            <option value="river-letter">The longer low road</option>
+            <option value="ridge-reply">The ridge on the way home</option>
+          </optgroup>
+        </select>
       </div>
       <h2 id="delivery-title"></h2>
       <p id="delivery-brief"></p>

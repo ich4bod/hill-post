@@ -1,4 +1,4 @@
-import {levels} from './levels.mjs?v=26';
+import {levels} from './levels.mjs?v=27';
 import {create, move, undo, restart, nextStop} from './engine.mjs?v=22';
 
 const select = document.querySelector('#delivery');
@@ -29,6 +29,7 @@ const deliveryGroups = [
   ['Signal box', ['signal-link', 'signal-express', 'signal-home']],
   ['Beacon', ['beacon-wall', 'beacon-dunes', 'beacon-reply']],
   ['Quarry', ['quarry-crane', 'quarry-yard', 'quarry-return']],
+  ['Ridge and river', ['ridge-letter', 'river-letter', 'ridge-reply']],
 ];
 
 const search = document.querySelector('#delivery-search');
