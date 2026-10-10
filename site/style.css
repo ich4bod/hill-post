@@ -16,6 +16,26 @@ h1 { margin: 0 0 4px; font-size: 36px; line-height: 1.2; }
 h2 { margin: 20px 0 4px; font-size: 22px; line-height: 1.3; }
 header p { margin: 0 0 16px; }
 .selector { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+#delivery-finder {
+  display: flex;
+  flex: 0 0 100%;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #203a32;
+  border-radius: 8px;
+  background: #fffdf2;
+}
+#delivery-finder > summary {
+  display: flex;
+  flex: 0 0 100%;
+  min-height: 45px;
+  align-items: center;
+  cursor: pointer;
+}
+#delivery-finder > summary:focus { outline: 3px solid #d46a3c; outline-offset: 3px; }
 .title-filter { flex: 0 0 100%; min-width: 0; }
 .title-filter label { display: block; }
 #delivery-search {
