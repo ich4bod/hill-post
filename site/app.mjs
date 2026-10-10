@@ -1,4 +1,4 @@
-import {levels} from './levels.mjs?v=22';
+import {levels} from './levels.mjs?v=23';
 import {create, move, undo, restart, nextStop} from './engine.mjs?v=18';
 
 const select = document.querySelector('#delivery');
@@ -25,6 +25,7 @@ const deliveryGroups = [
   ['Bell hill', ['bells-round', 'bells-home', 'bells-court']],
   ['Orchard crates', ['orchard-express', 'orchard-low', 'orchard-home']],
   ['Orangery', ['orangery-express', 'orangery-garden', 'orangery-reply']],
+  ['Tide mill', ['tide-mill-gentle', 'tide-mill-express', 'tide-mill-reply']],
 ];
 
 const search = document.querySelector('#delivery-search');
