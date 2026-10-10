@@ -1,5 +1,5 @@
-import {levels} from './levels.mjs?v=25';
-import {create, move, undo, restart, nextStop} from './engine.mjs?v=21';
+import {levels} from './levels.mjs?v=26';
+import {create, move, undo, restart, nextStop} from './engine.mjs?v=22';
 
 const select = document.querySelector('#delivery');
 select.style.minWidth = '0';
@@ -28,6 +28,7 @@ const deliveryGroups = [
   ['Tide mill', ['tide-mill-gentle', 'tide-mill-express', 'tide-mill-reply']],
   ['Signal box', ['signal-link', 'signal-express', 'signal-home']],
   ['Beacon', ['beacon-wall', 'beacon-dunes', 'beacon-reply']],
+  ['Quarry', ['quarry-crane', 'quarry-yard', 'quarry-return']],
 ];
 
 const search = document.querySelector('#delivery-search');
