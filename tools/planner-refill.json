@@ -1,0 +1,298 @@
+{
+  "mode": "roads",
+  "lane": 11,
+  "title": "Hill Post \u2014 Deliver across a ridge or take the longer low road",
+  "group": "Ridge and river",
+  "message": "three ridge rides keep a longer low road distinct from repeated climbing",
+  "rows": [
+    {
+      "level": {
+        "id": "ridge-letter",
+        "title": "Over the ridge to the ferry",
+        "brief": "Visit the ridge before the ferry. The descent to the river does not refund the earlier climb.",
+        "start": "s",
+        "goal": "t",
+        "via": [
+          "a"
+        ],
+        "distanceBudget": 3,
+        "climbBudget": 3,
+        "nodes": [
+          {
+            "id": "s",
+            "name": "Post",
+            "x": 10,
+            "y": 50,
+            "height": 0
+          },
+          {
+            "id": "a",
+            "name": "Ridge",
+            "x": 40,
+            "y": 20,
+            "height": 2
+          },
+          {
+            "id": "b",
+            "name": "River",
+            "x": 45,
+            "y": 80,
+            "height": 0
+          },
+          {
+            "id": "c",
+            "name": "Tower",
+            "x": 75,
+            "y": 20,
+            "height": 3
+          },
+          {
+            "id": "t",
+            "name": "Ferry",
+            "x": 90,
+            "y": 70,
+            "height": 1
+          }
+        ],
+        "edges": [
+          [
+            "s",
+            "a",
+            1
+          ],
+          [
+            "a",
+            "b",
+            1
+          ],
+          [
+            "b",
+            "t",
+            1
+          ],
+          [
+            "s",
+            "b",
+            3
+          ],
+          [
+            "s",
+            "c",
+            2
+          ],
+          [
+            "c",
+            "t",
+            2
+          ],
+          [
+            "b",
+            "c",
+            1
+          ]
+        ]
+      },
+      "route": [
+        "s",
+        "a",
+        "b",
+        "t"
+      ],
+      "distance": 3,
+      "climb": 3
+    },
+    {
+      "level": {
+        "id": "river-letter",
+        "title": "The longer low road",
+        "brief": "Reach the ferry with only one climbing unit. The direct-looking ridge spends too much climb.",
+        "start": "s",
+        "goal": "t",
+        "via": [],
+        "distanceBudget": 4,
+        "climbBudget": 1,
+        "nodes": [
+          {
+            "id": "s",
+            "name": "Post",
+            "x": 10,
+            "y": 50,
+            "height": 0
+          },
+          {
+            "id": "a",
+            "name": "Ridge",
+            "x": 40,
+            "y": 20,
+            "height": 2
+          },
+          {
+            "id": "b",
+            "name": "River",
+            "x": 45,
+            "y": 80,
+            "height": 0
+          },
+          {
+            "id": "c",
+            "name": "Tower",
+            "x": 75,
+            "y": 20,
+            "height": 3
+          },
+          {
+            "id": "t",
+            "name": "Ferry",
+            "x": 90,
+            "y": 70,
+            "height": 1
+          }
+        ],
+        "edges": [
+          [
+            "s",
+            "a",
+            1
+          ],
+          [
+            "a",
+            "b",
+            1
+          ],
+          [
+            "b",
+            "t",
+            1
+          ],
+          [
+            "s",
+            "b",
+            3
+          ],
+          [
+            "s",
+            "c",
+            2
+          ],
+          [
+            "c",
+            "t",
+            2
+          ],
+          [
+            "b",
+            "c",
+            1
+          ]
+        ]
+      },
+      "route": [
+        "s",
+        "b",
+        "t"
+      ],
+      "distance": 4,
+      "climb": 1
+    },
+    {
+      "level": {
+        "id": "ridge-reply",
+        "title": "The ridge on the way home",
+        "brief": "Visit the ridge, then the ferry, then return to the post. The ridge can cost climbing on both visits.",
+        "start": "s",
+        "goal": "s",
+        "via": [
+          "a",
+          "t"
+        ],
+        "distanceBudget": 6,
+        "climbBudget": 5,
+        "nodes": [
+          {
+            "id": "s",
+            "name": "Post",
+            "x": 10,
+            "y": 50,
+            "height": 0
+          },
+          {
+            "id": "a",
+            "name": "Ridge",
+            "x": 40,
+            "y": 20,
+            "height": 2
+          },
+          {
+            "id": "b",
+            "name": "River",
+            "x": 45,
+            "y": 80,
+            "height": 0
+          },
+          {
+            "id": "c",
+            "name": "Tower",
+            "x": 75,
+            "y": 20,
+            "height": 3
+          },
+          {
+            "id": "t",
+            "name": "Ferry",
+            "x": 90,
+            "y": 70,
+            "height": 1
+          }
+        ],
+        "edges": [
+          [
+            "s",
+            "a",
+            1
+          ],
+          [
+            "a",
+            "b",
+            1
+          ],
+          [
+            "b",
+            "t",
+            1
+          ],
+          [
+            "s",
+            "b",
+            3
+          ],
+          [
+            "s",
+            "c",
+            2
+          ],
+          [
+            "c",
+            "t",
+            2
+          ],
+          [
+            "b",
+            "c",
+            1
+          ]
+        ]
+      },
+      "route": [
+        "s",
+        "a",
+        "b",
+        "t",
+        "b",
+        "a",
+        "s"
+      ],
+      "distance": 6,
+      "climb": 5
+    }
+  ]
+}
