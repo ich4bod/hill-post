@@ -1,0 +1,302 @@
+[
+  {
+    "level": {
+      "id": "beacon-wall",
+      "title": "Stay on the sea wall",
+      "brief": "The wall and old pier keep their height. Dropping into the dunes makes you climb again.",
+      "start": "s",
+      "goal": "t",
+      "distanceBudget": 3,
+      "climbBudget": 3,
+      "nodes": [
+        {
+          "id": "s",
+          "name": "Post",
+          "x": 10,
+          "y": 50,
+          "height": 0
+        },
+        {
+          "id": "a",
+          "name": "Sea wall",
+          "x": 30,
+          "y": 20,
+          "height": 3
+        },
+        {
+          "id": "b",
+          "name": "Old pier",
+          "x": 55,
+          "y": 20,
+          "height": 3
+        },
+        {
+          "id": "t",
+          "name": "Beacon",
+          "x": 90,
+          "y": 50,
+          "height": 3
+        },
+        {
+          "id": "c",
+          "name": "Beach",
+          "x": 30,
+          "y": 80,
+          "height": 0
+        },
+        {
+          "id": "d",
+          "name": "Dunes",
+          "x": 65,
+          "y": 80,
+          "height": 1
+        }
+      ],
+      "edges": [
+        [
+          "s",
+          "a",
+          1
+        ],
+        [
+          "a",
+          "b",
+          1
+        ],
+        [
+          "b",
+          "t",
+          1
+        ],
+        [
+          "s",
+          "c",
+          1
+        ],
+        [
+          "c",
+          "d",
+          1
+        ],
+        [
+          "d",
+          "t",
+          1
+        ],
+        [
+          "b",
+          "d",
+          1
+        ]
+      ]
+    },
+    "route": [
+      "s",
+      "a",
+      "b",
+      "t"
+    ],
+    "distance": 3,
+    "climb": 3
+  },
+  {
+    "level": {
+      "id": "beacon-dunes",
+      "title": "The low way to the beacon",
+      "brief": "The beach stays low, then the dunes split the climb into two rises. Distance and climbing still count separately.",
+      "start": "s",
+      "goal": "t",
+      "distanceBudget": 3,
+      "climbBudget": 3,
+      "nodes": [
+        {
+          "id": "s",
+          "name": "Post",
+          "x": 10,
+          "y": 50,
+          "height": 0
+        },
+        {
+          "id": "a",
+          "name": "Sea wall",
+          "x": 30,
+          "y": 20,
+          "height": 3
+        },
+        {
+          "id": "b",
+          "name": "Old pier",
+          "x": 55,
+          "y": 20,
+          "height": 3
+        },
+        {
+          "id": "t",
+          "name": "Beacon",
+          "x": 90,
+          "y": 50,
+          "height": 3
+        },
+        {
+          "id": "c",
+          "name": "Beach",
+          "x": 30,
+          "y": 80,
+          "height": 0
+        },
+        {
+          "id": "d",
+          "name": "Dunes",
+          "x": 65,
+          "y": 80,
+          "height": 1
+        }
+      ],
+      "edges": [
+        [
+          "s",
+          "a",
+          1
+        ],
+        [
+          "a",
+          "b",
+          1
+        ],
+        [
+          "b",
+          "t",
+          1
+        ],
+        [
+          "s",
+          "c",
+          1
+        ],
+        [
+          "c",
+          "d",
+          1
+        ],
+        [
+          "d",
+          "t",
+          1
+        ],
+        [
+          "b",
+          "d",
+          1
+        ]
+      ]
+    },
+    "route": [
+      "s",
+      "c",
+      "d",
+      "t"
+    ],
+    "distance": 3,
+    "climb": 3
+  },
+  {
+    "level": {
+      "id": "beacon-reply",
+      "title": "A reply down the beach",
+      "brief": "Bring the reply down through the dunes. Descending does not refund the outward ride.",
+      "start": "t",
+      "goal": "s",
+      "distanceBudget": 3,
+      "climbBudget": 0,
+      "nodes": [
+        {
+          "id": "s",
+          "name": "Post",
+          "x": 10,
+          "y": 50,
+          "height": 0
+        },
+        {
+          "id": "a",
+          "name": "Sea wall",
+          "x": 30,
+          "y": 20,
+          "height": 3
+        },
+        {
+          "id": "b",
+          "name": "Old pier",
+          "x": 55,
+          "y": 20,
+          "height": 3
+        },
+        {
+          "id": "t",
+          "name": "Beacon",
+          "x": 90,
+          "y": 50,
+          "height": 3
+        },
+        {
+          "id": "c",
+          "name": "Beach",
+          "x": 30,
+          "y": 80,
+          "height": 0
+        },
+        {
+          "id": "d",
+          "name": "Dunes",
+          "x": 65,
+          "y": 80,
+          "height": 1
+        }
+      ],
+      "edges": [
+        [
+          "s",
+          "a",
+          1
+        ],
+        [
+          "a",
+          "b",
+          1
+        ],
+        [
+          "b",
+          "t",
+          1
+        ],
+        [
+          "s",
+          "c",
+          1
+        ],
+        [
+          "c",
+          "d",
+          1
+        ],
+        [
+          "d",
+          "t",
+          1
+        ],
+        [
+          "b",
+          "d",
+          1
+        ]
+      ]
+    },
+    "route": [
+      "t",
+      "d",
+      "c",
+      "s"
+    ],
+    "distance": 3,
+    "climb": 0
+  }
+]
