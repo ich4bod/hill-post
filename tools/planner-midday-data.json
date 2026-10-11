@@ -1,0 +1,310 @@
+{
+  "slug": "hill-post",
+  "mode": "roads",
+  "lane": 11,
+  "title": "Hill Post — Bring two ordered letters home by the ridge or the cross-road",
+  "group": "Two letters and home",
+  "helpID": "",
+  "help": "",
+  "rows": [
+    {
+      "level": {
+        "id": "two-letter-ridge",
+        "title": "Upper letter before the lower letter",
+        "brief": "Visit the upper letter, then the lower letter, and bring the reply home. The garden rises above the lower letter.",
+        "start": "s",
+        "goal": "s",
+        "via": [
+          "b",
+          "c"
+        ],
+        "distanceBudget": 6,
+        "climbBudget": 5,
+        "nodes": [
+          {
+            "id": "s",
+            "name": "Post",
+            "x": 10,
+            "y": 50,
+            "height": 1
+          },
+          {
+            "id": "a",
+            "name": "Ridge",
+            "x": 35,
+            "y": 20,
+            "height": 4
+          },
+          {
+            "id": "b",
+            "name": "Upper letter",
+            "x": 70,
+            "y": 20,
+            "height": 2
+          },
+          {
+            "id": "c",
+            "name": "Lower letter",
+            "x": 70,
+            "y": 80,
+            "height": 0
+          },
+          {
+            "id": "d",
+            "name": "Garden",
+            "x": 35,
+            "y": 80,
+            "height": 2
+          }
+        ],
+        "edges": [
+          [
+            "s",
+            "a",
+            1
+          ],
+          [
+            "a",
+            "b",
+            1
+          ],
+          [
+            "b",
+            "c",
+            2
+          ],
+          [
+            "c",
+            "d",
+            1
+          ],
+          [
+            "d",
+            "s",
+            1
+          ],
+          [
+            "a",
+            "d",
+            2
+          ],
+          [
+            "b",
+            "d",
+            2
+          ]
+        ]
+      },
+      "route": [
+        "s",
+        "a",
+        "b",
+        "c",
+        "d",
+        "s"
+      ],
+      "distance": 6,
+      "climb": 5
+    },
+    {
+      "level": {
+        "id": "two-letter-garden",
+        "title": "Lower letter before the upper letter",
+        "brief": "Deliver the lower letter first, then the upper letter, and return home. The return rises onto the ridge before descending to the post.",
+        "start": "s",
+        "goal": "s",
+        "via": [
+          "c",
+          "b"
+        ],
+        "distanceBudget": 6,
+        "climbBudget": 5,
+        "nodes": [
+          {
+            "id": "s",
+            "name": "Post",
+            "x": 10,
+            "y": 50,
+            "height": 1
+          },
+          {
+            "id": "a",
+            "name": "Ridge",
+            "x": 35,
+            "y": 20,
+            "height": 4
+          },
+          {
+            "id": "b",
+            "name": "Upper letter",
+            "x": 70,
+            "y": 20,
+            "height": 2
+          },
+          {
+            "id": "c",
+            "name": "Lower letter",
+            "x": 70,
+            "y": 80,
+            "height": 0
+          },
+          {
+            "id": "d",
+            "name": "Garden",
+            "x": 35,
+            "y": 80,
+            "height": 2
+          }
+        ],
+        "edges": [
+          [
+            "s",
+            "a",
+            1
+          ],
+          [
+            "a",
+            "b",
+            1
+          ],
+          [
+            "b",
+            "c",
+            2
+          ],
+          [
+            "c",
+            "d",
+            1
+          ],
+          [
+            "d",
+            "s",
+            1
+          ],
+          [
+            "a",
+            "d",
+            2
+          ],
+          [
+            "b",
+            "d",
+            2
+          ]
+        ]
+      },
+      "route": [
+        "s",
+        "d",
+        "c",
+        "b",
+        "a",
+        "s"
+      ],
+      "distance": 6,
+      "climb": 5
+    },
+    {
+      "level": {
+        "id": "two-letter-cross",
+        "title": "Both letters without visiting the ridge",
+        "brief": "Visit the upper letter and lower letter in order, then return home. The cross-road avoids the ridge but adds road distance.",
+        "start": "s",
+        "goal": "s",
+        "via": [
+          "b",
+          "c"
+        ],
+        "distanceBudget": 7,
+        "climbBudget": 3,
+        "nodes": [
+          {
+            "id": "s",
+            "name": "Post",
+            "x": 10,
+            "y": 50,
+            "height": 1
+          },
+          {
+            "id": "a",
+            "name": "Ridge",
+            "x": 35,
+            "y": 20,
+            "height": 4
+          },
+          {
+            "id": "b",
+            "name": "Upper letter",
+            "x": 70,
+            "y": 20,
+            "height": 2
+          },
+          {
+            "id": "c",
+            "name": "Lower letter",
+            "x": 70,
+            "y": 80,
+            "height": 0
+          },
+          {
+            "id": "d",
+            "name": "Garden",
+            "x": 35,
+            "y": 80,
+            "height": 2
+          }
+        ],
+        "edges": [
+          [
+            "s",
+            "a",
+            1
+          ],
+          [
+            "a",
+            "b",
+            1
+          ],
+          [
+            "b",
+            "c",
+            2
+          ],
+          [
+            "c",
+            "d",
+            1
+          ],
+          [
+            "d",
+            "s",
+            1
+          ],
+          [
+            "a",
+            "d",
+            2
+          ],
+          [
+            "b",
+            "d",
+            2
+          ]
+        ]
+      },
+      "route": [
+        "s",
+        "d",
+        "b",
+        "c",
+        "d",
+        "s"
+      ],
+      "distance": 7,
+      "climb": 3
+    }
+  ],
+  "depends": "nothing",
+  "message": "roads choices preserve exact authored data and the independent kept experiment"
+}
