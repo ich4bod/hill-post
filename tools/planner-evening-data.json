@@ -1,0 +1,303 @@
+{
+  "slug": "hill-post",
+  "mode": "roads",
+  "lane": 11,
+  "title": "Hill Post — Carry letters over a low bridge or around its hill",
+  "group": "Bell hill and low bridge",
+  "helpID": "",
+  "help": "",
+  "rows": [
+    {
+      "level": {
+        "id": "bell-bridge-out",
+        "title": "Take the letter across the low bridge",
+        "brief": "Visit the low bridge before the east door. The shortest road crosses a hill, and the bridge exit rises again.",
+        "start": "s",
+        "goal": "t",
+        "via": [
+          "b"
+        ],
+        "distanceBudget": 3,
+        "climbBudget": 3,
+        "nodes": [
+          {
+            "id": "s",
+            "name": "Post",
+            "x": 10,
+            "y": 50,
+            "height": 1
+          },
+          {
+            "id": "a",
+            "name": "Bell hill",
+            "x": 40,
+            "y": 20,
+            "height": 3
+          },
+          {
+            "id": "b",
+            "name": "Low bridge",
+            "x": 70,
+            "y": 50,
+            "height": 0
+          },
+          {
+            "id": "c",
+            "name": "Garden",
+            "x": 40,
+            "y": 80,
+            "height": 2
+          },
+          {
+            "id": "t",
+            "name": "East door",
+            "x": 90,
+            "y": 50,
+            "height": 1
+          }
+        ],
+        "edges": [
+          [
+            "s",
+            "a",
+            1
+          ],
+          [
+            "a",
+            "b",
+            1
+          ],
+          [
+            "b",
+            "t",
+            1
+          ],
+          [
+            "s",
+            "c",
+            2
+          ],
+          [
+            "c",
+            "t",
+            2
+          ],
+          [
+            "a",
+            "c",
+            1
+          ],
+          [
+            "c",
+            "b",
+            1
+          ]
+        ]
+      },
+      "route": [
+        "s",
+        "a",
+        "b",
+        "t"
+      ],
+      "distance": 3,
+      "climb": 3
+    },
+    {
+      "level": {
+        "id": "bell-garden-out",
+        "title": "Take the garden letter east",
+        "brief": "Visit the garden before the east door. Its longer road avoids the bell hill.",
+        "start": "s",
+        "goal": "t",
+        "via": [
+          "c"
+        ],
+        "distanceBudget": 4,
+        "climbBudget": 1,
+        "nodes": [
+          {
+            "id": "s",
+            "name": "Post",
+            "x": 10,
+            "y": 50,
+            "height": 1
+          },
+          {
+            "id": "a",
+            "name": "Bell hill",
+            "x": 40,
+            "y": 20,
+            "height": 3
+          },
+          {
+            "id": "b",
+            "name": "Low bridge",
+            "x": 70,
+            "y": 50,
+            "height": 0
+          },
+          {
+            "id": "c",
+            "name": "Garden",
+            "x": 40,
+            "y": 80,
+            "height": 2
+          },
+          {
+            "id": "t",
+            "name": "East door",
+            "x": 90,
+            "y": 50,
+            "height": 1
+          }
+        ],
+        "edges": [
+          [
+            "s",
+            "a",
+            1
+          ],
+          [
+            "a",
+            "b",
+            1
+          ],
+          [
+            "b",
+            "t",
+            1
+          ],
+          [
+            "s",
+            "c",
+            2
+          ],
+          [
+            "c",
+            "t",
+            2
+          ],
+          [
+            "a",
+            "c",
+            1
+          ],
+          [
+            "c",
+            "b",
+            1
+          ]
+        ]
+      },
+      "route": [
+        "s",
+        "c",
+        "t"
+      ],
+      "distance": 4,
+      "climb": 1
+    },
+    {
+      "level": {
+        "id": "bell-bridge-garden-home",
+        "title": "Bridge first, garden next, then home",
+        "brief": "Visit the low bridge, then the garden, then return to Post. Leaving the bridge spends a new climb.",
+        "start": "s",
+        "goal": "s",
+        "via": [
+          "b",
+          "c"
+        ],
+        "distanceBudget": 5,
+        "climbBudget": 4,
+        "nodes": [
+          {
+            "id": "s",
+            "name": "Post",
+            "x": 10,
+            "y": 50,
+            "height": 1
+          },
+          {
+            "id": "a",
+            "name": "Bell hill",
+            "x": 40,
+            "y": 20,
+            "height": 3
+          },
+          {
+            "id": "b",
+            "name": "Low bridge",
+            "x": 70,
+            "y": 50,
+            "height": 0
+          },
+          {
+            "id": "c",
+            "name": "Garden",
+            "x": 40,
+            "y": 80,
+            "height": 2
+          },
+          {
+            "id": "t",
+            "name": "East door",
+            "x": 90,
+            "y": 50,
+            "height": 1
+          }
+        ],
+        "edges": [
+          [
+            "s",
+            "a",
+            1
+          ],
+          [
+            "a",
+            "b",
+            1
+          ],
+          [
+            "b",
+            "t",
+            1
+          ],
+          [
+            "s",
+            "c",
+            2
+          ],
+          [
+            "c",
+            "t",
+            2
+          ],
+          [
+            "a",
+            "c",
+            1
+          ],
+          [
+            "c",
+            "b",
+            1
+          ]
+        ]
+      },
+      "route": [
+        "s",
+        "a",
+        "b",
+        "c",
+        "s"
+      ],
+      "distance": 5,
+      "climb": 4
+    }
+  ],
+  "depends": "nothing",
+  "message": "roads experiments keep the supplied choices silent and reversible",
+  "facts": "Ship ONLY row.level; route/distance/climb are independent witnesses, not solver UI. Distances sum edge prices. Climb=sum max(0,nextheight−currentheight); descent refunds neither. Witnesses3/3,4/1,5/4. Ordered via visits before final finish, including home: passing Post early is not delivery. No bicycle-energy claim or graph/engine rule change."
+}
