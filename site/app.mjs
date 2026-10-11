@@ -1,4 +1,4 @@
-import {levels} from './levels.mjs?v=28';
+import {levels} from './levels.mjs?v=29';
 import {create, move, undo, restart, nextStop} from './engine.mjs?v=23';
 
 const select = document.querySelector('#delivery');
@@ -31,6 +31,7 @@ const deliveryGroups = [
   ['Beacon', ['beacon-wall', 'beacon-dunes', 'beacon-reply']],
   ['Quarry', ['quarry-crane', 'quarry-yard', 'quarry-return']],
   ['Ridge and river', ['ridge-letter', 'river-letter', 'ridge-reply']],
+  ['Two orchard letters', ['orchard-east-first', 'orchard-west-first', 'orchard-round-home']],
 ];
 
 const search = document.querySelector('#delivery-search');
