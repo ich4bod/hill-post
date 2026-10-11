@@ -1,0 +1,295 @@
+{
+  "slug": "hill-post",
+  "mode": "roads",
+  "lane": 11,
+  "title": "Hill Post \u2014 Carry an uphill letter and a lower reply home in either order",
+  "group": "A letter and a changing return",
+  "helpID": "",
+  "help": "",
+  "rows": [
+    {
+      "level": {
+        "id": "letter-rise-first",
+        "title": "Upper letter, then down to the reply",
+        "brief": "Deliver uphill first, then collect the lower reply and bring it home. The towpath avoids climbing back through the orchard.",
+        "start": "s",
+        "goal": "s",
+        "via": [
+          "b",
+          "c"
+        ],
+        "distanceBudget": 9,
+        "climbBudget": 3,
+        "nodes": [
+          {
+            "id": "s",
+            "name": "Post",
+            "x": 10,
+            "y": 50,
+            "height": 0
+          },
+          {
+            "id": "a",
+            "name": "Orchard",
+            "x": 35,
+            "y": 20,
+            "height": 2
+          },
+          {
+            "id": "b",
+            "name": "Upper letter",
+            "x": 65,
+            "y": 20,
+            "height": 3
+          },
+          {
+            "id": "c",
+            "name": "Lower letter",
+            "x": 85,
+            "y": 70,
+            "height": 1
+          },
+          {
+            "id": "d",
+            "name": "Towpath",
+            "x": 45,
+            "y": 80,
+            "height": 0
+          }
+        ],
+        "edges": [
+          [
+            "s",
+            "a",
+            2
+          ],
+          [
+            "a",
+            "b",
+            2
+          ],
+          [
+            "b",
+            "c",
+            1
+          ],
+          [
+            "c",
+            "d",
+            2
+          ],
+          [
+            "d",
+            "s",
+            2
+          ],
+          [
+            "a",
+            "c",
+            1
+          ]
+        ]
+      },
+      "route": [
+        "s",
+        "a",
+        "b",
+        "c",
+        "d",
+        "s"
+      ],
+      "distance": 9,
+      "climb": 3
+    },
+    {
+      "level": {
+        "id": "letter-low-first",
+        "title": "Lower letter, then climb for the reply",
+        "brief": "Deliver the lower letter first and then the upper letter. Return through the orchard after collecting the reply.",
+        "start": "s",
+        "goal": "s",
+        "via": [
+          "c",
+          "b"
+        ],
+        "distanceBudget": 9,
+        "climbBudget": 3,
+        "nodes": [
+          {
+            "id": "s",
+            "name": "Post",
+            "x": 10,
+            "y": 50,
+            "height": 0
+          },
+          {
+            "id": "a",
+            "name": "Orchard",
+            "x": 35,
+            "y": 20,
+            "height": 2
+          },
+          {
+            "id": "b",
+            "name": "Upper letter",
+            "x": 65,
+            "y": 20,
+            "height": 3
+          },
+          {
+            "id": "c",
+            "name": "Lower letter",
+            "x": 85,
+            "y": 70,
+            "height": 1
+          },
+          {
+            "id": "d",
+            "name": "Towpath",
+            "x": 45,
+            "y": 80,
+            "height": 0
+          }
+        ],
+        "edges": [
+          [
+            "s",
+            "a",
+            2
+          ],
+          [
+            "a",
+            "b",
+            2
+          ],
+          [
+            "b",
+            "c",
+            1
+          ],
+          [
+            "c",
+            "d",
+            2
+          ],
+          [
+            "d",
+            "s",
+            2
+          ],
+          [
+            "a",
+            "c",
+            1
+          ]
+        ]
+      },
+      "route": [
+        "s",
+        "d",
+        "c",
+        "b",
+        "a",
+        "s"
+      ],
+      "distance": 9,
+      "climb": 3
+    },
+    {
+      "level": {
+        "id": "letter-orchard-return",
+        "title": "Bring the lower reply through the orchard",
+        "brief": "Deliver the upper letter, collect the lower reply, then take the shorter orchard return. It saves one distance but adds one climbing compared with the towpath.",
+        "start": "s",
+        "goal": "s",
+        "via": [
+          "b",
+          "c"
+        ],
+        "distanceBudget": 8,
+        "climbBudget": 4,
+        "nodes": [
+          {
+            "id": "s",
+            "name": "Post",
+            "x": 10,
+            "y": 50,
+            "height": 0
+          },
+          {
+            "id": "a",
+            "name": "Orchard",
+            "x": 35,
+            "y": 20,
+            "height": 2
+          },
+          {
+            "id": "b",
+            "name": "Upper letter",
+            "x": 65,
+            "y": 20,
+            "height": 3
+          },
+          {
+            "id": "c",
+            "name": "Lower letter",
+            "x": 85,
+            "y": 70,
+            "height": 1
+          },
+          {
+            "id": "d",
+            "name": "Towpath",
+            "x": 45,
+            "y": 80,
+            "height": 0
+          }
+        ],
+        "edges": [
+          [
+            "s",
+            "a",
+            2
+          ],
+          [
+            "a",
+            "b",
+            2
+          ],
+          [
+            "b",
+            "c",
+            1
+          ],
+          [
+            "c",
+            "d",
+            2
+          ],
+          [
+            "d",
+            "s",
+            2
+          ],
+          [
+            "a",
+            "c",
+            1
+          ]
+        ]
+      },
+      "route": [
+        "s",
+        "a",
+        "b",
+        "c",
+        "a",
+        "s"
+      ],
+      "distance": 8,
+      "climb": 4
+    }
+  ],
+  "depends": "nothing",
+  "message": "roads comparisons preserve the authored experiment without replacing its memory"
+}
