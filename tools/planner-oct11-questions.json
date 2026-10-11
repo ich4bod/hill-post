@@ -1,0 +1,35 @@
+{
+  "slug": "hill-post",
+  "lane": 11,
+  "title": "Hill Post \u2014 Ask why the shorter delivery cannot always be ridden",
+  "id": "three-questions-hill-post",
+  "summary": "Try three questions about distance and climbing",
+  "lead": "Road lengths and stop heights are separate allowances in this puzzle. Count the road you ride and every upward change; these numbers are not bicycle-energy measurements.",
+  "questions": [
+    {
+      "title": "Is the shortest road always available?",
+      "prompt": "Choose Take the contour. Compare the ridge road with the road through Mill, Bridge and Orchard before riding.",
+      "answer": "The ridge costs four distance and four climbing. The longer road costs eight distance and one climbing. With a climbing allowance of one, the shortest route is not a usable route. The two limits cannot replace each other."
+    },
+    {
+      "title": "Does the descent pay back the climb?",
+      "prompt": "Choose Two hills count twice. Follow the heights along the two-hill road without pressing a destination yet.",
+      "answer": "The road rises from zero to two, falls to zero, then rises to two again. Those upward changes add to four climbing, even though the finish is back at zero. A descent does not refund an earlier rise. The lower towpath fits the separate climbing allowance."
+    },
+    {
+      "title": "Can a longer complete delivery need less climbing?",
+      "prompt": "Compare Deliver and bring back the reply with A gentler complete delivery. Include the ride home, not just the outward delivery.",
+      "answer": "The roof round trip uses eight distance and five climbing. The gentler round trip uses sixteen distance and three climbing. Returning over the roof adds a rise from the cafe\u2019s height of three to the roof\u2019s height of four. The price of going home belongs to the route too."
+    }
+  ],
+  "facts": "Existing contour ridge roads2+2=4 withclimb4, valley2+2+2+2=8/climb1. Two-hills pathheight0/2/0/2/0 totals4climb. Cafe shortcircuit8/5 andgentlecircuit16/3. These are authored toy units.",
+  "palette": "#f1efd7/#253b3b/#dce7b7/#e9755c",
+  "files": [
+    "site/index.html",
+    "site/style.css"
+  ],
+  "root": "main",
+  "anchor": "footer",
+  "url": "https://hill-post.ichabod-crane.net/",
+  "message": "three authored hill-post questions stay optional and leave the live experiment alone"
+}
