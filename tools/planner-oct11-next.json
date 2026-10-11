@@ -1,0 +1,355 @@
+{
+  "orchardcourse": {
+    "copy": {},
+    "buttons": [],
+    "message": "orchardcourse preserves unrelated state and answers its supplied native experiment",
+    "rows": [
+      {
+        "level": {
+          "id": "orchard-east-first",
+          "title": "East letter before west",
+          "brief": "Deliver east first, then west, then reach the market.",
+          "start": "s",
+          "goal": "t",
+          "via": [
+            "e",
+            "w"
+          ],
+          "distanceBudget": 6,
+          "climbBudget": 3,
+          "nodes": [
+            {
+              "id": "s",
+              "name": "Post",
+              "x": 10,
+              "y": 50,
+              "height": 0
+            },
+            {
+              "id": "w",
+              "name": "West orchard",
+              "x": 30,
+              "y": 80,
+              "height": 1
+            },
+            {
+              "id": "m",
+              "name": "Lane junction",
+              "x": 50,
+              "y": 50,
+              "height": 2
+            },
+            {
+              "id": "e",
+              "name": "East orchard",
+              "x": 70,
+              "y": 20,
+              "height": 3
+            },
+            {
+              "id": "h",
+              "name": "High hedge",
+              "x": 50,
+              "y": 10,
+              "height": 4
+            },
+            {
+              "id": "t",
+              "name": "Market",
+              "x": 90,
+              "y": 70,
+              "height": 0
+            }
+          ],
+          "edges": [
+            [
+              "s",
+              "w",
+              2
+            ],
+            [
+              "w",
+              "m",
+              1
+            ],
+            [
+              "m",
+              "e",
+              1
+            ],
+            [
+              "e",
+              "t",
+              2
+            ],
+            [
+              "s",
+              "e",
+              2
+            ],
+            [
+              "w",
+              "t",
+              2
+            ],
+            [
+              "m",
+              "t",
+              1
+            ],
+            [
+              "m",
+              "h",
+              1
+            ],
+            [
+              "h",
+              "e",
+              1
+            ]
+          ]
+        },
+        "route": [
+          "s",
+          "e",
+          "m",
+          "w",
+          "t"
+        ],
+        "distance": 6,
+        "climb": 3
+      },
+      {
+        "level": {
+          "id": "orchard-west-first",
+          "title": "West letter before east",
+          "brief": "Deliver west first, then east, then reach the market.",
+          "start": "s",
+          "goal": "t",
+          "via": [
+            "w",
+            "e"
+          ],
+          "distanceBudget": 6,
+          "climbBudget": 3,
+          "nodes": [
+            {
+              "id": "s",
+              "name": "Post",
+              "x": 10,
+              "y": 50,
+              "height": 0
+            },
+            {
+              "id": "w",
+              "name": "West orchard",
+              "x": 30,
+              "y": 80,
+              "height": 1
+            },
+            {
+              "id": "m",
+              "name": "Lane junction",
+              "x": 50,
+              "y": 50,
+              "height": 2
+            },
+            {
+              "id": "e",
+              "name": "East orchard",
+              "x": 70,
+              "y": 20,
+              "height": 3
+            },
+            {
+              "id": "h",
+              "name": "High hedge",
+              "x": 50,
+              "y": 10,
+              "height": 4
+            },
+            {
+              "id": "t",
+              "name": "Market",
+              "x": 90,
+              "y": 70,
+              "height": 0
+            }
+          ],
+          "edges": [
+            [
+              "s",
+              "w",
+              2
+            ],
+            [
+              "w",
+              "m",
+              1
+            ],
+            [
+              "m",
+              "e",
+              1
+            ],
+            [
+              "e",
+              "t",
+              2
+            ],
+            [
+              "s",
+              "e",
+              2
+            ],
+            [
+              "w",
+              "t",
+              2
+            ],
+            [
+              "m",
+              "t",
+              1
+            ],
+            [
+              "m",
+              "h",
+              1
+            ],
+            [
+              "h",
+              "e",
+              1
+            ]
+          ]
+        },
+        "route": [
+          "s",
+          "w",
+          "m",
+          "e",
+          "t"
+        ],
+        "distance": 6,
+        "climb": 3
+      },
+      {
+        "level": {
+          "id": "orchard-round-home",
+          "title": "Both orchard letters, then home",
+          "brief": "Deliver west, then east, then return to the post. Descending refunds neither allowance.",
+          "start": "s",
+          "goal": "s",
+          "via": [
+            "w",
+            "e"
+          ],
+          "distanceBudget": 6,
+          "climbBudget": 3,
+          "nodes": [
+            {
+              "id": "s",
+              "name": "Post",
+              "x": 10,
+              "y": 50,
+              "height": 0
+            },
+            {
+              "id": "w",
+              "name": "West orchard",
+              "x": 30,
+              "y": 80,
+              "height": 1
+            },
+            {
+              "id": "m",
+              "name": "Lane junction",
+              "x": 50,
+              "y": 50,
+              "height": 2
+            },
+            {
+              "id": "e",
+              "name": "East orchard",
+              "x": 70,
+              "y": 20,
+              "height": 3
+            },
+            {
+              "id": "h",
+              "name": "High hedge",
+              "x": 50,
+              "y": 10,
+              "height": 4
+            },
+            {
+              "id": "t",
+              "name": "Market",
+              "x": 90,
+              "y": 70,
+              "height": 0
+            }
+          ],
+          "edges": [
+            [
+              "s",
+              "w",
+              2
+            ],
+            [
+              "w",
+              "m",
+              1
+            ],
+            [
+              "m",
+              "e",
+              1
+            ],
+            [
+              "e",
+              "t",
+              2
+            ],
+            [
+              "s",
+              "e",
+              2
+            ],
+            [
+              "w",
+              "t",
+              2
+            ],
+            [
+              "m",
+              "t",
+              1
+            ],
+            [
+              "m",
+              "h",
+              1
+            ],
+            [
+              "h",
+              "e",
+              1
+            ]
+          ]
+        },
+        "route": [
+          "s",
+          "w",
+          "m",
+          "e",
+          "s"
+        ],
+        "distance": 6,
+        "climb": 3
+      }
+    ],
+    "group": "Two orchard letters"
+  }
+}
