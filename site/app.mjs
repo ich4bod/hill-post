@@ -1,5 +1,5 @@
-import {levels} from './levels.mjs?v=29';
-import {create, move, undo, restart, nextStop} from './engine.mjs?v=23';
+import {levels} from './levels.mjs?v=30';
+import {create, move, undo, restart, nextStop} from './engine.mjs?v=24';
 
 const select = document.querySelector('#delivery');
 select.style.minWidth = '0';
@@ -32,6 +32,7 @@ const deliveryGroups = [
   ['Quarry', ['quarry-crane', 'quarry-yard', 'quarry-return']],
   ['Ridge and river', ['ridge-letter', 'river-letter', 'ridge-reply']],
   ['Two orchard letters', ['orchard-east-first', 'orchard-west-first', 'orchard-round-home']],
+  ['Ferry and island', ['ferry-quays', 'ferry-island', 'ferry-garden-home']],
 ];
 
 const search = document.querySelector('#delivery-search');
