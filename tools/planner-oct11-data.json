@@ -1,0 +1,284 @@
+{
+  "mode": "roads",
+  "lane": 11,
+  "depends": "nothing",
+  "title": "Hill Post — Cross a high bridge or follow the towpath to market",
+  "message": "three bridge deliveries price the short climb and the longer low return separately",
+  "group": "Bridge and market",
+  "rows": [
+    {
+      "level": {
+        "id": "bridge-parcel",
+        "title": "The short high bridge",
+        "brief": "Reach the mill. Two short roads cost three climbing units.",
+        "start": "s",
+        "goal": "t",
+        "via": [],
+        "distanceBudget": 2,
+        "climbBudget": 3,
+        "nodes": [
+          {
+            "id": "s",
+            "name": "Post",
+            "x": 10,
+            "y": 50,
+            "height": 1
+          },
+          {
+            "id": "a",
+            "name": "High bridge",
+            "x": 40,
+            "y": 20,
+            "height": 4
+          },
+          {
+            "id": "b",
+            "name": "Towpath",
+            "x": 40,
+            "y": 80,
+            "height": 1
+          },
+          {
+            "id": "c",
+            "name": "Market",
+            "x": 70,
+            "y": 65,
+            "height": 2
+          },
+          {
+            "id": "t",
+            "name": "Mill",
+            "x": 90,
+            "y": 30,
+            "height": 0
+          }
+        ],
+        "edges": [
+          [
+            "s",
+            "a",
+            1
+          ],
+          [
+            "a",
+            "t",
+            1
+          ],
+          [
+            "s",
+            "b",
+            2
+          ],
+          [
+            "b",
+            "c",
+            1
+          ],
+          [
+            "c",
+            "t",
+            1
+          ],
+          [
+            "a",
+            "c",
+            1
+          ]
+        ]
+      },
+      "route": [
+        "s",
+        "a",
+        "t"
+      ],
+      "distance": 2,
+      "climb": 3
+    },
+    {
+      "level": {
+        "id": "towpath-parcel",
+        "title": "Keep beside the water",
+        "brief": "Visit the market before the mill. The longer towpath avoids the high bridge.",
+        "start": "s",
+        "goal": "t",
+        "via": [
+          "c"
+        ],
+        "distanceBudget": 4,
+        "climbBudget": 1,
+        "nodes": [
+          {
+            "id": "s",
+            "name": "Post",
+            "x": 10,
+            "y": 50,
+            "height": 1
+          },
+          {
+            "id": "a",
+            "name": "High bridge",
+            "x": 40,
+            "y": 20,
+            "height": 4
+          },
+          {
+            "id": "b",
+            "name": "Towpath",
+            "x": 40,
+            "y": 80,
+            "height": 1
+          },
+          {
+            "id": "c",
+            "name": "Market",
+            "x": 70,
+            "y": 65,
+            "height": 2
+          },
+          {
+            "id": "t",
+            "name": "Mill",
+            "x": 90,
+            "y": 30,
+            "height": 0
+          }
+        ],
+        "edges": [
+          [
+            "s",
+            "a",
+            1
+          ],
+          [
+            "a",
+            "t",
+            1
+          ],
+          [
+            "s",
+            "b",
+            2
+          ],
+          [
+            "b",
+            "c",
+            1
+          ],
+          [
+            "c",
+            "t",
+            1
+          ],
+          [
+            "a",
+            "c",
+            1
+          ]
+        ]
+      },
+      "route": [
+        "s",
+        "b",
+        "c",
+        "t"
+      ],
+      "distance": 4,
+      "climb": 1
+    },
+    {
+      "level": {
+        "id": "market-reply",
+        "title": "Back through the market",
+        "brief": "Visit the mill, then the market, then return home. The low return has its own climb.",
+        "start": "s",
+        "goal": "s",
+        "via": [
+          "t",
+          "c"
+        ],
+        "distanceBudget": 8,
+        "climbBudget": 3,
+        "nodes": [
+          {
+            "id": "s",
+            "name": "Post",
+            "x": 10,
+            "y": 50,
+            "height": 1
+          },
+          {
+            "id": "a",
+            "name": "High bridge",
+            "x": 40,
+            "y": 20,
+            "height": 4
+          },
+          {
+            "id": "b",
+            "name": "Towpath",
+            "x": 40,
+            "y": 80,
+            "height": 1
+          },
+          {
+            "id": "c",
+            "name": "Market",
+            "x": 70,
+            "y": 65,
+            "height": 2
+          },
+          {
+            "id": "t",
+            "name": "Mill",
+            "x": 90,
+            "y": 30,
+            "height": 0
+          }
+        ],
+        "edges": [
+          [
+            "s",
+            "a",
+            1
+          ],
+          [
+            "a",
+            "t",
+            1
+          ],
+          [
+            "s",
+            "b",
+            2
+          ],
+          [
+            "b",
+            "c",
+            1
+          ],
+          [
+            "c",
+            "t",
+            1
+          ],
+          [
+            "a",
+            "c",
+            1
+          ]
+        ]
+      },
+      "route": [
+        "s",
+        "b",
+        "c",
+        "t",
+        "c",
+        "b",
+        "s"
+      ],
+      "distance": 8,
+      "climb": 3
+    }
+  ]
+}
