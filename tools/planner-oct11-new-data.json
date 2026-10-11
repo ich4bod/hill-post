@@ -1,0 +1,361 @@
+{
+  "slug": "hill-post",
+  "mode": "roads",
+  "lane": 11,
+  "title": "Hill Post \u2014 Deliver across two quays and climb out of a low island",
+  "rows": [
+    {
+      "level": {
+        "id": "ferry-quays",
+        "title": "Cross the high quays",
+        "brief": "The ferry needs its letter before you visit the island. Two short quay roads surround the crossing.",
+        "start": "s",
+        "goal": "t",
+        "via": [],
+        "distanceBudget": 4,
+        "climbBudget": 2,
+        "nodes": [
+          {
+            "id": "s",
+            "name": "Post",
+            "x": 10,
+            "y": 50,
+            "height": 1
+          },
+          {
+            "id": "a",
+            "name": "West quay",
+            "x": 32,
+            "y": 20,
+            "height": 3
+          },
+          {
+            "id": "b",
+            "name": "East quay",
+            "x": 68,
+            "y": 20,
+            "height": 3
+          },
+          {
+            "id": "t",
+            "name": "Ferry",
+            "x": 90,
+            "y": 50,
+            "height": 1
+          },
+          {
+            "id": "c",
+            "name": "West garden",
+            "x": 32,
+            "y": 80,
+            "height": 1
+          },
+          {
+            "id": "d",
+            "name": "East garden",
+            "x": 68,
+            "y": 80,
+            "height": 2
+          },
+          {
+            "id": "m",
+            "name": "Island",
+            "x": 50,
+            "y": 50,
+            "height": 0
+          }
+        ],
+        "edges": [
+          [
+            "s",
+            "a",
+            1
+          ],
+          [
+            "a",
+            "b",
+            2
+          ],
+          [
+            "b",
+            "t",
+            1
+          ],
+          [
+            "s",
+            "c",
+            2
+          ],
+          [
+            "c",
+            "d",
+            2
+          ],
+          [
+            "d",
+            "t",
+            2
+          ],
+          [
+            "c",
+            "m",
+            1
+          ],
+          [
+            "m",
+            "b",
+            1
+          ]
+        ]
+      },
+      "route": [
+        "s",
+        "a",
+        "b",
+        "t"
+      ],
+      "distance": 4,
+      "climb": 2
+    },
+    {
+      "level": {
+        "id": "ferry-island",
+        "title": "A letter for the island first",
+        "brief": "Visit the island before the ferry. Leaving the low island costs a new rise.",
+        "start": "s",
+        "goal": "t",
+        "via": [
+          "m"
+        ],
+        "distanceBudget": 5,
+        "climbBudget": 3,
+        "nodes": [
+          {
+            "id": "s",
+            "name": "Post",
+            "x": 10,
+            "y": 50,
+            "height": 1
+          },
+          {
+            "id": "a",
+            "name": "West quay",
+            "x": 32,
+            "y": 20,
+            "height": 3
+          },
+          {
+            "id": "b",
+            "name": "East quay",
+            "x": 68,
+            "y": 20,
+            "height": 3
+          },
+          {
+            "id": "t",
+            "name": "Ferry",
+            "x": 90,
+            "y": 50,
+            "height": 1
+          },
+          {
+            "id": "c",
+            "name": "West garden",
+            "x": 32,
+            "y": 80,
+            "height": 1
+          },
+          {
+            "id": "d",
+            "name": "East garden",
+            "x": 68,
+            "y": 80,
+            "height": 2
+          },
+          {
+            "id": "m",
+            "name": "Island",
+            "x": 50,
+            "y": 50,
+            "height": 0
+          }
+        ],
+        "edges": [
+          [
+            "s",
+            "a",
+            1
+          ],
+          [
+            "a",
+            "b",
+            2
+          ],
+          [
+            "b",
+            "t",
+            1
+          ],
+          [
+            "s",
+            "c",
+            2
+          ],
+          [
+            "c",
+            "d",
+            2
+          ],
+          [
+            "d",
+            "t",
+            2
+          ],
+          [
+            "c",
+            "m",
+            1
+          ],
+          [
+            "m",
+            "b",
+            1
+          ]
+        ]
+      },
+      "route": [
+        "s",
+        "c",
+        "m",
+        "b",
+        "t"
+      ],
+      "distance": 5,
+      "climb": 3
+    },
+    {
+      "level": {
+        "id": "ferry-garden-home",
+        "title": "Bring the ferry reply through the gardens",
+        "brief": "Visit the ferry and the east garden, then come home. The low return still contains a climb.",
+        "start": "s",
+        "goal": "s",
+        "via": [
+          "t",
+          "d"
+        ],
+        "distanceBudget": 10,
+        "climbBudget": 3,
+        "nodes": [
+          {
+            "id": "s",
+            "name": "Post",
+            "x": 10,
+            "y": 50,
+            "height": 1
+          },
+          {
+            "id": "a",
+            "name": "West quay",
+            "x": 32,
+            "y": 20,
+            "height": 3
+          },
+          {
+            "id": "b",
+            "name": "East quay",
+            "x": 68,
+            "y": 20,
+            "height": 3
+          },
+          {
+            "id": "t",
+            "name": "Ferry",
+            "x": 90,
+            "y": 50,
+            "height": 1
+          },
+          {
+            "id": "c",
+            "name": "West garden",
+            "x": 32,
+            "y": 80,
+            "height": 1
+          },
+          {
+            "id": "d",
+            "name": "East garden",
+            "x": 68,
+            "y": 80,
+            "height": 2
+          },
+          {
+            "id": "m",
+            "name": "Island",
+            "x": 50,
+            "y": 50,
+            "height": 0
+          }
+        ],
+        "edges": [
+          [
+            "s",
+            "a",
+            1
+          ],
+          [
+            "a",
+            "b",
+            2
+          ],
+          [
+            "b",
+            "t",
+            1
+          ],
+          [
+            "s",
+            "c",
+            2
+          ],
+          [
+            "c",
+            "d",
+            2
+          ],
+          [
+            "d",
+            "t",
+            2
+          ],
+          [
+            "c",
+            "m",
+            1
+          ],
+          [
+            "m",
+            "b",
+            1
+          ]
+        ]
+      },
+      "route": [
+        "s",
+        "a",
+        "b",
+        "t",
+        "d",
+        "c",
+        "s"
+      ],
+      "distance": 10,
+      "climb": 3
+    }
+  ],
+  "group": "Ferry and island",
+  "help": "",
+  "helpID": "",
+  "depends": "nothing",
+  "message": "roads studies preserve their supplied values and independent memory"
+}
