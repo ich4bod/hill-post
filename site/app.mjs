@@ -1,5 +1,5 @@
-import {levels} from './levels.mjs?v=27';
-import {create, move, undo, restart, nextStop} from './engine.mjs?v=22';
+import {levels} from './levels.mjs?v=28';
+import {create, move, undo, restart, nextStop} from './engine.mjs?v=23';
 
 const select = document.querySelector('#delivery');
 select.style.minWidth = '0';
@@ -20,6 +20,7 @@ const deliveryGroups = [
   ['Complete deliveries', ['cafe-circuit-short', 'cafe-circuit-gentle']],
   ['Observatories', ['observatory-link', 'observatory-home', 'tower-parcel']],
   ['Market', ['market-quick', 'market-gentle', 'market-reply']],
+  ['Bridge and market', ['bridge-parcel', 'towpath-parcel', 'bridge-market-reply']],
   ['River crossings', ['river-bell', 'river-home', 'river-ford']],
   ['Reedbank', ['reedbank-gentle', 'reedbank-fast', 'reedbank-home']],
   ['Bell hill', ['bells-round', 'bells-home', 'bells-court']],
