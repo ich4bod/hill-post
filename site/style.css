@@ -252,5 +252,37 @@ select { width: min(100%, 24rem); min-height: 44px; max-width: 100%; padding: 6p
 .actions button { min-height: 44px; padding: 8px 14px; border: 2px solid #203a32; border-radius: 8px; background: #fffdf2; cursor: pointer; }
 .actions button:disabled { opacity: .65; cursor: default; }
 .caveat { font-size: 13px; }
+#three-questions-hill-post {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  margin: 16px 0;
+  padding: 12px;
+  border: 1px solid #d46a3c;
+  border-radius: 8px;
+  background: #fffdf2;
+}
+#three-questions-hill-post summary {
+  box-sizing: border-box;
+  min-height: 45px;
+  max-width: 100%;
+  padding: 8px;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+}
+#three-questions-hill-post summary:focus-visible {
+  outline: 3px solid #d46a3c;
+  outline-offset: 3px;
+}
+#three-questions-hill-post p { max-width: 100%; margin: 8px 0; overflow-wrap: anywhere; }
+#three-questions-hill-post h3 { margin: 16px 0 8px; font: bold 18px/1.35 system-ui, sans-serif; }
+#three-questions-hill-post section { max-width: 100%; margin: 16px 0; overflow-wrap: anywhere; }
+#three-questions-hill-post section > details {
+  max-width: 100%;
+  margin: 8px 0;
+  padding: 8px;
+  border: 1px solid #8c9b86;
+  border-radius: 6px;
+  overflow-wrap: anywhere;
+}
 footer { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 20px; }
 a { color: #203a32; }
