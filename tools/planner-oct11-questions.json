@@ -23,7 +23,7 @@
     }
   ],
   "facts": "Existing contour ridge roads2+2=4 withclimb4, valley2+2+2+2=8/climb1. Two-hills pathheight0/2/0/2/0 totals4climb. Cafe shortcircuit8/5 andgentlecircuit16/3. These are authored toy units.",
-  "palette": "#f1efd7/#253b3b/#dce7b7/#e9755c",
+  "palette": "#f1efdc/#203a32/#fffdf2/#d46a3c",
   "files": [
     "site/index.html",
     "site/style.css"
