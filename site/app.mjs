@@ -3,6 +3,15 @@ import {create, move, undo, restart, nextStop} from './engine.mjs?v=28';
 
 const select = document.querySelector('#delivery');
 select.style.minWidth = '0';
+const selectedChoiceNotes = {
+  'bridge-two-out': 'About the selected delivery: This delivery allows ten distance and three climbing. Two ordered letters must be visited before Post counts as home; descending does not refund either allowance.',
+  'bridge-two-back': 'About the selected delivery: This delivery uses the same ten-distance and three-climbing allowances, but asks for the lower letter before the higher reply. The order of the stops is part of the delivery.',
+  'bridge-two-short': 'About the selected delivery: This delivery allows nine distance and four climbing. It trades one unit of distance for one more upward unit; the two limits remain separate.',
+};
+function updateSelectedChoiceNote() {
+  document.querySelector('#choice-note-hill-post').textContent = selectedChoiceNotes[select.value]
+    ?? 'Other choices keep their existing descriptions.';
+}
 const map = document.querySelector('#map');
 const levelById = new Map(levels.map(level => [level.id, level]));
 let state = create('contour');
@@ -124,6 +133,7 @@ function budgetPoints(level, path, allowance, climbed) {
 
 function render() {
   renderDeliveryOptions();
+  updateSelectedChoiceNote();
   const level = levelById.get(state.levelId);
   const nodeById = new Map(level.nodes.map(node => [node.id, node]));
   const currentId = state.path.at(-1);
