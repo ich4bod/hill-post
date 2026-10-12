@@ -1,5 +1,5 @@
 import {levels} from './levels.mjs?v=34';
-import {create, move, undo, restart, nextStop} from './engine.mjs?v=27';
+import {create, move, undo, restart, nextStop} from './engine.mjs?v=28';
 
 const select = document.querySelector('#delivery');
 select.style.minWidth = '0';
