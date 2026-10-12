@@ -1,0 +1,311 @@
+{
+  "slug": "hill-post",
+  "mode": "roads",
+  "lane": 11,
+  "group": "Two letters round the orchard",
+  "helpID": "",
+  "help": "",
+  "message": "orchard deliveries price both letter order and the complete return",
+  "rows": [
+    {
+      "level": {
+        "id": "orchard-out",
+        "title": "Orchard letter before River letter",
+        "brief": "Deliver at Orchard letter, then River letter. Return to Post within ten distance and four climbing.",
+        "start": "s",
+        "goal": "s",
+        "via": [
+          "b",
+          "c"
+        ],
+        "distanceBudget": 10,
+        "climbBudget": 4,
+        "nodes": [
+          {
+            "id": "s",
+            "name": "Post",
+            "x": 10,
+            "y": 70,
+            "height": 0
+          },
+          {
+            "id": "r",
+            "name": "Wind rise",
+            "x": 30,
+            "y": 20,
+            "height": 3
+          },
+          {
+            "id": "b",
+            "name": "Orchard letter",
+            "x": 65,
+            "y": 15,
+            "height": 4
+          },
+          {
+            "id": "c",
+            "name": "River letter",
+            "x": 85,
+            "y": 70,
+            "height": 1
+          },
+          {
+            "id": "e",
+            "name": "River bend",
+            "x": 45,
+            "y": 85,
+            "height": 0
+          }
+        ],
+        "edges": [
+          [
+            "s",
+            "r",
+            2
+          ],
+          [
+            "r",
+            "b",
+            2
+          ],
+          [
+            "b",
+            "c",
+            2
+          ],
+          [
+            "c",
+            "e",
+            2
+          ],
+          [
+            "e",
+            "s",
+            2
+          ],
+          [
+            "r",
+            "c",
+            1
+          ],
+          [
+            "e",
+            "b",
+            4
+          ]
+        ]
+      },
+      "route": [
+        "s",
+        "r",
+        "b",
+        "c",
+        "e",
+        "s"
+      ],
+      "distance": 10,
+      "climb": 4,
+      "note": "Two letters require a complete return to Post. The allowance is ten distance and four climbing; the ordered stops are Orchard letter, then River letter."
+    },
+    {
+      "level": {
+        "id": "orchard-back",
+        "title": "River letter before Orchard letter",
+        "brief": "Deliver at River letter, then Orchard letter. Return to Post within ten distance and four climbing.",
+        "start": "s",
+        "goal": "s",
+        "via": [
+          "c",
+          "b"
+        ],
+        "distanceBudget": 10,
+        "climbBudget": 4,
+        "nodes": [
+          {
+            "id": "s",
+            "name": "Post",
+            "x": 10,
+            "y": 70,
+            "height": 0
+          },
+          {
+            "id": "r",
+            "name": "Wind rise",
+            "x": 30,
+            "y": 20,
+            "height": 3
+          },
+          {
+            "id": "b",
+            "name": "Orchard letter",
+            "x": 65,
+            "y": 15,
+            "height": 4
+          },
+          {
+            "id": "c",
+            "name": "River letter",
+            "x": 85,
+            "y": 70,
+            "height": 1
+          },
+          {
+            "id": "e",
+            "name": "River bend",
+            "x": 45,
+            "y": 85,
+            "height": 0
+          }
+        ],
+        "edges": [
+          [
+            "s",
+            "r",
+            2
+          ],
+          [
+            "r",
+            "b",
+            2
+          ],
+          [
+            "b",
+            "c",
+            2
+          ],
+          [
+            "c",
+            "e",
+            2
+          ],
+          [
+            "e",
+            "s",
+            2
+          ],
+          [
+            "r",
+            "c",
+            1
+          ],
+          [
+            "e",
+            "b",
+            4
+          ]
+        ]
+      },
+      "route": [
+        "s",
+        "e",
+        "c",
+        "b",
+        "r",
+        "s"
+      ],
+      "distance": 10,
+      "climb": 4,
+      "note": "Visit River letter before Orchard letter and return to Post. Reversing an identical closed circuit keeps its cumulative climbing; this allowance is ten distance and four climbing."
+    },
+    {
+      "level": {
+        "id": "orchard-short",
+        "title": "A shorter return over Wind rise",
+        "brief": "Deliver at Orchard letter, then River letter. Return to Post within nine distance and six climbing.",
+        "start": "s",
+        "goal": "s",
+        "via": [
+          "b",
+          "c"
+        ],
+        "distanceBudget": 9,
+        "climbBudget": 6,
+        "nodes": [
+          {
+            "id": "s",
+            "name": "Post",
+            "x": 10,
+            "y": 70,
+            "height": 0
+          },
+          {
+            "id": "r",
+            "name": "Wind rise",
+            "x": 30,
+            "y": 20,
+            "height": 3
+          },
+          {
+            "id": "b",
+            "name": "Orchard letter",
+            "x": 65,
+            "y": 15,
+            "height": 4
+          },
+          {
+            "id": "c",
+            "name": "River letter",
+            "x": 85,
+            "y": 70,
+            "height": 1
+          },
+          {
+            "id": "e",
+            "name": "River bend",
+            "x": 45,
+            "y": 85,
+            "height": 0
+          }
+        ],
+        "edges": [
+          [
+            "s",
+            "r",
+            2
+          ],
+          [
+            "r",
+            "b",
+            2
+          ],
+          [
+            "b",
+            "c",
+            2
+          ],
+          [
+            "c",
+            "e",
+            2
+          ],
+          [
+            "e",
+            "s",
+            2
+          ],
+          [
+            "r",
+            "c",
+            1
+          ],
+          [
+            "e",
+            "b",
+            4
+          ]
+        ]
+      },
+      "route": [
+        "s",
+        "r",
+        "b",
+        "c",
+        "r",
+        "s"
+      ],
+      "distance": 9,
+      "climb": 6,
+      "note": "This allowance trades distance for climbing: nine distance and six climbing. The final letter is still followed by a ride home."
+    }
+  ]
+}
