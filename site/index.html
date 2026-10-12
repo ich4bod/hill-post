@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hill Post</title>
   <link rel="stylesheet" href="./style.css?v=15">
-  <script type="module" src="./app.mjs?v=52"></script>
+  <script type="module" src="./app.mjs?v=53"></script>
 </head>
 <body>
   <main>
@@ -45,6 +45,11 @@
             <option value="two-letter-ridge">Upper letter before the lower letter</option>
             <option value="two-letter-garden">Lower letter before the upper letter</option>
             <option value="two-letter-cross">Both letters without visiting the ridge</option>
+          </optgroup>
+          <optgroup label="Bell hill and low bridge">
+            <option value="bell-bridge-out">Take the letter across the low bridge</option>
+            <option value="bell-garden-out">Take the garden letter east</option>
+            <option value="bell-bridge-garden-home">Bridge first, garden next, then home</option>
           </optgroup>
         </select>
       </div>
