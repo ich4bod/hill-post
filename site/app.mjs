@@ -1,4 +1,4 @@
-import {levels} from './levels.mjs?v=33';
+import {levels} from './levels.mjs?v=34';
 import {create, move, undo, restart, nextStop} from './engine.mjs?v=27';
 
 const select = document.querySelector('#delivery');
@@ -36,6 +36,7 @@ const deliveryGroups = [
   ['Two letters and home', ['two-letter-ridge', 'two-letter-garden', 'two-letter-cross']],
   ['Bell hill and low bridge', ['bell-bridge-out', 'bell-garden-out', 'bell-bridge-garden-home']],
   ['A letter and a changing return', ['letter-rise-first', 'letter-low-first', 'letter-orchard-return']],
+  ['Two letters and the low bridge', ['bridge-two-out', 'bridge-two-back', 'bridge-two-short']],
 ];
 
 const search = document.querySelector('#delivery-search');
