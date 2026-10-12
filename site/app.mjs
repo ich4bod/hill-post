@@ -1,5 +1,5 @@
-import {levels} from './levels.mjs?v=32';
-import {create, move, undo, restart, nextStop} from './engine.mjs?v=26';
+import {levels} from './levels.mjs?v=33';
+import {create, move, undo, restart, nextStop} from './engine.mjs?v=27';
 
 const select = document.querySelector('#delivery');
 select.style.minWidth = '0';
@@ -35,6 +35,7 @@ const deliveryGroups = [
   ['Ferry and island', ['ferry-quays', 'ferry-island', 'ferry-garden-home']],
   ['Two letters and home', ['two-letter-ridge', 'two-letter-garden', 'two-letter-cross']],
   ['Bell hill and low bridge', ['bell-bridge-out', 'bell-garden-out', 'bell-bridge-garden-home']],
+  ['A letter and a changing return', ['letter-rise-first', 'letter-low-first', 'letter-orchard-return']],
 ];
 
 const search = document.querySelector('#delivery-search');
