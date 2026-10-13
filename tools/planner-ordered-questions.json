@@ -1,0 +1,55 @@
+{
+  "id": "three-questions-hill-post",
+  "title": "Hill Post — Ask whether an early letter and a repeated road count",
+  "depends": "1025",
+  "sections": [
+    [
+      "Is the shortest road always available?",
+      "Choose Take the contour. Compare the ridge road with the road through Mill, Bridge and Orchard before riding.",
+      "The ridge costs four distance and four climbing. The longer road costs eight distance and one climbing. With a climbing allowance of one, the shortest route is not a usable route. The two limits cannot replace each other."
+    ],
+    [
+      "Does the descent pay back the climb?",
+      "Choose Two hills count twice. Follow the heights along the two-hill road without pressing a destination yet.",
+      "The road rises from zero to two, falls to zero, then rises to two again. Those upward changes add to four climbing, even though the finish is back at zero. A descent does not refund an earlier rise. The lower towpath fits the separate climbing allowance."
+    ],
+    [
+      "Can a longer complete delivery need less climbing?",
+      "Compare Deliver and bring back the reply with A gentler complete delivery. Include the ride home, not just the outward delivery.",
+      "The roof round trip uses eight distance and five climbing. The gentler round trip uses sixteen distance and three climbing. Returning over the roof adds a rise from the cafe’s height of three to the roof’s height of four. The price of going home belongs to the route too."
+    ],
+    [
+      "Does reversing a loop remove a hill?",
+      "Choose a complete journey with the same roads in either direction. Add only the upward height changes, including the ride home.",
+      "A closed circuit returns to its starting height, so its total rises equal its total falls. Reversing that identical circuit swaps rises and falls and keeps the same cumulative climbing. A different road can change the price; reversal alone cannot."
+    ],
+    [
+      "Is a delivery finished at its last letter?",
+      "On a journey whose goal is Post, pause after delivering the final letter. Read the next stop before choosing a road.",
+      "Not yet. The goal still requires the ride home. Delivered letters do not grant extra distance or climbing, and the allowance already spent stays spent. A route must pay for its whole stated journey."
+    ],
+    [
+      "Does a taller stop imply a longer road?",
+      "Compare a road length with the heights of its two endpoints before riding it.",
+      "They are separate authored quantities. Road length spends distance; a positive endpoint height difference spends climbing. Map spacing is a drawing aid, not the road-length formula. Neither allowance is a physical bicycle-energy estimate."
+    ],
+    [
+      "Does passing a future letter deliver it early?",
+      "Choose Three letters using the school cross-road. Read the requested order before passing School on the way to Orchard.",
+      "No. This delivery asks for Hill, then Orchard, then School. Passing School before Orchard does not deliver the School letter; you must return when it is the next requested stop. A place on the map and a place in the delivery order are different things."
+    ],
+    [
+      "Is a road free the second time?",
+      "On an ordered-letter delivery, compare the route list with a road that you have ridden before.",
+      "No. Every traversal spends that road’s printed distance again. Climbing is also charged for each upward traversal, not once for discovering a hill. An earlier visit grants neither allowance back."
+    ],
+    [
+      "Does reaching Post before the letters end the ride?",
+      "Begin a delivery whose goal is Post. Read the remaining ordered stops before returning there early.",
+      "No. Returning to Post finishes only after the requested letters have been delivered in order. An early return is another position on the route; it does not erase the remaining stops or restore distance and climbing."
+    ]
+  ],
+  "summary": "Questions about distance and climbing",
+  "lead": "Road lengths and stop heights are separate allowances in this puzzle. Count the road you ride and every upward change; these numbers are not bicycle-energy measurements.",
+  "slug": "hill-post"
+}

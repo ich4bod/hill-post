@@ -349,7 +349,7 @@
   "picker": "delivery",
   "noteID": "choice-note-hill-post",
   "noteLead": "About the selected delivery: ",
-  "noteFallback": "Other choices keep their existing descriptions.",
+  "noteFallback": "",
   "notes": [
     "This delivery allows ten distance and three climbing. Two ordered letters must be visited before Post counts as home; descending does not refund either allowance.",
     "This delivery uses the same ten-distance and three-climbing allowances, but asks for the lower letter before the higher reply. The order of the stops is part of the delivery.",
