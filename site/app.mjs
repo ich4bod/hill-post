@@ -1,4 +1,4 @@
-import {levels} from './levels.mjs?v=35';
+import {levels} from './levels.mjs?v=36';
 import {create, move, undo, restart, nextStop} from './engine.mjs?v=30';
 
 const select = document.querySelector('#delivery');
@@ -13,6 +13,9 @@ const selectedChoiceNotes = {
   'school-bell-first': 'About the selected delivery: Two ordered stops and a return share eight distance and three climbing. Reaching Post before both stops is not delivery.',
   'school-bell-last': 'About the selected delivery: The same loop reverses the stop order, but its complete climb stays three. Descents refund neither allowance.',
   'school-bell-cut': 'About the selected delivery: Seven distance and three climbing leave the quay loop too long. Visiting a road again counts its length again; the hollow return can fit.',
+  'open-up': 'About the selected delivery: Start at Post, deliver Bridge letter then School letter, and finish at Hill station. Eight distance and five climbing include every rise along this open ride.',
+  'open-down': 'About the selected delivery: Reverse the open ride: School letter then Bridge letter, ending at Post. Eight distance now needs one climbing; an open route does not obey the closed-circuit reversal rule.',
+  'open-home': 'About the selected delivery: Visit Bridge letter, Post, then School letter before returning to Hill station. The sixteen-distance circuit needs six climbing; passing a future stop too early does not deliver it.',
 };
 function updateSelectedChoiceNote() {
   document.querySelector('#choice-note-hill-post').textContent = selectedChoiceNotes[select.value]
@@ -54,6 +57,7 @@ const deliveryGroups = [
   ['Two letters and the low bridge', ['bridge-two-out', 'bridge-two-back', 'bridge-two-short']],
   ['Two letters round the orchard', ['orchard-out', 'orchard-back', 'orchard-short']],
   ['Letters above the hollow', ['school-bell-first', 'school-bell-last', 'school-bell-cut']],
+  ['An open road and a complete return', ['open-up', 'open-down', 'open-home']],
 ];
 
 const search = document.querySelector('#delivery-search');
