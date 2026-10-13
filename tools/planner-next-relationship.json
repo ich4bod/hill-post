@@ -1,0 +1,306 @@
+{
+  "roads": {
+    "mode": "roads",
+    "group": "An open road and a complete return",
+    "rows": [
+      {
+        "level": {
+          "id": "open-up",
+          "title": "Two letters ending at Hill station",
+          "brief": "Start at Post, deliver Bridge letter then School letter, and finish at Hill station. Eight distance and five climbing include every rise along this open ride.",
+          "start": "s",
+          "goal": "h",
+          "via": [
+            "b",
+            "c"
+          ],
+          "distanceBudget": 8,
+          "climbBudget": 5,
+          "nodes": [
+            {
+              "id": "s",
+              "name": "Post",
+              "x": 10,
+              "y": 80,
+              "height": 0
+            },
+            {
+              "id": "a",
+              "name": "Rise",
+              "x": 30,
+              "y": 25,
+              "height": 2
+            },
+            {
+              "id": "b",
+              "name": "Bridge letter",
+              "x": 50,
+              "y": 70,
+              "height": 1
+            },
+            {
+              "id": "c",
+              "name": "School letter",
+              "x": 70,
+              "y": 25,
+              "height": 3
+            },
+            {
+              "id": "h",
+              "name": "Hill station",
+              "x": 90,
+              "y": 10,
+              "height": 4
+            }
+          ],
+          "edges": [
+            [
+              "s",
+              "a",
+              2
+            ],
+            [
+              "a",
+              "b",
+              2
+            ],
+            [
+              "b",
+              "c",
+              2
+            ],
+            [
+              "c",
+              "h",
+              2
+            ],
+            [
+              "s",
+              "b",
+              5
+            ],
+            [
+              "a",
+              "c",
+              5
+            ]
+          ]
+        },
+        "route": [
+          "s",
+          "a",
+          "b",
+          "c",
+          "h"
+        ],
+        "distance": 8,
+        "climb": 5,
+        "note": "Start at Post, deliver Bridge letter then School letter, and finish at Hill station. Eight distance and five climbing include every rise along this open ride."
+      },
+      {
+        "level": {
+          "id": "open-down",
+          "title": "Two letters ending at Post",
+          "brief": "Reverse the open ride: School letter then Bridge letter, ending at Post. Eight distance now needs one climbing; an open route does not obey the closed-circuit reversal rule.",
+          "start": "h",
+          "goal": "s",
+          "via": [
+            "c",
+            "b"
+          ],
+          "distanceBudget": 8,
+          "climbBudget": 1,
+          "nodes": [
+            {
+              "id": "s",
+              "name": "Post",
+              "x": 10,
+              "y": 80,
+              "height": 0
+            },
+            {
+              "id": "a",
+              "name": "Rise",
+              "x": 30,
+              "y": 25,
+              "height": 2
+            },
+            {
+              "id": "b",
+              "name": "Bridge letter",
+              "x": 50,
+              "y": 70,
+              "height": 1
+            },
+            {
+              "id": "c",
+              "name": "School letter",
+              "x": 70,
+              "y": 25,
+              "height": 3
+            },
+            {
+              "id": "h",
+              "name": "Hill station",
+              "x": 90,
+              "y": 10,
+              "height": 4
+            }
+          ],
+          "edges": [
+            [
+              "s",
+              "a",
+              2
+            ],
+            [
+              "a",
+              "b",
+              2
+            ],
+            [
+              "b",
+              "c",
+              2
+            ],
+            [
+              "c",
+              "h",
+              2
+            ],
+            [
+              "s",
+              "b",
+              5
+            ],
+            [
+              "a",
+              "c",
+              5
+            ]
+          ]
+        },
+        "route": [
+          "h",
+          "c",
+          "b",
+          "a",
+          "s"
+        ],
+        "distance": 8,
+        "climb": 1,
+        "note": "Reverse the open ride: School letter then Bridge letter, ending at Post. Eight distance now needs one climbing; an open route does not obey the closed-circuit reversal rule."
+      },
+      {
+        "level": {
+          "id": "open-home",
+          "title": "From Hill station to Post and back",
+          "brief": "Visit Bridge letter, Post, then School letter before returning to Hill station. The sixteen-distance circuit needs six climbing; passing a future stop too early does not deliver it.",
+          "start": "h",
+          "goal": "h",
+          "via": [
+            "b",
+            "s",
+            "c"
+          ],
+          "distanceBudget": 16,
+          "climbBudget": 6,
+          "nodes": [
+            {
+              "id": "s",
+              "name": "Post",
+              "x": 10,
+              "y": 80,
+              "height": 0
+            },
+            {
+              "id": "a",
+              "name": "Rise",
+              "x": 30,
+              "y": 25,
+              "height": 2
+            },
+            {
+              "id": "b",
+              "name": "Bridge letter",
+              "x": 50,
+              "y": 70,
+              "height": 1
+            },
+            {
+              "id": "c",
+              "name": "School letter",
+              "x": 70,
+              "y": 25,
+              "height": 3
+            },
+            {
+              "id": "h",
+              "name": "Hill station",
+              "x": 90,
+              "y": 10,
+              "height": 4
+            }
+          ],
+          "edges": [
+            [
+              "s",
+              "a",
+              2
+            ],
+            [
+              "a",
+              "b",
+              2
+            ],
+            [
+              "b",
+              "c",
+              2
+            ],
+            [
+              "c",
+              "h",
+              2
+            ],
+            [
+              "s",
+              "b",
+              5
+            ],
+            [
+              "a",
+              "c",
+              5
+            ]
+          ]
+        },
+        "route": [
+          "h",
+          "c",
+          "b",
+          "a",
+          "s",
+          "a",
+          "b",
+          "c",
+          "h"
+        ],
+        "distance": 16,
+        "climb": 6,
+        "note": "Visit Bridge letter, Post, then School letter before returning to Hill station. The sixteen-distance circuit needs six climbing; passing a future stop too early does not deliver it."
+      }
+    ],
+    "notes": [
+      "Start at Post, deliver Bridge letter then School letter, and finish at Hill station. Eight distance and five climbing include every rise along this open ride.",
+      "Reverse the open ride: School letter then Bridge letter, ending at Post. Eight distance now needs one climbing; an open route does not obey the closed-circuit reversal rule.",
+      "Visit Bridge letter, Post, then School letter before returning to Hill station. The sixteen-distance circuit needs six climbing; passing a future stop too early does not deliver it."
+    ],
+    "facts": "Host witness distances/climbs8/5,8/1,16/6; endpoint netheight change explains differing reversedopen climbs. Closedcircuit climbs6bothdirections. Edge lengths explicit, positiveendpoint rises accumulated; descent refundsneither. Witnessroutes NOT shownvisitors.",
+    "dep": 948,
+    "picker": "delivery",
+    "noteID": "choice-note-hill-post",
+    "noteLead": "About the selected delivery: ",
+    "message": "roads comparisons keep exact choices silent and reversible"
+  }
+}
