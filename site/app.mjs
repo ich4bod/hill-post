@@ -1,5 +1,5 @@
-import {levels} from './levels.mjs?v=34';
-import {create, move, undo, restart, nextStop} from './engine.mjs?v=28';
+import {levels} from './levels.mjs?v=35';
+import {create, move, undo, restart, nextStop} from './engine.mjs?v=29';
 
 const select = document.querySelector('#delivery');
 select.style.minWidth = '0';
@@ -7,6 +7,9 @@ const selectedChoiceNotes = {
   'bridge-two-out': 'About the selected delivery: This delivery allows ten distance and three climbing. Two ordered letters must be visited before Post counts as home; descending does not refund either allowance.',
   'bridge-two-back': 'About the selected delivery: This delivery uses the same ten-distance and three-climbing allowances, but asks for the lower letter before the higher reply. The order of the stops is part of the delivery.',
   'bridge-two-short': 'About the selected delivery: This delivery allows nine distance and four climbing. It trades one unit of distance for one more upward unit; the two limits remain separate.',
+  'orchard-out': 'About the selected delivery: Two letters require a complete return to Post. The allowance is ten distance and four climbing; the ordered stops are Orchard letter, then River letter.',
+  'orchard-back': 'About the selected delivery: Visit River letter before Orchard letter and return to Post. Reversing an identical closed circuit keeps its cumulative climbing; this allowance is ten distance and four climbing.',
+  'orchard-short': 'About the selected delivery: This allowance trades distance for climbing: nine distance and six climbing. The final letter is still followed by a ride home.',
 };
 function updateSelectedChoiceNote() {
   document.querySelector('#choice-note-hill-post').textContent = selectedChoiceNotes[select.value]
@@ -46,6 +49,7 @@ const deliveryGroups = [
   ['Bell hill and low bridge', ['bell-bridge-out', 'bell-garden-out', 'bell-bridge-garden-home']],
   ['A letter and a changing return', ['letter-rise-first', 'letter-low-first', 'letter-orchard-return']],
   ['Two letters and the low bridge', ['bridge-two-out', 'bridge-two-back', 'bridge-two-short']],
+  ['Two letters round the orchard', ['orchard-out', 'orchard-back', 'orchard-short']],
 ];
 
 const search = document.querySelector('#delivery-search');
