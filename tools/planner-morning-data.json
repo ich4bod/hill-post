@@ -1,0 +1,301 @@
+{
+  "study": {
+    "mode": "roads",
+    "group": "Letters above the hollow",
+    "rows": [
+      {
+        "level": {
+          "id": "school-bell-first",
+          "title": "Bell hill then school, round the quay",
+          "brief": "Deliver on Bell hill, then at the school. The quay makes a loop home.",
+          "start": "s",
+          "goal": "s",
+          "via": [
+            "a",
+            "c"
+          ],
+          "distanceBudget": 8,
+          "climbBudget": 3,
+          "nodes": [
+            {
+              "id": "s",
+              "name": "Post",
+              "x": 12,
+              "y": 50,
+              "height": 0
+            },
+            {
+              "id": "a",
+              "name": "Bell hill",
+              "x": 32,
+              "y": 18,
+              "height": 2
+            },
+            {
+              "id": "b",
+              "name": "Hollow",
+              "x": 53,
+              "y": 18,
+              "height": 0
+            },
+            {
+              "id": "c",
+              "name": "School",
+              "x": 88,
+              "y": 50,
+              "height": 1
+            },
+            {
+              "id": "d",
+              "name": "Quay",
+              "x": 60,
+              "y": 82,
+              "height": 0
+            }
+          ],
+          "edges": [
+            [
+              "s",
+              "a",
+              2
+            ],
+            [
+              "a",
+              "b",
+              1
+            ],
+            [
+              "b",
+              "c",
+              1
+            ],
+            [
+              "c",
+              "d",
+              1
+            ],
+            [
+              "d",
+              "s",
+              3
+            ],
+            [
+              "b",
+              "s",
+              2
+            ]
+          ]
+        },
+        "route": [
+          "s",
+          "a",
+          "b",
+          "c",
+          "d",
+          "s"
+        ],
+        "distance": 8,
+        "climb": 3
+      },
+      {
+        "level": {
+          "id": "school-bell-last",
+          "title": "School then Bell hill, round the quay",
+          "brief": "The school comes first today. Return with the hill letter collected afterward.",
+          "start": "s",
+          "goal": "s",
+          "via": [
+            "c",
+            "a"
+          ],
+          "distanceBudget": 8,
+          "climbBudget": 3,
+          "nodes": [
+            {
+              "id": "s",
+              "name": "Post",
+              "x": 12,
+              "y": 50,
+              "height": 0
+            },
+            {
+              "id": "a",
+              "name": "Bell hill",
+              "x": 32,
+              "y": 18,
+              "height": 2
+            },
+            {
+              "id": "b",
+              "name": "Hollow",
+              "x": 53,
+              "y": 18,
+              "height": 0
+            },
+            {
+              "id": "c",
+              "name": "School",
+              "x": 88,
+              "y": 50,
+              "height": 1
+            },
+            {
+              "id": "d",
+              "name": "Quay",
+              "x": 60,
+              "y": 82,
+              "height": 0
+            }
+          ],
+          "edges": [
+            [
+              "s",
+              "a",
+              2
+            ],
+            [
+              "a",
+              "b",
+              1
+            ],
+            [
+              "b",
+              "c",
+              1
+            ],
+            [
+              "c",
+              "d",
+              1
+            ],
+            [
+              "d",
+              "s",
+              3
+            ],
+            [
+              "b",
+              "s",
+              2
+            ]
+          ]
+        },
+        "route": [
+          "s",
+          "d",
+          "c",
+          "b",
+          "a",
+          "s"
+        ],
+        "distance": 8,
+        "climb": 3
+      },
+      {
+        "level": {
+          "id": "school-bell-cut",
+          "title": "Bell hill then school, through the hollow",
+          "brief": "Seven distance rules out the quay loop. A repeated hollow road can bring you home.",
+          "start": "s",
+          "goal": "s",
+          "via": [
+            "a",
+            "c"
+          ],
+          "distanceBudget": 7,
+          "climbBudget": 3,
+          "nodes": [
+            {
+              "id": "s",
+              "name": "Post",
+              "x": 12,
+              "y": 50,
+              "height": 0
+            },
+            {
+              "id": "a",
+              "name": "Bell hill",
+              "x": 32,
+              "y": 18,
+              "height": 2
+            },
+            {
+              "id": "b",
+              "name": "Hollow",
+              "x": 53,
+              "y": 18,
+              "height": 0
+            },
+            {
+              "id": "c",
+              "name": "School",
+              "x": 88,
+              "y": 50,
+              "height": 1
+            },
+            {
+              "id": "d",
+              "name": "Quay",
+              "x": 60,
+              "y": 82,
+              "height": 0
+            }
+          ],
+          "edges": [
+            [
+              "s",
+              "a",
+              2
+            ],
+            [
+              "a",
+              "b",
+              1
+            ],
+            [
+              "b",
+              "c",
+              1
+            ],
+            [
+              "c",
+              "d",
+              1
+            ],
+            [
+              "d",
+              "s",
+              3
+            ],
+            [
+              "b",
+              "s",
+              2
+            ]
+          ]
+        },
+        "route": [
+          "s",
+          "a",
+          "b",
+          "c",
+          "b",
+          "s"
+        ],
+        "distance": 7,
+        "climb": 3
+      }
+    ],
+    "notes": [
+      "Two ordered stops and a return share eight distance and three climbing. Reaching Post before both stops is not delivery.",
+      "The same loop reverses the stop order, but its complete climb stays three. Descents refund neither allowance.",
+      "Seven distance and three climbing leave the quay loop too long. Visiting a road again counts its length again; the hollow return can fit."
+    ],
+    "noteID": "choice-note-hill-post",
+    "noteLead": "About the selected delivery: ",
+    "picker": "delivery",
+    "facts": "Edgesundirected; distanceeachtraversal; positiveheightonlyclimb. Closedloopforward/reverse8/3; repeatedhollow7/3. Allnodespositionsheightandexactrouteprovided. Noenergyoroptimalityclaim.",
+    "dep": 914,
+    "message": "roads histories keep their authored relationship and independent memory"
+  }
+}
