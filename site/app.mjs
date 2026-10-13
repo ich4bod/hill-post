@@ -1,5 +1,5 @@
 import {levels} from './levels.mjs?v=35';
-import {create, move, undo, restart, nextStop} from './engine.mjs?v=29';
+import {create, move, undo, restart, nextStop} from './engine.mjs?v=30';
 
 const select = document.querySelector('#delivery');
 select.style.minWidth = '0';
@@ -10,6 +10,9 @@ const selectedChoiceNotes = {
   'orchard-out': 'About the selected delivery: Two letters require a complete return to Post. The allowance is ten distance and four climbing; the ordered stops are Orchard letter, then River letter.',
   'orchard-back': 'About the selected delivery: Visit River letter before Orchard letter and return to Post. Reversing an identical closed circuit keeps its cumulative climbing; this allowance is ten distance and four climbing.',
   'orchard-short': 'About the selected delivery: This allowance trades distance for climbing: nine distance and six climbing. The final letter is still followed by a ride home.',
+  'school-bell-first': 'About the selected delivery: Two ordered stops and a return share eight distance and three climbing. Reaching Post before both stops is not delivery.',
+  'school-bell-last': 'About the selected delivery: The same loop reverses the stop order, but its complete climb stays three. Descents refund neither allowance.',
+  'school-bell-cut': 'About the selected delivery: Seven distance and three climbing leave the quay loop too long. Visiting a road again counts its length again; the hollow return can fit.',
 };
 function updateSelectedChoiceNote() {
   document.querySelector('#choice-note-hill-post').textContent = selectedChoiceNotes[select.value]
@@ -50,6 +53,7 @@ const deliveryGroups = [
   ['A letter and a changing return', ['letter-rise-first', 'letter-low-first', 'letter-orchard-return']],
   ['Two letters and the low bridge', ['bridge-two-out', 'bridge-two-back', 'bridge-two-short']],
   ['Two letters round the orchard', ['orchard-out', 'orchard-back', 'orchard-short']],
+  ['Letters above the hollow', ['school-bell-first', 'school-bell-last', 'school-bell-cut']],
 ];
 
 const search = document.querySelector('#delivery-search');

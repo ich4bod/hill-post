@@ -1,4 +1,4 @@
-import {levels} from './levels.mjs?v=35';
+import {levels} from './levels.mjs?v=36';
 
 const byId = new Map(levels.map(level => [level.id, level]));
 
