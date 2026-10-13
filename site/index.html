@@ -14,6 +14,34 @@
       <p>Carry a parcel across the hills. Your legs and your time have different limits.</p>
     </header>
     <section aria-labelledby="delivery-title">
+      <h2 id="delivery-title"></h2>
+      <p id="delivery-brief"></p>
+      <p id="choice-note-hill-post"></p>
+      <p id="destination"></p>
+      <p id="hill-stops"></p>
+      <p id="hill-next-stop"></p>
+      <div id="map" aria-label="Road map"></div>
+      <p id="distance"></p>
+      <p id="climb"></p>
+      <p id="ride-allowance"></p>
+      <p id="ride-status" aria-live="polite"></p>
+      <p id="arrival-note" hidden></p>
+      <details id="road-choices">
+        <summary>Roads from here</summary>
+        <table>
+          <thead>
+            <tr><th scope="col">Stop</th><th scope="col">Distance</th><th scope="col">Climbing</th></tr>
+          </thead>
+          <tbody id="road-choice-rows"></tbody>
+        </table>
+        <p id="road-choices-empty" hidden>No more roads. Undo road to leave the destination.</p>
+      </details>
+      <p id="route"></p>
+      <div class="actions">
+        <button id="undo" type="button">Undo road</button>
+        <button id="undo-junction" type="button">Undo to the last junction</button>
+        <button id="restart" type="button">Restart delivery</button>
+      </div>
       <div class="selector">
         <details id="delivery-finder">
           <summary>Find another delivery</summary>
@@ -68,29 +96,6 @@
           </optgroup>
         </select>
       </div>
-      <h2 id="delivery-title"></h2>
-      <p id="delivery-brief"></p>
-      <p id="choice-note-hill-post"></p>
-      <p id="destination"></p>
-      <p id="hill-stops"></p>
-      <p id="hill-next-stop"></p>
-      <div id="map" aria-label="Road map"></div>
-      <p id="distance"></p>
-      <p id="climb"></p>
-      <p id="ride-allowance"></p>
-      <p id="ride-status" aria-live="polite"></p>
-      <p id="arrival-note" hidden></p>
-      <details id="road-choices">
-        <summary>Roads from here</summary>
-        <table>
-          <thead>
-            <tr><th scope="col">Stop</th><th scope="col">Distance</th><th scope="col">Climbing</th></tr>
-          </thead>
-          <tbody id="road-choice-rows"></tbody>
-        </table>
-        <p id="road-choices-empty" hidden>No more roads. Undo road to leave the destination.</p>
-      </details>
-      <p id="route"></p>
       <details id="ride-readers">
         <summary>Read this ride</summary>
       <details id="ride-legs">
@@ -126,11 +131,6 @@
         <p id="retrace-help">These are new costs on the roads already ridden, not a refund. Undo changes the attempt instead of riding back.</p>
       </details>
       </details>
-      <div class="actions">
-        <button id="undo" type="button">Undo road</button>
-        <button id="undo-junction" type="button">Undo to the last junction</button>
-        <button id="restart" type="button">Restart delivery</button>
-      </div>
       <details id="ride-comparison">
         <summary>Compare with a kept ride</summary>
         <div class="actions"><button id="remember-ride" type="button">Keep this ride</button><button id="return-kept-ride" type="button">Return to kept ride</button></div>
