@@ -1,0 +1,362 @@
+{
+  "roads": {
+    "mode": "roads",
+    "picker": "delivery",
+    "noteID": "choice-note-hill-post",
+    "noteLead": "About the selected delivery: ",
+    "slug": "hill-post",
+    "lane": 11,
+    "title": "Hill Post — Carry three ordered letters around a closed road",
+    "group": "Three letters and the road home",
+    "rows": [
+      {
+        "level": {
+          "id": "three-letters-clockwise",
+          "title": "Three letters around the long road",
+          "brief": "Deliver Hill, School and Orchard letters in that order, then return to Post. The road still rises after the final letter.",
+          "start": "s",
+          "goal": "s",
+          "via": [
+            "a",
+            "b",
+            "c"
+          ],
+          "distanceBudget": 12,
+          "climbBudget": 5,
+          "nodes": [
+            {
+              "id": "s",
+              "name": "Post",
+              "x": 10,
+              "y": 50,
+              "height": 0
+            },
+            {
+              "id": "a",
+              "name": "Hill letter",
+              "x": 30,
+              "y": 15,
+              "height": 3
+            },
+            {
+              "id": "b",
+              "name": "School letter",
+              "x": 70,
+              "y": 15,
+              "height": 1
+            },
+            {
+              "id": "c",
+              "name": "Orchard letter",
+              "x": 90,
+              "y": 50,
+              "height": 2
+            },
+            {
+              "id": "d",
+              "name": "Low bridge",
+              "x": 70,
+              "y": 85,
+              "height": 0
+            },
+            {
+              "id": "e",
+              "name": "Garden",
+              "x": 30,
+              "y": 85,
+              "height": 1
+            }
+          ],
+          "edges": [
+            [
+              "s",
+              "a",
+              2
+            ],
+            [
+              "a",
+              "b",
+              2
+            ],
+            [
+              "b",
+              "c",
+              2
+            ],
+            [
+              "c",
+              "d",
+              2
+            ],
+            [
+              "d",
+              "e",
+              2
+            ],
+            [
+              "e",
+              "s",
+              2
+            ],
+            [
+              "a",
+              "e",
+              3
+            ],
+            [
+              "b",
+              "d",
+              3
+            ]
+          ]
+        },
+        "route": [
+          "s",
+          "a",
+          "b",
+          "c",
+          "d",
+          "e",
+          "s"
+        ],
+        "distance": 12,
+        "climb": 5
+      },
+      {
+        "level": {
+          "id": "three-letters-reverse",
+          "title": "Three letters around the other way",
+          "brief": "Deliver Orchard, School and Hill letters in that order, then return to Post. Reversing the same closed road does not erase its climbing.",
+          "start": "s",
+          "goal": "s",
+          "via": [
+            "c",
+            "b",
+            "a"
+          ],
+          "distanceBudget": 12,
+          "climbBudget": 5,
+          "nodes": [
+            {
+              "id": "s",
+              "name": "Post",
+              "x": 10,
+              "y": 50,
+              "height": 0
+            },
+            {
+              "id": "a",
+              "name": "Hill letter",
+              "x": 30,
+              "y": 15,
+              "height": 3
+            },
+            {
+              "id": "b",
+              "name": "School letter",
+              "x": 70,
+              "y": 15,
+              "height": 1
+            },
+            {
+              "id": "c",
+              "name": "Orchard letter",
+              "x": 90,
+              "y": 50,
+              "height": 2
+            },
+            {
+              "id": "d",
+              "name": "Low bridge",
+              "x": 70,
+              "y": 85,
+              "height": 0
+            },
+            {
+              "id": "e",
+              "name": "Garden",
+              "x": 30,
+              "y": 85,
+              "height": 1
+            }
+          ],
+          "edges": [
+            [
+              "s",
+              "a",
+              2
+            ],
+            [
+              "a",
+              "b",
+              2
+            ],
+            [
+              "b",
+              "c",
+              2
+            ],
+            [
+              "c",
+              "d",
+              2
+            ],
+            [
+              "d",
+              "e",
+              2
+            ],
+            [
+              "e",
+              "s",
+              2
+            ],
+            [
+              "a",
+              "e",
+              3
+            ],
+            [
+              "b",
+              "d",
+              3
+            ]
+          ]
+        },
+        "route": [
+          "s",
+          "e",
+          "d",
+          "c",
+          "b",
+          "a",
+          "s"
+        ],
+        "distance": 12,
+        "climb": 5
+      },
+      {
+        "level": {
+          "id": "three-letters-crossroad",
+          "title": "Three letters using the school cross-road",
+          "brief": "Pass School before its letter is due, deliver Orchard, then return to School before going home through the low bridge.",
+          "start": "s",
+          "goal": "s",
+          "via": [
+            "a",
+            "c",
+            "b"
+          ],
+          "distanceBudget": 15,
+          "climbBudget": 5,
+          "nodes": [
+            {
+              "id": "s",
+              "name": "Post",
+              "x": 10,
+              "y": 50,
+              "height": 0
+            },
+            {
+              "id": "a",
+              "name": "Hill letter",
+              "x": 30,
+              "y": 15,
+              "height": 3
+            },
+            {
+              "id": "b",
+              "name": "School letter",
+              "x": 70,
+              "y": 15,
+              "height": 1
+            },
+            {
+              "id": "c",
+              "name": "Orchard letter",
+              "x": 90,
+              "y": 50,
+              "height": 2
+            },
+            {
+              "id": "d",
+              "name": "Low bridge",
+              "x": 70,
+              "y": 85,
+              "height": 0
+            },
+            {
+              "id": "e",
+              "name": "Garden",
+              "x": 30,
+              "y": 85,
+              "height": 1
+            }
+          ],
+          "edges": [
+            [
+              "s",
+              "a",
+              2
+            ],
+            [
+              "a",
+              "b",
+              2
+            ],
+            [
+              "b",
+              "c",
+              2
+            ],
+            [
+              "c",
+              "d",
+              2
+            ],
+            [
+              "d",
+              "e",
+              2
+            ],
+            [
+              "e",
+              "s",
+              2
+            ],
+            [
+              "a",
+              "e",
+              3
+            ],
+            [
+              "b",
+              "d",
+              3
+            ]
+          ]
+        },
+        "route": [
+          "s",
+          "a",
+          "b",
+          "c",
+          "b",
+          "d",
+          "e",
+          "s"
+        ],
+        "distance": 15,
+        "climb": 5
+      }
+    ],
+    "notes": [
+      "Deliver Hill, School and Orchard letters in that order, then return to Post. The road still rises after the final letter.",
+      "Deliver Orchard, School and Hill letters in that order, then return to Post. Reversing the same closed road does not erase its climbing.",
+      "Pass School before its letter is due, deliver Orchard, then return to School before going home through the low bridge."
+    ],
+    "facts": "All data are authored puzzle rules. Exact routes/counters in fixture. Six-node closed perimeter distance12/climb5 in either direction; cross-road witness distance15/climb5. Letters are ordered: passing a future letter node too early does not deliver it. Descent refunds neither distance nor climb. Use existing unchanged engine.",
+    "dep": 991,
+    "message": "roads afternoon relationships preserve exact choices and independent memory"
+  }
+}
